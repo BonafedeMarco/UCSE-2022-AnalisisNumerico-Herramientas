@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "AnalisisNumerico-BonafedeMarengo\GUI.csproj", "{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{1591AD35-2905-4C0B-88C9-6250F99FAE75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29765A8C-0C55-4109-B025-E4D98A06FB2C}
+	EndGlobalSection
+EndGlobal
