@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    class Salida
+    public class Salida
     {
         public bool Converge { get; set; }
         public int Iteraciones { get; set; }
-        public decimal ErrorRelativo { get; set; }
-        public decimal Raiz { get; set; }
+        public double ErrorRelativo { get; set; }
+        public double Raiz { get; set; }
     }
 }
