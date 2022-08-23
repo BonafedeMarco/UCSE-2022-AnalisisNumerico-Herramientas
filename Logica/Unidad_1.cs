@@ -18,10 +18,12 @@ namespace Logica
             Salida Resultado = new Salida();
             int c = 0;
             bool flag = false;
-            double Xr = 999; //JJJJJJ
+            double Xr = 999; //Corregir--------------------------------------
+            double Xant = 0;
+            double ErrorRelat = 0;
             Calculo Analizador = new Calculo();
 
-            while (c <= datos.MaxIter || flag == false || Math.Abs(Xr) < datos.Tolerancia)
+            while (c < datos.MaxIter || flag == false)
             {
                 if (Analizador.Sintaxis(datos.Funcion, 'x')) //Se fija si la sintaxis de la F está bien en torno al char x.
                 {
@@ -38,13 +40,30 @@ namespace Logica
                     }
                     else if(Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) < 0)
                     {
+                        Resultado.AgregarMsjError("No capo");
+                        break;
+                    }
+                    else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) > 0)
+                    {
                         c++;
-                        //Cosa del generics
+                        Xr = FormulaBiseccion(datos);
+                        ErrorRelat = Math.Abs((Xr + Xant) / Xr);
+                        if (Math.Abs(Analizador.EvaluaFx(Xr))<datos.Tolerancia||ErrorRelat<datos.Tolerancia)
+                        {
+                            break;
+                        }
                     }
                 }
             }
             Resultado.Iteraciones = c;
-            //Qué concha era el error Relativo??
+            Resultado.ErrorRelativo = ErrorRelat;
+            if (c >= datos.MaxIter)//VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+                Resultado.Converge = false;
+            else
+                Resultado.Converge = true;
+            Resultado.Raiz = Xr;
+            
+
             return Resultado;
         }
         public Salida MetodoAbierto(Entrada datos)
@@ -56,9 +75,8 @@ namespace Logica
         {
             return (datos.Xi + datos.Xd) / 2;
         }
-        public double FormulaReglaFalsa(Entrada datos)
+        public double FormulaReglaFalsa(Entrada datos, Calculo Analizador)
         {
-            Calculo Analizador = new Calculo();
             double fxi = Analizador.EvaluaFx(datos.Xi);
             double fxd = Analizador.EvaluaFx(datos.Xd);
             return ((fxi * datos.Xd) - (fxd * datos.Xi)) / (fxi - fxd);

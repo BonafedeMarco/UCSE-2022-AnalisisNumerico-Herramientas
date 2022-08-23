@@ -12,7 +12,6 @@ namespace Logica
         public double Xi { get; set; } //Xini
         public double Xd { get; set; }
         public int MaxIter { get; set; }
-        public double ErrorRelat { get; set; }
         public double Tolerancia { get; set; }
     }
 }
