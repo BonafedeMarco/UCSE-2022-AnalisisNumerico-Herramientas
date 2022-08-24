@@ -8,12 +8,21 @@ namespace Logica
 {
     public class Salida
     {
-        public bool _Error { get; set; }
-        public string _MsjError { get; set; }
+        // Propiedades de debug
+
+        public bool _Error { get; set; } // Indica si hubo un error
+        public string _MsjError { get; set; } // Detalle de dicho error
+        public string _Metodo { get; set; } // Método utilizado para la resolución
+        
+        // Propiedades del cálculo
+
         public bool Converge { get; set; }        
         public int Iteraciones { get; set; }
         public double ErrorRelativo { get; set; }
         public double Raiz { get; set; }
+        
+        // Métodos
+
         public void AgregarMsjError(string msj)
         {
             _Error = true;

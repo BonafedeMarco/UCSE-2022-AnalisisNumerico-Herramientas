@@ -17,6 +17,7 @@ namespace Logica
         {
             Salida Resultado = new Salida();
             Calculo Analizador = new Calculo();
+            Resultado._Metodo = bit ? "Bisección" : "Regla Falsa";
 
             if (Analizador.Sintaxis(datos.Funcion, 'x')) ///Se fija si la sintaxis de la F está bien en torno al char x.
             {
@@ -83,6 +84,8 @@ namespace Logica
         {
             Calculo Analizador = new Calculo();
             Salida Resultado = new Salida();
+            Resultado._Metodo = bit ? "Tangente" : "Secante";
+
             if (Analizador.Sintaxis(datos.Funcion, 'x'))
             {
                 int c = 0;
