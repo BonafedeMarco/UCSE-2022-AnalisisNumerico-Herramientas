@@ -47,24 +47,73 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         #region Unidad 1
 
+        private void btnU1Biseccion_Click(object sender, EventArgs e)
+        {
+            // AGREGAR VALIDACIONES
+            Entrada entrada = new Entrada()
+            {
+                Funcion = txtU1Funcion.Text,
+                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Xd = Convert.ToDouble(txtU1XDerecha.Text),
+                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
+                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
+            };
+            MostrarResultados(Main.Bisección(entrada));
+        }
+
         private void btnU1ReglaFalsa_Click(object sender, EventArgs e)
         {
-
+            // AGREGAR VALIDACIONES
+            Entrada entrada = new Entrada()
+            {
+                Funcion = txtU1Funcion.Text,
+                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Xd = Convert.ToDouble(txtU1XDerecha.Text),
+                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
+                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
+            };
+            MostrarResultados(Main.ReglaFalsa(entrada));
         }
 
         private void btnU1Tangente_Click(object sender, EventArgs e)
         {
-
+            // AGREGAR VALIDACIONES
+            Entrada entrada = new Entrada()
+            {
+                Funcion = txtU1Funcion.Text,
+                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
+                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
+            };
+            MostrarResultados(Main.Tangente(entrada));
         }
 
         private void btnU1Secante_Click(object sender, EventArgs e)
         {
-
+            // AGREGAR VALIDACIONES
+            Entrada entrada = new Entrada()
+            {
+                Funcion = txtU1Funcion.Text,
+                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
+                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
+            };
+            MostrarResultados(Main.Secante(entrada));
         }
 
-        private void btnU1Biseccion_Click(object sender, EventArgs e)
+        private void MostrarResultados(Salida salida)
         {
-
+            if (!salida._Error)
+            {
+                txtConverge.Text = salida.Converge.ToString();
+                txtCantIteraciones.Text = salida.Iteraciones.ToString();
+                txtErrorRelativo.Text = salida.ErrorRelativo.ToString();
+                txtRaiz.Text = salida.Raiz.ToString();
+            }
+            else 
+            {
+                MessageBox.Show(salida._MsjError, $"Error - Método: {salida._Metodo}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
         }
 
         #endregion
