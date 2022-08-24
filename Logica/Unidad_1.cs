@@ -8,12 +8,12 @@ using Calculus;
 
 namespace Logica
 {
-    public class Unidad_1
+    public static class Unidad_1
     {
         //4 metodos (Biseccion - Regla Falsa - Tangente - Secante)
         //Una region para cada metodo (o dos para abiertos y cerrados), una seccion para calculos globale
         //con generincs se puede pasar el metodo de la (para pasar el same (privado)dfd y qué metodo usar () para que llame a la funcion y utilizar el calculo que corresponda)
-        public Salida MetodoCerrado(Entrada datos, bool bit) //true = Biseccion
+        public static Salida MetodoCerrado(Entrada datos, bool bit) //true = Biseccion
         {
             Salida Resultado = new Salida();
             Calculo Analizador = new Calculo();
@@ -79,7 +79,7 @@ namespace Logica
             Resultado.AgregarMsjError("Funcion no válida");
             return Resultado;
         }
-        public Salida MetodoAbierto(Entrada datos, bool bit) //true = Tangente
+        public static Salida MetodoAbierto(Entrada datos, bool bit) //true = Tangente
         {
             Calculo Analizador = new Calculo();
             Salida Resultado = new Salida();
@@ -141,21 +141,21 @@ namespace Logica
             Resultado.AgregarMsjError("Funcion no válida");
             return Resultado;
         }
-        public double FormulaBiseccion(Entrada datos)
+        public static double FormulaBiseccion(Entrada datos)
         {
             return (datos.Xi + datos.Xd) / 2;
         }
-        public double FormulaReglaFalsa(Entrada datos, Calculo Analizador)
+        public static double FormulaReglaFalsa(Entrada datos, Calculo Analizador)
         {
             double fxi = Analizador.EvaluaFx(datos.Xi);
             double fxd = Analizador.EvaluaFx(datos.Xd);
             return ((fxi * datos.Xd) - (fxd * datos.Xi)) / (fxi - fxd);
         }
-        public double FormulaTangente(Entrada datos, Calculo Analizador)
+        public static double FormulaTangente(Entrada datos, Calculo Analizador)
         {
             return datos.Xi - (Analizador.EvaluaFx(datos.Xi) / Analizador.Dx(datos.Xi));
         }
-        public double FormulaSecante(Entrada datos, Calculo Analizador)
+        public static double FormulaSecante(Entrada datos, Calculo Analizador)
         {
             return ((Analizador.EvaluaFx(datos.Xd) * datos.Xi) - (Analizador.EvaluaFx(datos.Xi) * datos.Xd)) / (Analizador.EvaluaFx(datos.Xd) - Analizador.EvaluaFx(datos.Xi));
         }
