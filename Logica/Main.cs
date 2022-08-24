@@ -9,6 +9,27 @@ namespace Logica
 {
     public class Main
     {
+        #region Unidad 1
+        public Salida Bisección(Entrada datos)
+        {
+            return Unidad_1.MetodoCerrado(datos, true);
+        }
 
+        public Salida ReglaFalsa(Entrada datos)
+        {
+            return Unidad_1.MetodoCerrado(datos, false);
+        }
+
+        public Salida Tangente(Entrada datos)
+        {
+            return Unidad_1.MetodoAbierto(datos, true);
+        }
+        
+        public Salida Secante(Entrada datos)
+        {
+            return Unidad_1.MetodoAbierto(datos, false);
+        }
+
+        #endregion
     }
 }
