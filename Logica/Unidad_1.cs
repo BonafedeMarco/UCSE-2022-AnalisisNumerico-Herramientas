@@ -94,7 +94,7 @@ namespace Logica
                 double Errorx = 0;
                 while (Math.Abs(Analizador.EvaluaFx(datos.Xi)) < datos.Tolerancia || c < datos.MaxIter) //Xi hace de Xini por ahora
                 {
-                    if (Analizador.Dx(datos.Xi) != 0)
+                    if (!DenominadorCero(datos,Analizador,bit))
                     {
                         c++;
 
@@ -109,11 +109,19 @@ namespace Logica
                     }
                     else
                     {
-                        Resultado.AgregarMsjError("Division por 0 no che");
+                        Resultado.AgregarMsjError($"Luego de {c} iteraciones la {Resultado._Metodo.ToLower()} terminó paralela al eje X");
                         break;
                     }
-                    datos.Xi = Xr;
+
+                    if (bit)     
+                        datos.Xi = Xr;   
+                    else
+                    {
+                        datos.Xi = datos.Xd;
+                        datos.Xd = Xr;
+                    }
                     Xant = Xr;
+
                 }
                 if (!Resultado._Error)
                 {
@@ -161,6 +169,20 @@ namespace Logica
         public static double FormulaSecante(Entrada datos, Calculo Analizador)
         {
             return ((Analizador.EvaluaFx(datos.Xd) * datos.Xi) - (Analizador.EvaluaFx(datos.Xi) * datos.Xd)) / (Analizador.EvaluaFx(datos.Xd) - Analizador.EvaluaFx(datos.Xi));
+        }
+        public static bool DenominadorCero(Entrada datos, Calculo Analizador, bool bit) //return true = Error
+        {
+            if (bit)
+            {
+                if (Analizador.Dx(datos.Xi) == 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            if (Analizador.Dx(datos.Xi)==Analizador.Dx(datos.Xd))
+                return true;            
+            return false;
         }
     }
 }
