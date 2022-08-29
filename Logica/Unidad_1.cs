@@ -40,12 +40,12 @@ namespace Logica
                         Resultado.Raiz = datos.Xd;
                         return Resultado;
                     }
-                    else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) < 0)
+                    else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) > 0)
                     {
                         Resultado.AgregarMsjError("No capo");
                         break;
                     }
-                    else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) > 0)
+                    else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) < 0)
                     {
                         c++;
 
