@@ -42,7 +42,7 @@ namespace Logica
                     }
                     else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) > 0)
                     {
-                        Resultado.AgregarMsjError("No capo");
+                        Resultado.AgregarMsjError("No existe una raíz entre estos dos puntos");
                         break;
                     }
                     else if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(datos.Xd) < 0)
@@ -54,7 +54,7 @@ namespace Logica
                         else
                             Xr = FormulaReglaFalsa(datos, Analizador);
 
-                        ErrorRelat = Math.Abs((Xr + Xant) / Xr);
+                        ErrorRelat = Math.Abs((Xr - Xant) / Xr);
                         if (Math.Abs(Analizador.EvaluaFx(Xr)) < datos.Tolerancia || ErrorRelat < datos.Tolerancia)
                             break;                        
                     }
@@ -139,7 +139,7 @@ namespace Logica
 
                     Resultado.Raiz = Xr;
 
-                    if (c <= datos.Tolerancia) //VERRRRRRRR
+                    if (c <= datos.MaxIter) 
                         Resultado.Converge = true;
                     else
                         Resultado.Converge = false;
