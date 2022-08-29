@@ -69,7 +69,10 @@ namespace Logica
                     Resultado.Iteraciones = c;
                     Resultado.ErrorRelativo = ErrorRelat;
                     if (c >= datos.MaxIter)//VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+                    {
                         Resultado.Converge = false;
+                        Resultado.AgregarMsjError("Se han superado las máximas iteraciones");
+                    }
                     else
                         Resultado.Converge = true;
                     Resultado.Raiz = Xr;
@@ -142,7 +145,10 @@ namespace Logica
                     if (c <= datos.MaxIter) 
                         Resultado.Converge = true;
                     else
+                    {
                         Resultado.Converge = false;
+                        Resultado.AgregarMsjError("Se han superado las máximas iteraciones");
+                    }           
 
                     return Resultado;
                 }
