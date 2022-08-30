@@ -56,19 +56,19 @@ namespace Logica
 
                         ErrorRelat = Math.Abs((Xr - Xant) / Xr);
                         if (Math.Abs(Analizador.EvaluaFx(Xr)) < datos.Tolerancia || ErrorRelat < datos.Tolerancia)
-                            break;                        
+                            break;
                     }
                     if (Analizador.EvaluaFx(datos.Xi) * Analizador.EvaluaFx(Xr) < 0)
                         datos.Xd = Xr;
                     else
                         datos.Xi = Xr;
-                    Xant = Xr;                    
+                    Xant = Xr;
                 }
                 if (!Resultado._Error)
                 {
                     Resultado.Iteraciones = c;
                     Resultado.ErrorRelativo = ErrorRelat;
-                    if (c >= datos.MaxIter)//VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+                    if (c >= datos.MaxIter)
                     {
                         Resultado.Converge = false;
                         Resultado.AgregarMsjError("Se han superado las máximas iteraciones");
@@ -97,7 +97,7 @@ namespace Logica
                 double Errorx = 0;
                 while (Math.Abs(Analizador.EvaluaFx(datos.Xi)) < datos.Tolerancia || c < datos.MaxIter) //Xi hace de Xini por ahora
                 {
-                    if (!DenominadorCero(datos,Analizador,bit))
+                    if (!DenominadorCero(datos, Analizador, bit))
                     {
                         c++;
 
@@ -107,9 +107,12 @@ namespace Logica
                             Xr = FormulaSecante(datos, Analizador);
 
                         Errorx = Math.Abs((Xr - Xant) / Xr);
-                        if (double.IsNaN(Errorx))                        
-                            break;                        
-                        
+                        if (double.IsNaN(Xr))
+                        {
+                            Resultado.AgregarMsjError($"Luego de {c} iteraciones la {Resultado._Metodo.ToLower()} terminó paralela al eje X (Xr = NaN)");
+                            break;
+                        }
+
                         if (Math.Abs(Analizador.EvaluaFx(Xr)) < datos.Tolerancia || Errorx < datos.Tolerancia)
                             break;
                     }
@@ -119,8 +122,8 @@ namespace Logica
                         break;
                     }
 
-                    if (bit)     
-                        datos.Xi = Xr;   
+                    if (bit)
+                        datos.Xi = Xr;
                     else
                     {
                         datos.Xi = datos.Xd;
@@ -185,8 +188,8 @@ namespace Logica
                 }
                 return false;
             }
-            if (Analizador.EvaluaFx(datos.Xi)==Analizador.EvaluaFx(datos.Xd))
-                return true;            
+            if (Analizador.EvaluaFx(datos.Xi) == Analizador.EvaluaFx(datos.Xd))
+                return true;
             return false;
         }
     }
