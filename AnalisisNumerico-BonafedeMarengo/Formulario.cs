@@ -95,6 +95,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             {
                 Funcion = txtU1Funcion.Text,
                 Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Xd = Convert.ToDouble(txtU1XDerecha.Text),
                 Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
                 MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
             };
@@ -105,6 +106,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         {
             if (!salida._Error)
             {
+                txtMetodo.Text = salida._Metodo;
                 txtConverge.Text = salida.Converge.ToString();
                 txtCantIteraciones.Text = salida.Iteraciones.ToString();
                 txtErrorRelativo.Text = salida.ErrorRelativo.ToString();
