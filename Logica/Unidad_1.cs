@@ -126,9 +126,16 @@ namespace Logica
                     Xant = Xr;
 
                 }
+                Resultado.Iteraciones = c;
+                if (c <= datos.MaxIter)
+                    Resultado.Converge = true;
+                else
+                {
+                    Resultado.Converge = false;
+                    Resultado.AgregarMsjError("Se han superado las máximas iteraciones");
+                }
                 if (!Resultado._Error)
                 {
-                    Resultado.Iteraciones = c;
                     Resultado.ErrorRelativo = Errorx;
                     if (c == 0)
                     {
@@ -141,18 +148,7 @@ namespace Logica
                     }
 
                     Resultado.Raiz = Xr;
-
-                    if (c <= datos.MaxIter) 
-                        Resultado.Converge = true;
-                    else
-                    {
-                        Resultado.Converge = false;
-                        Resultado.AgregarMsjError("Se han superado las máximas iteraciones");
-                    }           
-
-                    return Resultado;
                 }
-                Resultado.Iteraciones = c;
                 return Resultado;
             }
             Resultado.AgregarMsjError("Funcion no válida");
