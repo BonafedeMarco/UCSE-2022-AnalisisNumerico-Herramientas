@@ -106,7 +106,10 @@ namespace Logica
                         else
                             Xr = FormulaSecante(datos, Analizador);
 
-                        Errorx = Math.Abs((Xr - Xant) / Xr);//Xr puede ser 0 en este punto? VERRRRRRRR
+                        Errorx = Math.Abs((Xr - Xant) / Xr);
+                        if (double.IsNaN(Errorx))                        
+                            break;                        
+                        
                         if (Math.Abs(Analizador.EvaluaFx(Xr)) < datos.Tolerancia || Errorx < datos.Tolerancia)
                             break;
                     }
@@ -182,7 +185,7 @@ namespace Logica
                 }
                 return false;
             }
-            if (Analizador.Dx(datos.Xi)==Analizador.Dx(datos.Xd))
+            if (Analizador.EvaluaFx(datos.Xi)==Analizador.EvaluaFx(datos.Xd))
                 return true;            
             return false;
         }
