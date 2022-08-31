@@ -40,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxU1Salidas = new System.Windows.Forms.GroupBox();
+            this.txtMetodo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtCantIteraciones = new System.Windows.Forms.TextBox();
             this.txtRaiz = new System.Windows.Forms.TextBox();
             this.txtErrorRelativo = new System.Windows.Forms.TextBox();
@@ -60,8 +62,6 @@
             this.tstUnidad2 = new System.Windows.Forms.ToolStripLabel();
             this.tstUnidad3 = new System.Windows.Forms.ToolStripLabel();
             this.tstUnidad4 = new System.Windows.Forms.ToolStripLabel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtMetodo = new System.Windows.Forms.TextBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -84,14 +84,14 @@
             this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Name = "gbxU1Entradas";
             this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxU1Entradas.Size = new System.Drawing.Size(1013, 271);
+            this.gbxU1Entradas.Size = new System.Drawing.Size(567, 271);
             this.gbxU1Entradas.TabIndex = 0;
             this.gbxU1Entradas.TabStop = false;
             this.gbxU1Entradas.Text = "Entradas";
             // 
             // txtU1MaxIteraciones
             // 
-            this.txtU1MaxIteraciones.Location = new System.Drawing.Point(410, 132);
+            this.txtU1MaxIteraciones.Location = new System.Drawing.Point(411, 211);
             this.txtU1MaxIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1MaxIteraciones.Name = "txtU1MaxIteraciones";
             this.txtU1MaxIteraciones.Size = new System.Drawing.Size(132, 22);
@@ -99,7 +99,7 @@
             // 
             // txtU1Tolerancia
             // 
-            this.txtU1Tolerancia.Location = new System.Drawing.Point(410, 53);
+            this.txtU1Tolerancia.Location = new System.Drawing.Point(411, 132);
             this.txtU1Tolerancia.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Tolerancia.Name = "txtU1Tolerancia";
             this.txtU1Tolerancia.Size = new System.Drawing.Size(132, 22);
@@ -110,7 +110,7 @@
             this.txtU1XDerecha.Location = new System.Drawing.Point(64, 210);
             this.txtU1XDerecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XDerecha.Name = "txtU1XDerecha";
-            this.txtU1XDerecha.Size = new System.Drawing.Size(132, 22);
+            this.txtU1XDerecha.Size = new System.Drawing.Size(172, 22);
             this.txtU1XDerecha.TabIndex = 7;
             // 
             // txtU1XIzquierda
@@ -118,7 +118,7 @@
             this.txtU1XIzquierda.Location = new System.Drawing.Point(64, 132);
             this.txtU1XIzquierda.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XIzquierda.Name = "txtU1XIzquierda";
-            this.txtU1XIzquierda.Size = new System.Drawing.Size(132, 22);
+            this.txtU1XIzquierda.Size = new System.Drawing.Size(172, 22);
             this.txtU1XIzquierda.TabIndex = 6;
             // 
             // txtU1Funcion
@@ -126,7 +126,7 @@
             this.txtU1Funcion.Location = new System.Drawing.Point(64, 53);
             this.txtU1Funcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Funcion.Name = "txtU1Funcion";
-            this.txtU1Funcion.Size = new System.Drawing.Size(132, 22);
+            this.txtU1Funcion.Size = new System.Drawing.Size(479, 22);
             this.txtU1Funcion.TabIndex = 5;
             // 
             // label5
@@ -152,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(284, 57);
+            this.label3.Location = new System.Drawing.Point(285, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
@@ -162,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 135);
+            this.label2.Location = new System.Drawing.Point(285, 214);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 16);
@@ -195,10 +195,29 @@
             this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Name = "gbxU1Salidas";
             this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxU1Salidas.Size = new System.Drawing.Size(1013, 271);
+            this.gbxU1Salidas.Size = new System.Drawing.Size(567, 277);
             this.gbxU1Salidas.TabIndex = 1;
             this.gbxU1Salidas.TabStop = false;
             this.gbxU1Salidas.Text = "Salidas";
+            // 
+            // txtMetodo
+            // 
+            this.txtMetodo.Enabled = false;
+            this.txtMetodo.Location = new System.Drawing.Point(104, 72);
+            this.txtMetodo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMetodo.Name = "txtMetodo";
+            this.txtMetodo.Size = new System.Drawing.Size(132, 22);
+            this.txtMetodo.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 75);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Método:";
             // 
             // txtCantIteraciones
             // 
@@ -215,16 +234,16 @@
             this.txtRaiz.Location = new System.Drawing.Point(384, 130);
             this.txtRaiz.Margin = new System.Windows.Forms.Padding(4);
             this.txtRaiz.Name = "txtRaiz";
-            this.txtRaiz.Size = new System.Drawing.Size(132, 22);
+            this.txtRaiz.Size = new System.Drawing.Size(159, 22);
             this.txtRaiz.TabIndex = 6;
             // 
             // txtErrorRelativo
             // 
             this.txtErrorRelativo.Enabled = false;
-            this.txtErrorRelativo.Location = new System.Drawing.Point(663, 130);
+            this.txtErrorRelativo.Location = new System.Drawing.Point(104, 189);
             this.txtErrorRelativo.Margin = new System.Windows.Forms.Padding(4);
             this.txtErrorRelativo.Name = "txtErrorRelativo";
-            this.txtErrorRelativo.Size = new System.Drawing.Size(132, 22);
+            this.txtErrorRelativo.Size = new System.Drawing.Size(439, 22);
             this.txtErrorRelativo.TabIndex = 5;
             // 
             // txtConverge
@@ -233,7 +252,7 @@
             this.txtConverge.Location = new System.Drawing.Point(384, 69);
             this.txtConverge.Margin = new System.Windows.Forms.Padding(4);
             this.txtConverge.Name = "txtConverge";
-            this.txtConverge.Size = new System.Drawing.Size(132, 22);
+            this.txtConverge.Size = new System.Drawing.Size(159, 22);
             this.txtConverge.TabIndex = 4;
             // 
             // label9
@@ -249,7 +268,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(553, 133);
+            this.label8.Location = new System.Drawing.Point(10, 192);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 16);
@@ -284,11 +303,11 @@
             this.gbxU1Metodos.Controls.Add(this.btnU1Tangente);
             this.gbxU1Metodos.Controls.Add(this.btnU1ReglaFalsa);
             this.gbxU1Metodos.Controls.Add(this.btnU1Biseccion);
-            this.gbxU1Metodos.Location = new System.Drawing.Point(1037, 42);
+            this.gbxU1Metodos.Location = new System.Drawing.Point(591, 42);
             this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Name = "gbxU1Metodos";
             this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxU1Metodos.Size = new System.Drawing.Size(196, 549);
+            this.gbxU1Metodos.Size = new System.Drawing.Size(196, 555);
             this.gbxU1Metodos.TabIndex = 2;
             this.gbxU1Metodos.TabStop = false;
             this.gbxU1Metodos.Text = "Métodos";
@@ -365,7 +384,7 @@
             this.tstUnidad4});
             this.tstUnidades.Location = new System.Drawing.Point(0, 0);
             this.tstUnidades.Name = "tstUnidades";
-            this.tstUnidades.Size = new System.Drawing.Size(1249, 27);
+            this.tstUnidades.Size = new System.Drawing.Size(800, 27);
             this.tstUnidades.TabIndex = 3;
             this.tstUnidades.Text = "toolStrip1";
             // 
@@ -401,30 +420,11 @@
             this.tstUnidad4.Text = "Unidad 4";
             this.tstUnidad4.Click += new System.EventHandler(this.tstUnidad4_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 75);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Método:";
-            // 
-            // txtMetodo
-            // 
-            this.txtMetodo.Enabled = false;
-            this.txtMetodo.Location = new System.Drawing.Point(104, 72);
-            this.txtMetodo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMetodo.Name = "txtMetodo";
-            this.txtMetodo.Size = new System.Drawing.Size(132, 22);
-            this.txtMetodo.TabIndex = 9;
-            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 610);
+            this.ClientSize = new System.Drawing.Size(800, 610);
             this.Controls.Add(this.tstUnidades);
             this.Controls.Add(this.gbxU1Metodos);
             this.Controls.Add(this.gbxU1Salidas);

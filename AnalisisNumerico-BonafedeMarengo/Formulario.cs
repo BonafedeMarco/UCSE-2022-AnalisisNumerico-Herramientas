@@ -49,61 +49,22 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         private void btnU1Biseccion_Click(object sender, EventArgs e)
         {
-            // AGREGAR VALIDACIONES
-            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
-            Entrada entrada = new Entrada()
-            {
-                Funcion = txtU1Funcion.Text,
-                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
-                Xd = Convert.ToDouble(txtU1XDerecha.Text),
-                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
-                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
-            };
-            MostrarResultados(Main.Bisección(entrada));
+            MostrarResultados(Main.Bisección(ParseInputs()));
         }
 
         private void btnU1ReglaFalsa_Click(object sender, EventArgs e)
         {
-            // AGREGAR VALIDACIONES
-            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
-            Entrada entrada = new Entrada()
-            {
-                Funcion = txtU1Funcion.Text,
-                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
-                Xd = Convert.ToDouble(txtU1XDerecha.Text),
-                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
-                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
-            };
-            MostrarResultados(Main.ReglaFalsa(entrada));
+            MostrarResultados(Main.ReglaFalsa(ParseInputs()));
         }
 
         private void btnU1Tangente_Click(object sender, EventArgs e)
         {
-            // AGREGAR VALIDACIONES
-            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
-            Entrada entrada = new Entrada()
-            {
-                Funcion = txtU1Funcion.Text,
-                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
-                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
-                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
-            };
-            MostrarResultados(Main.Tangente(entrada));
+            MostrarResultados(Main.Tangente(ParseInputs()));
         }
 
         private void btnU1Secante_Click(object sender, EventArgs e)
         {
-            // AGREGAR VALIDACIONES
-            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
-            Entrada entrada = new Entrada()
-            {
-                Funcion = txtU1Funcion.Text,
-                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
-                Xd = Convert.ToDouble(txtU1XDerecha.Text),
-                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
-                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
-            };
-            MostrarResultados(Main.Secante(entrada));
+            MostrarResultados(Main.Secante(ParseInputs()));
         }
 
         private void MostrarResultados(Salida salida)
@@ -113,7 +74,7 @@ namespace AnalisisNumerico_BonafedeMarengo
                 txtMetodo.Text = salida._Metodo;
                 txtConverge.Text = salida.Converge.ToString();
                 txtCantIteraciones.Text = salida.Iteraciones.ToString();
-                txtErrorRelativo.Text = salida.ErrorRelativo.ToString(); //--> Intenté redondearlo también pero no entendí lo que pasó pupupupu
+                txtErrorRelativo.Text = salida.ErrorRelativo.ToString();
                 txtRaiz.Text = Math.Round(salida.Raiz,4).ToString();
             }
             else 
@@ -122,12 +83,27 @@ namespace AnalisisNumerico_BonafedeMarengo
             }
         }
 
-        private void checkDefaults(string tolerancia, string iteraciones)
+        public Entrada ParseInputs()
         {
-            if(tolerancia=="")            
-                txtU1Tolerancia.Text = "0.0001"; //No sé si daría problemas en otros equipos, GL!
-            if (iteraciones == "")
-                txtU1MaxIteraciones.Text = "200";            
+            CheckDefaults();
+            Entrada entrada = new Entrada()
+            {
+                Funcion = txtU1Funcion.Text,
+                Xi = Convert.ToDouble(txtU1XIzquierda.Text),
+                Xd = Convert.ToDouble(txtU1XDerecha.Text),
+                Tolerancia = Convert.ToDouble(txtU1Tolerancia.Text),
+                MaxIter = Convert.ToInt32(txtU1MaxIteraciones.Text)
+            };
+            return entrada;
+        }
+
+        private void CheckDefaults()
+        {
+            if (txtU1Tolerancia.Text == "")
+                txtU1Tolerancia.Text = "0.0001";
+            
+            if (txtU1MaxIteraciones.Text == "")
+                txtU1MaxIteraciones.Text = "100";            
         }
         #endregion
 
