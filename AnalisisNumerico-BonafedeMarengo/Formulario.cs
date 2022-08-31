@@ -50,6 +50,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         private void btnU1Biseccion_Click(object sender, EventArgs e)
         {
             // AGREGAR VALIDACIONES
+            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
             Entrada entrada = new Entrada()
             {
                 Funcion = txtU1Funcion.Text,
@@ -64,6 +65,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         private void btnU1ReglaFalsa_Click(object sender, EventArgs e)
         {
             // AGREGAR VALIDACIONES
+            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
             Entrada entrada = new Entrada()
             {
                 Funcion = txtU1Funcion.Text,
@@ -78,6 +80,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         private void btnU1Tangente_Click(object sender, EventArgs e)
         {
             // AGREGAR VALIDACIONES
+            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
             Entrada entrada = new Entrada()
             {
                 Funcion = txtU1Funcion.Text,
@@ -91,6 +94,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         private void btnU1Secante_Click(object sender, EventArgs e)
         {
             // AGREGAR VALIDACIONES
+            checkDefaults(txtU1Tolerancia.Text, txtU1MaxIteraciones.Text);
             Entrada entrada = new Entrada()
             {
                 Funcion = txtU1Funcion.Text,
@@ -109,8 +113,8 @@ namespace AnalisisNumerico_BonafedeMarengo
                 txtMetodo.Text = salida._Metodo;
                 txtConverge.Text = salida.Converge.ToString();
                 txtCantIteraciones.Text = salida.Iteraciones.ToString();
-                txtErrorRelativo.Text = salida.ErrorRelativo.ToString();
-                txtRaiz.Text = salida.Raiz.ToString();
+                txtErrorRelativo.Text = salida.ErrorRelativo.ToString(); //--> Intenté redondearlo también pero no entendí lo que pasó pupupupu
+                txtRaiz.Text = Math.Round(salida.Raiz,4).ToString();
             }
             else 
             {
@@ -118,6 +122,13 @@ namespace AnalisisNumerico_BonafedeMarengo
             }
         }
 
+        private void checkDefaults(string tolerancia, string iteraciones)
+        {
+            if(tolerancia=="")            
+                txtU1Tolerancia.Text = "0.0001"; //No sé si daría problemas en otros equipos, GL!
+            if (iteraciones == "")
+                txtU1MaxIteraciones.Text = "200";            
+        }
         #endregion
 
         #region Unidad 2
