@@ -57,15 +57,16 @@
             this.btnU1Tangente = new System.Windows.Forms.Button();
             this.btnU1ReglaFalsa = new System.Windows.Forms.Button();
             this.btnU1Biseccion = new System.Windows.Forms.Button();
-            this.tstUnidades = new System.Windows.Forms.ToolStrip();
-            this.tstUnidad1 = new System.Windows.Forms.ToolStripLabel();
-            this.tstUnidad2 = new System.Windows.Forms.ToolStripLabel();
-            this.tstUnidad3 = new System.Windows.Forms.ToolStripLabel();
-            this.tstUnidad4 = new System.Windows.Forms.ToolStripLabel();
+            this.tbcUnidades = new System.Windows.Forms.TabControl();
+            this.tbcUnidad1 = new System.Windows.Forms.TabPage();
+            this.tbcUnidad2 = new System.Windows.Forms.TabPage();
+            this.tbcUnidad3 = new System.Windows.Forms.TabPage();
+            this.tbcUnidad4 = new System.Windows.Forms.TabPage();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
-            this.tstUnidades.SuspendLayout();
+            this.tbcUnidades.SuspendLayout();
+            this.tbcUnidad1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -80,7 +81,7 @@
             this.gbxU1Entradas.Controls.Add(this.label3);
             this.gbxU1Entradas.Controls.Add(this.label2);
             this.gbxU1Entradas.Controls.Add(this.label1);
-            this.gbxU1Entradas.Location = new System.Drawing.Point(16, 42);
+            this.gbxU1Entradas.Location = new System.Drawing.Point(7, 7);
             this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Name = "gbxU1Entradas";
             this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4);
@@ -191,7 +192,7 @@
             this.gbxU1Salidas.Controls.Add(this.label8);
             this.gbxU1Salidas.Controls.Add(this.label7);
             this.gbxU1Salidas.Controls.Add(this.label6);
-            this.gbxU1Salidas.Location = new System.Drawing.Point(16, 320);
+            this.gbxU1Salidas.Location = new System.Drawing.Point(7, 285);
             this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Name = "gbxU1Salidas";
             this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4);
@@ -303,7 +304,7 @@
             this.gbxU1Metodos.Controls.Add(this.btnU1Tangente);
             this.gbxU1Metodos.Controls.Add(this.btnU1ReglaFalsa);
             this.gbxU1Metodos.Controls.Add(this.btnU1Biseccion);
-            this.gbxU1Metodos.Location = new System.Drawing.Point(591, 42);
+            this.gbxU1Metodos.Location = new System.Drawing.Point(582, 7);
             this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Name = "gbxU1Metodos";
             this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4);
@@ -374,61 +375,68 @@
             this.btnU1Biseccion.UseVisualStyleBackColor = true;
             this.btnU1Biseccion.Click += new System.EventHandler(this.btnU1Biseccion_Click);
             // 
-            // tstUnidades
+            // tbcUnidades
             // 
-            this.tstUnidades.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tstUnidades.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tstUnidad1,
-            this.tstUnidad2,
-            this.tstUnidad3,
-            this.tstUnidad4});
-            this.tstUnidades.Location = new System.Drawing.Point(0, 0);
-            this.tstUnidades.Name = "tstUnidades";
-            this.tstUnidades.Size = new System.Drawing.Size(800, 27);
-            this.tstUnidades.TabIndex = 3;
-            this.tstUnidades.Text = "toolStrip1";
+            this.tbcUnidades.Controls.Add(this.tbcUnidad1);
+            this.tbcUnidades.Controls.Add(this.tbcUnidad2);
+            this.tbcUnidades.Controls.Add(this.tbcUnidad3);
+            this.tbcUnidades.Controls.Add(this.tbcUnidad4);
+            this.tbcUnidades.Location = new System.Drawing.Point(0, 0);
+            this.tbcUnidades.Name = "tbcUnidades";
+            this.tbcUnidades.SelectedIndex = 0;
+            this.tbcUnidades.Size = new System.Drawing.Size(800, 598);
+            this.tbcUnidades.TabIndex = 4;
             // 
-            // tstUnidad1
+            // tbcUnidad1
             // 
-            this.tstUnidad1.AutoSize = false;
-            this.tstUnidad1.Name = "tstUnidad1";
-            this.tstUnidad1.Size = new System.Drawing.Size(150, 24);
-            this.tstUnidad1.Text = "Unidad 1";
-            this.tstUnidad1.Click += new System.EventHandler(this.tstUnidad1_Click);
+            this.tbcUnidad1.Controls.Add(this.gbxU1Entradas);
+            this.tbcUnidad1.Controls.Add(this.gbxU1Metodos);
+            this.tbcUnidad1.Controls.Add(this.gbxU1Salidas);
+            this.tbcUnidad1.Location = new System.Drawing.Point(4, 25);
+            this.tbcUnidad1.Name = "tbcUnidad1";
+            this.tbcUnidad1.Padding = new System.Windows.Forms.Padding(3);
+            this.tbcUnidad1.Size = new System.Drawing.Size(792, 569);
+            this.tbcUnidad1.TabIndex = 0;
+            this.tbcUnidad1.Text = "Unidad 1";
+            this.tbcUnidad1.UseVisualStyleBackColor = true;
             // 
-            // tstUnidad2
+            // tbcUnidad2
             // 
-            this.tstUnidad2.AutoSize = false;
-            this.tstUnidad2.Name = "tstUnidad2";
-            this.tstUnidad2.Size = new System.Drawing.Size(150, 24);
-            this.tstUnidad2.Text = "Unidad 2";
-            this.tstUnidad2.Click += new System.EventHandler(this.tstUnidad2_Click);
+            this.tbcUnidad2.Location = new System.Drawing.Point(4, 25);
+            this.tbcUnidad2.Name = "tbcUnidad2";
+            this.tbcUnidad2.Padding = new System.Windows.Forms.Padding(3);
+            this.tbcUnidad2.Size = new System.Drawing.Size(792, 569);
+            this.tbcUnidad2.TabIndex = 1;
+            this.tbcUnidad2.Text = "Unidad 2";
+            this.tbcUnidad2.UseVisualStyleBackColor = true;
             // 
-            // tstUnidad3
+            // tbcUnidad3
             // 
-            this.tstUnidad3.AutoSize = false;
-            this.tstUnidad3.Name = "tstUnidad3";
-            this.tstUnidad3.Size = new System.Drawing.Size(150, 24);
-            this.tstUnidad3.Text = "Unidad 3";
-            this.tstUnidad3.Click += new System.EventHandler(this.tstUnidad3_Click);
+            this.tbcUnidad3.Location = new System.Drawing.Point(4, 25);
+            this.tbcUnidad3.Name = "tbcUnidad3";
+            this.tbcUnidad3.Padding = new System.Windows.Forms.Padding(3);
+            this.tbcUnidad3.Size = new System.Drawing.Size(792, 569);
+            this.tbcUnidad3.TabIndex = 2;
+            this.tbcUnidad3.Text = "Unidad 3";
+            this.tbcUnidad3.UseVisualStyleBackColor = true;
             // 
-            // tstUnidad4
+            // tbcUnidad4
             // 
-            this.tstUnidad4.AutoSize = false;
-            this.tstUnidad4.Name = "tstUnidad4";
-            this.tstUnidad4.Size = new System.Drawing.Size(150, 24);
-            this.tstUnidad4.Text = "Unidad 4";
-            this.tstUnidad4.Click += new System.EventHandler(this.tstUnidad4_Click);
+            this.tbcUnidad4.Location = new System.Drawing.Point(4, 25);
+            this.tbcUnidad4.Name = "tbcUnidad4";
+            this.tbcUnidad4.Padding = new System.Windows.Forms.Padding(3);
+            this.tbcUnidad4.Size = new System.Drawing.Size(792, 569);
+            this.tbcUnidad4.TabIndex = 3;
+            this.tbcUnidad4.Text = "Unidad 4";
+            this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 610);
-            this.Controls.Add(this.tstUnidades);
-            this.Controls.Add(this.gbxU1Metodos);
-            this.Controls.Add(this.gbxU1Salidas);
-            this.Controls.Add(this.gbxU1Entradas);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(797, 598);
+            this.Controls.Add(this.tbcUnidades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Formulario";
@@ -439,10 +447,9 @@
             this.gbxU1Salidas.PerformLayout();
             this.gbxU1Metodos.ResumeLayout(false);
             this.gbxU1Metodos.PerformLayout();
-            this.tstUnidades.ResumeLayout(false);
-            this.tstUnidades.PerformLayout();
+            this.tbcUnidades.ResumeLayout(false);
+            this.tbcUnidad1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -475,13 +482,13 @@
         private System.Windows.Forms.Button btnU1Biseccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ToolStrip tstUnidades;
-        private System.Windows.Forms.ToolStripLabel tstUnidad1;
-        private System.Windows.Forms.ToolStripLabel tstUnidad2;
-        private System.Windows.Forms.ToolStripLabel tstUnidad3;
-        private System.Windows.Forms.ToolStripLabel tstUnidad4;
         private System.Windows.Forms.TextBox txtMetodo;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabControl tbcUnidades;
+        private System.Windows.Forms.TabPage tbcUnidad1;
+        private System.Windows.Forms.TabPage tbcUnidad2;
+        private System.Windows.Forms.TabPage tbcUnidad3;
+        private System.Windows.Forms.TabPage tbcUnidad4;
     }
 }
 

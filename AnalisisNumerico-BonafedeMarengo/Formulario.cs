@@ -19,32 +19,6 @@ namespace AnalisisNumerico_BonafedeMarengo
             InitializeComponent();
         }
 
-        #region Toolstrip
-
-        private void tstUnidad1_Click(object sender, EventArgs e)
-        {
-            gbxU1Entradas.Enabled = true;
-            gbxU1Metodos.Enabled = true;
-            gbxU1Salidas.Enabled = true;
-        }
-
-        private void tstUnidad2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tstUnidad3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tstUnidad4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
-
         #region Unidad 1
 
         private void btnU1Biseccion_Click(object sender, EventArgs e)
