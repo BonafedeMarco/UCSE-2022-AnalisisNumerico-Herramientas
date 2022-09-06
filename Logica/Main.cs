@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Calculus;
 
+using Unidad_2;
+
 namespace Logica
 {
     public static class Main

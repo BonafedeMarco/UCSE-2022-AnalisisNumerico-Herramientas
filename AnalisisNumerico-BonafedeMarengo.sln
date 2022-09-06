@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "AnalisisNumerico-Bon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{1591AD35-2905-4C0B-88C9-6250F99FAE75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unidad_2", "Unidad_2\Unidad_2.csproj", "{8FC0815A-341A-4CB2-AADD-7D9F3EAADA8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1591AD35-2905-4C0B-88C9-6250F99FAE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC0815A-341A-4CB2-AADD-7D9F3EAADA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC0815A-341A-4CB2-AADD-7D9F3EAADA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC0815A-341A-4CB2-AADD-7D9F3EAADA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC0815A-341A-4CB2-AADD-7D9F3EAADA8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

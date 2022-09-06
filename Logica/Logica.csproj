@@ -50,5 +50,11 @@
     <Compile Include="Salida.cs" />
     <Compile Include="Unidad_1.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unidad_2\Unidad_2.csproj">
+      <Project>{8fc0815a-341a-4cb2-aadd-7d9f3eaada8a}</Project>
+      <Name>Unidad_2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
