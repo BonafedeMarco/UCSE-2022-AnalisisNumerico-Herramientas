@@ -69,7 +69,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cmbU2Metodo = new System.Windows.Forms.ComboBox();
             this.btnU2Calcular = new System.Windows.Forms.Button();
-            this.gbxU2Matriz = new System.Windows.Forms.GroupBox();
+            this.pnlMatriz = new System.Windows.Forms.Panel();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -413,8 +413,7 @@
             // 
             // tbcUnidad2
             // 
-            this.tbcUnidad2.AutoScroll = true;
-            this.tbcUnidad2.Controls.Add(this.gbxU2Matriz);
+            this.tbcUnidad2.Controls.Add(this.pnlMatriz);
             this.tbcUnidad2.Controls.Add(this.groupBox1);
             this.tbcUnidad2.Location = new System.Drawing.Point(4, 25);
             this.tbcUnidad2.Name = "tbcUnidad2";
@@ -471,11 +470,6 @@
             // nudU2Dimension
             // 
             this.nudU2Dimension.Location = new System.Drawing.Point(87, 26);
-            this.nudU2Dimension.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudU2Dimension.Minimum = new decimal(new int[] {
             2,
             0,
@@ -498,6 +492,7 @@
             this.btnU2Generar.TabIndex = 2;
             this.btnU2Generar.Text = "Generar";
             this.btnU2Generar.UseVisualStyleBackColor = true;
+            this.btnU2Generar.Click += new System.EventHandler(this.btnU2Generar_Click);
             // 
             // label14
             // 
@@ -530,14 +525,14 @@
             this.btnU2Calcular.Text = "Calcular";
             this.btnU2Calcular.UseVisualStyleBackColor = true;
             // 
-            // gbxU2Matriz
+            // pnlMatriz
             // 
-            this.gbxU2Matriz.Location = new System.Drawing.Point(8, 77);
-            this.gbxU2Matriz.Name = "gbxU2Matriz";
-            this.gbxU2Matriz.Size = new System.Drawing.Size(773, 484);
-            this.gbxU2Matriz.TabIndex = 1;
-            this.gbxU2Matriz.TabStop = false;
-            this.gbxU2Matriz.Text = "Matriz";
+            this.pnlMatriz.AutoScroll = true;
+            this.pnlMatriz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMatriz.Location = new System.Drawing.Point(8, 77);
+            this.pnlMatriz.Name = "pnlMatriz";
+            this.pnlMatriz.Size = new System.Drawing.Size(773, 484);
+            this.pnlMatriz.TabIndex = 1;
             // 
             // Formulario
             // 
@@ -609,7 +604,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnU2Generar;
         private System.Windows.Forms.Button btnU2Calcular;
-        private System.Windows.Forms.GroupBox gbxU2Matriz;
+        private System.Windows.Forms.Panel pnlMatriz;
     }
 }
 

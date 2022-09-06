@@ -90,6 +90,35 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         #region Unidad 2
 
+        private void btnU2Generar_Click(object sender, EventArgs e)
+        {
+            int dimension = (int)nudU2Dimension.Value;
+            int puntoX = 10;
+            int puntoY = 10;
+            int espacioX = 10;
+            int espacioY = 10;
+            int sizeX = 75;
+            int sizeY = 22;
+            
+            pnlMatriz.Controls.Clear();
+
+            for (int col = 0; col < dimension+1; col++)
+            {
+                for (int row = 0; row < dimension; row++)
+                {
+                    TextBox txt = new TextBox();
+                    txt.Name = row.ToString() + "r" + col.ToString() + "c";
+                    txt.Location = new Point(puntoX, puntoY);
+                    txt.Size = new Size(sizeX, sizeY);
+                    pnlMatriz.Controls.Add(txt);
+                    pnlMatriz.Show();
+                    puntoY += sizeY + espacioY;
+                }
+                puntoY = 10;
+                puntoX += sizeX + espacioX;
+            }
+        }
+
         #endregion
 
         #region Unidad 3
