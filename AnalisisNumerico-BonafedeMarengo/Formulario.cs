@@ -17,7 +17,14 @@ namespace AnalisisNumerico_BonafedeMarengo
         public Formulario()
         {
             InitializeComponent();
+            cmbU2Metodo.SelectedIndex = 0;
         }
+
+        #region Tabcontrol
+        
+
+
+        #endregion
 
         #region Unidad 1
 
@@ -45,11 +52,11 @@ namespace AnalisisNumerico_BonafedeMarengo
         {
             if (!salida._Error)
             {
-                txtMetodo.Text = salida._Metodo;
-                txtConverge.Text = salida.Converge.ToString();
-                txtCantIteraciones.Text = salida.Iteraciones.ToString();
-                txtErrorRelativo.Text = salida.ErrorRelativo.ToString();
-                txtRaiz.Text = Math.Round(salida.Raiz,4).ToString();
+                txtU1Metodo.Text = salida._Metodo;
+                txtU1Converge.Text = salida.Converge.ToString();
+                txtU1CantIteraciones.Text = salida.Iteraciones.ToString();
+                txtU1ErrorRelativo.Text = salida.ErrorRelativo.ToString();
+                txtU1Raiz.Text = Math.Round(salida.Raiz,4).ToString();
             }
             else 
             {

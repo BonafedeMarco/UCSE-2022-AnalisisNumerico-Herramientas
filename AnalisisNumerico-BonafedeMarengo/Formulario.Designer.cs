@@ -40,12 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxU1Salidas = new System.Windows.Forms.GroupBox();
-            this.txtMetodo = new System.Windows.Forms.TextBox();
+            this.txtU1Metodo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtCantIteraciones = new System.Windows.Forms.TextBox();
-            this.txtRaiz = new System.Windows.Forms.TextBox();
-            this.txtErrorRelativo = new System.Windows.Forms.TextBox();
-            this.txtConverge = new System.Windows.Forms.TextBox();
+            this.txtU1CantIteraciones = new System.Windows.Forms.TextBox();
+            this.txtU1Raiz = new System.Windows.Forms.TextBox();
+            this.txtU1ErrorRelativo = new System.Windows.Forms.TextBox();
+            this.txtU1Converge = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,11 +62,22 @@
             this.tbcUnidad2 = new System.Windows.Forms.TabPage();
             this.tbcUnidad3 = new System.Windows.Forms.TabPage();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nudU2Dimension = new System.Windows.Forms.NumericUpDown();
+            this.btnU2Generar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbU2Metodo = new System.Windows.Forms.ComboBox();
+            this.btnU2Calcular = new System.Windows.Forms.Button();
+            this.gbxU2Matriz = new System.Windows.Forms.GroupBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
             this.tbcUnidades.SuspendLayout();
             this.tbcUnidad1.SuspendLayout();
+            this.tbcUnidad2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -182,12 +193,12 @@
             // 
             // gbxU1Salidas
             // 
-            this.gbxU1Salidas.Controls.Add(this.txtMetodo);
+            this.gbxU1Salidas.Controls.Add(this.txtU1Metodo);
             this.gbxU1Salidas.Controls.Add(this.label12);
-            this.gbxU1Salidas.Controls.Add(this.txtCantIteraciones);
-            this.gbxU1Salidas.Controls.Add(this.txtRaiz);
-            this.gbxU1Salidas.Controls.Add(this.txtErrorRelativo);
-            this.gbxU1Salidas.Controls.Add(this.txtConverge);
+            this.gbxU1Salidas.Controls.Add(this.txtU1CantIteraciones);
+            this.gbxU1Salidas.Controls.Add(this.txtU1Raiz);
+            this.gbxU1Salidas.Controls.Add(this.txtU1ErrorRelativo);
+            this.gbxU1Salidas.Controls.Add(this.txtU1Converge);
             this.gbxU1Salidas.Controls.Add(this.label9);
             this.gbxU1Salidas.Controls.Add(this.label8);
             this.gbxU1Salidas.Controls.Add(this.label7);
@@ -201,14 +212,14 @@
             this.gbxU1Salidas.TabStop = false;
             this.gbxU1Salidas.Text = "Salidas";
             // 
-            // txtMetodo
+            // txtU1Metodo
             // 
-            this.txtMetodo.Enabled = false;
-            this.txtMetodo.Location = new System.Drawing.Point(104, 72);
-            this.txtMetodo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMetodo.Name = "txtMetodo";
-            this.txtMetodo.Size = new System.Drawing.Size(132, 22);
-            this.txtMetodo.TabIndex = 9;
+            this.txtU1Metodo.Enabled = false;
+            this.txtU1Metodo.Location = new System.Drawing.Point(104, 72);
+            this.txtU1Metodo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtU1Metodo.Name = "txtU1Metodo";
+            this.txtU1Metodo.Size = new System.Drawing.Size(132, 22);
+            this.txtU1Metodo.TabIndex = 9;
             // 
             // label12
             // 
@@ -220,41 +231,41 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Método:";
             // 
-            // txtCantIteraciones
+            // txtU1CantIteraciones
             // 
-            this.txtCantIteraciones.Enabled = false;
-            this.txtCantIteraciones.Location = new System.Drawing.Point(104, 130);
-            this.txtCantIteraciones.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCantIteraciones.Name = "txtCantIteraciones";
-            this.txtCantIteraciones.Size = new System.Drawing.Size(132, 22);
-            this.txtCantIteraciones.TabIndex = 7;
+            this.txtU1CantIteraciones.Enabled = false;
+            this.txtU1CantIteraciones.Location = new System.Drawing.Point(104, 130);
+            this.txtU1CantIteraciones.Margin = new System.Windows.Forms.Padding(4);
+            this.txtU1CantIteraciones.Name = "txtU1CantIteraciones";
+            this.txtU1CantIteraciones.Size = new System.Drawing.Size(132, 22);
+            this.txtU1CantIteraciones.TabIndex = 7;
             // 
-            // txtRaiz
+            // txtU1Raiz
             // 
-            this.txtRaiz.Enabled = false;
-            this.txtRaiz.Location = new System.Drawing.Point(384, 130);
-            this.txtRaiz.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRaiz.Name = "txtRaiz";
-            this.txtRaiz.Size = new System.Drawing.Size(159, 22);
-            this.txtRaiz.TabIndex = 6;
+            this.txtU1Raiz.Enabled = false;
+            this.txtU1Raiz.Location = new System.Drawing.Point(384, 130);
+            this.txtU1Raiz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtU1Raiz.Name = "txtU1Raiz";
+            this.txtU1Raiz.Size = new System.Drawing.Size(159, 22);
+            this.txtU1Raiz.TabIndex = 6;
             // 
-            // txtErrorRelativo
+            // txtU1ErrorRelativo
             // 
-            this.txtErrorRelativo.Enabled = false;
-            this.txtErrorRelativo.Location = new System.Drawing.Point(104, 189);
-            this.txtErrorRelativo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtErrorRelativo.Name = "txtErrorRelativo";
-            this.txtErrorRelativo.Size = new System.Drawing.Size(439, 22);
-            this.txtErrorRelativo.TabIndex = 5;
+            this.txtU1ErrorRelativo.Enabled = false;
+            this.txtU1ErrorRelativo.Location = new System.Drawing.Point(104, 189);
+            this.txtU1ErrorRelativo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtU1ErrorRelativo.Name = "txtU1ErrorRelativo";
+            this.txtU1ErrorRelativo.Size = new System.Drawing.Size(439, 22);
+            this.txtU1ErrorRelativo.TabIndex = 5;
             // 
-            // txtConverge
+            // txtU1Converge
             // 
-            this.txtConverge.Enabled = false;
-            this.txtConverge.Location = new System.Drawing.Point(384, 69);
-            this.txtConverge.Margin = new System.Windows.Forms.Padding(4);
-            this.txtConverge.Name = "txtConverge";
-            this.txtConverge.Size = new System.Drawing.Size(159, 22);
-            this.txtConverge.TabIndex = 4;
+            this.txtU1Converge.Enabled = false;
+            this.txtU1Converge.Location = new System.Drawing.Point(384, 69);
+            this.txtU1Converge.Margin = new System.Windows.Forms.Padding(4);
+            this.txtU1Converge.Name = "txtU1Converge";
+            this.txtU1Converge.Size = new System.Drawing.Size(159, 22);
+            this.txtU1Converge.TabIndex = 4;
             // 
             // label9
             // 
@@ -402,6 +413,9 @@
             // 
             // tbcUnidad2
             // 
+            this.tbcUnidad2.AutoScroll = true;
+            this.tbcUnidad2.Controls.Add(this.gbxU2Matriz);
+            this.tbcUnidad2.Controls.Add(this.groupBox1);
             this.tbcUnidad2.Location = new System.Drawing.Point(4, 25);
             this.tbcUnidad2.Name = "tbcUnidad2";
             this.tbcUnidad2.Padding = new System.Windows.Forms.Padding(3);
@@ -430,6 +444,101 @@
             this.tbcUnidad4.Text = "Unidad 4";
             this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnU2Calcular);
+            this.groupBox1.Controls.Add(this.cmbU2Metodo);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.btnU2Generar);
+            this.groupBox1.Controls.Add(this.nudU2Dimension);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(773, 65);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Especificaciones";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Dimensión:";
+            // 
+            // nudU2Dimension
+            // 
+            this.nudU2Dimension.Location = new System.Drawing.Point(87, 26);
+            this.nudU2Dimension.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudU2Dimension.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudU2Dimension.Name = "nudU2Dimension";
+            this.nudU2Dimension.Size = new System.Drawing.Size(120, 22);
+            this.nudU2Dimension.TabIndex = 1;
+            this.nudU2Dimension.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // btnU2Generar
+            // 
+            this.btnU2Generar.Location = new System.Drawing.Point(213, 26);
+            this.btnU2Generar.Name = "btnU2Generar";
+            this.btnU2Generar.Size = new System.Drawing.Size(75, 23);
+            this.btnU2Generar.TabIndex = 2;
+            this.btnU2Generar.Text = "Generar";
+            this.btnU2Generar.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(400, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Método:";
+            // 
+            // cmbU2Metodo
+            // 
+            this.cmbU2Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbU2Metodo.FormattingEnabled = true;
+            this.cmbU2Metodo.Items.AddRange(new object[] {
+            "Gauss-Jordan",
+            "Gauss-Seidel"});
+            this.cmbU2Metodo.Location = new System.Drawing.Point(462, 24);
+            this.cmbU2Metodo.MaxDropDownItems = 2;
+            this.cmbU2Metodo.Name = "cmbU2Metodo";
+            this.cmbU2Metodo.Size = new System.Drawing.Size(210, 24);
+            this.cmbU2Metodo.TabIndex = 4;
+            // 
+            // btnU2Calcular
+            // 
+            this.btnU2Calcular.Location = new System.Drawing.Point(678, 24);
+            this.btnU2Calcular.Name = "btnU2Calcular";
+            this.btnU2Calcular.Size = new System.Drawing.Size(75, 23);
+            this.btnU2Calcular.TabIndex = 5;
+            this.btnU2Calcular.Text = "Calcular";
+            this.btnU2Calcular.UseVisualStyleBackColor = true;
+            // 
+            // gbxU2Matriz
+            // 
+            this.gbxU2Matriz.Location = new System.Drawing.Point(8, 77);
+            this.gbxU2Matriz.Name = "gbxU2Matriz";
+            this.gbxU2Matriz.Size = new System.Drawing.Size(773, 484);
+            this.gbxU2Matriz.TabIndex = 1;
+            this.gbxU2Matriz.TabStop = false;
+            this.gbxU2Matriz.Text = "Matriz";
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -449,6 +558,10 @@
             this.gbxU1Metodos.PerformLayout();
             this.tbcUnidades.ResumeLayout(false);
             this.tbcUnidad1.ResumeLayout(false);
+            this.tbcUnidad2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,23 +585,31 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCantIteraciones;
-        private System.Windows.Forms.TextBox txtRaiz;
-        private System.Windows.Forms.TextBox txtErrorRelativo;
-        private System.Windows.Forms.TextBox txtConverge;
+        private System.Windows.Forms.TextBox txtU1CantIteraciones;
+        private System.Windows.Forms.TextBox txtU1Raiz;
+        private System.Windows.Forms.TextBox txtU1ErrorRelativo;
+        private System.Windows.Forms.TextBox txtU1Converge;
         private System.Windows.Forms.Button btnU1Secante;
         private System.Windows.Forms.Button btnU1Tangente;
         private System.Windows.Forms.Button btnU1ReglaFalsa;
         private System.Windows.Forms.Button btnU1Biseccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtMetodo;
+        private System.Windows.Forms.TextBox txtU1Metodo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabControl tbcUnidades;
         private System.Windows.Forms.TabPage tbcUnidad1;
         private System.Windows.Forms.TabPage tbcUnidad2;
         private System.Windows.Forms.TabPage tbcUnidad3;
         private System.Windows.Forms.TabPage tbcUnidad4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown nudU2Dimension;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbU2Metodo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnU2Generar;
+        private System.Windows.Forms.Button btnU2Calcular;
+        private System.Windows.Forms.GroupBox gbxU2Matriz;
     }
 }
 
