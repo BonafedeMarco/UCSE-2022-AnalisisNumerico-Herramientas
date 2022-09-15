@@ -28,20 +28,37 @@ namespace Unidad_2
          *      
          *      El tema del pivoteo se puede aclarar en la teoría
          */
-         //llega un integer con la dimensión de la matriz, una matriz de dos dimensiones tipo double, un bool para el metodo
-         public static Salida MetodoGaussJordan(Entrada datos)
+        //llega un integer con la dimensión de la matriz, una matriz de dos dimensiones tipo double, un bool para el metodo
+        public static Salida MetodoGaussJordan(Entrada datos)
         {
             Salida salida = new Salida();
-            
+
             for (int x = 0; x < datos.Dimension; x++)
             {
                 for (int y = 0; y < datos.Dimension; y++)
                 {
-                    if(x==y)
+                    if (x == y)
                     {
-
+                        for (int col = 0; col < datos.Dimension + 1; col++) //Divido todos los coeficientes de la ecuación por el coeficiente de la DP
+                        {
+                            datos.Matriz[x, col] = datos.Matriz[x, col] / datos.Matriz[x, y];
+                        }
+                        for (int row = 0; row < datos.Dimension; row++)//Fuera de ese renglón tengo que hacer 0 todos los coeficientes de arriba y abajo
+                        {                                                //Tmb modificando los demás coeficientes de renglones ajenos.
+                            if (row != x)
+                            {
+                                for (int col = 0; col < datos.Dimension + 1; col++)
+                                {
+                                    datos.Matriz[row, col] = datos.Matriz[row, col] - (datos.Matriz[row, col] * datos.Matriz[x, y]);
+                                }
+                            }
+                        }
                     }
                 }
+            }
+            for (int i = 0; i < datos.Dimension; i++) //En algunos pongo dimensión+1 y en otros no porque solamente hay una columna extra (los valores b resultados)
+            {
+                salida.Resultado[i] = datos.Matriz[i, datos.Dimension + 1];
             }
             return salida;
         }
