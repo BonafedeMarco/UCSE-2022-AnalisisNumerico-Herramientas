@@ -62,10 +62,43 @@ namespace Unidad_2
             }
             return salida;
         }
-        public static Salida MetodoGaussSeidel(Entrada datos)
+        public static Salida MetodoGaussSeidel(Entrada datos)//Transcribo lo que mandó el profe (as good as I can)
         {
+            double tolerancia = 0.0001;
+            bool menorTolerancia = false;
+            int contador = 0;
+            double[] vectorAnterior = new double[datos.Dimension];
+            double resultado = 0;
             Salida salida = new Salida();
-
+            salida.Resultado.Initialize(); //Rellena el vector con 0s
+            while (contador<=100||!menorTolerancia)
+            {
+                contador++;
+                if (contador>1)                
+                    salida.Resultado.CopyTo(vectorAnterior, 0);
+                for (int row = 0; row < datos.Dimension; row++)
+                {
+                    for (int col = 0; col < datos.Dimension; col++)
+                    {
+                        if (row!=col)                        
+                            resultado = datos.Matriz[row, datos.Dimension] - (datos.Matriz[row,col]*salida.Resultado[col]);                        
+                    }
+                    //double coefIncognit = resultado / coefIncognit;
+                    salida.Resultado[row] = resultado / (salida.Resultado[row] * resultado);
+                }
+                int contarMismoResultado = 0;
+                for (int i = 0; i < datos.Dimension; i++)
+                {
+                    if (Math.Abs(salida.Resultado[i]-vectorAnterior[i])<tolerancia)
+                    {
+                        contarMismoResultado++;
+                    }
+                }
+                menorTolerancia = contarMismoResultado == datos.Dimension;
+            }
+            if (contador > 100)
+                salida.AgregarMsjError("Se superó el número máximo de iteraciones antes de llegar a un resultado tolerable");
+            
             return salida;
         }
     }
