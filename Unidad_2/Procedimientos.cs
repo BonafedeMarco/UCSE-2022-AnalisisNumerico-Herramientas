@@ -30,9 +30,9 @@ namespace Unidad_2
          *      El tema del pivoteo se puede aclarar en la teoría
          */
         //llega un integer con la dimensión de la matriz, una matriz de dos dimensiones tipo double, un bool para el metodo
-        public static Salida MetodoGaussJordan(Entrada datos)
+        public static U2Salida MetodoGaussJordan(U2Entrada datos)
         {
-            Salida salida = new Salida();
+            U2Salida salida = new U2Salida();
 
             for (int x = 0; x < datos.Dimension; x++)
             {
@@ -63,14 +63,14 @@ namespace Unidad_2
             }
             return salida;
         }
-        public static Salida MetodoGaussSeidel(Entrada datos)//Transcribo lo que mandó el profe (as good as I can)
+        public static U2Salida MetodoGaussSeidel(U2Entrada datos)//Transcribo lo que mandó el profe (as good as I can)
         {
             double tolerancia = 0.0001;
             bool menorTolerancia = false;
             int contador = 0;
             double[] vectorAnterior = new double[datos.Dimension];
             double resultado = 0;
-            Salida salida = new Salida();
+            U2Salida salida = new U2Salida();
             salida.Resultado.Initialize(); //Rellena el vector con 0s
             while (contador<=100||!menorTolerancia)
             {
