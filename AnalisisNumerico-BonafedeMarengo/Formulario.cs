@@ -30,25 +30,25 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         private void btnU1Biseccion_Click(object sender, EventArgs e)
         {
-            MostrarResultados(Main.Bisección(ParseInputs()));
+            MostrarResultadosU1(Main.Bisección(ParseInputs()));
         }
 
         private void btnU1ReglaFalsa_Click(object sender, EventArgs e)
         {
-            MostrarResultados(Main.ReglaFalsa(ParseInputs()));
+            MostrarResultadosU1(Main.ReglaFalsa(ParseInputs()));
         }
 
         private void btnU1Tangente_Click(object sender, EventArgs e)
         {
-            MostrarResultados(Main.Tangente(ParseInputs()));
+            MostrarResultadosU1(Main.Tangente(ParseInputs()));
         }
 
         private void btnU1Secante_Click(object sender, EventArgs e)
         {
-            MostrarResultados(Main.Secante(ParseInputs()));
+            MostrarResultadosU1(Main.Secante(ParseInputs()));
         }
 
-        private void MostrarResultados(Salida salida)
+        private void MostrarResultadosU1(Salida salida)
         {
             if (!salida._Error)
             {
@@ -117,6 +117,16 @@ namespace AnalisisNumerico_BonafedeMarengo
                 puntoY = 10;
                 puntoX += sizeX + espacioX;
             }
+        }
+
+        private void btnU2Calcular_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MostrarResultadosU2()
+        {
+
         }
 
         #endregion

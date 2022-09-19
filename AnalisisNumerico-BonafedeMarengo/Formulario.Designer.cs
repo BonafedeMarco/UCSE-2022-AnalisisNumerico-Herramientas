@@ -60,16 +60,16 @@
             this.tbcUnidades = new System.Windows.Forms.TabControl();
             this.tbcUnidad1 = new System.Windows.Forms.TabPage();
             this.tbcUnidad2 = new System.Windows.Forms.TabPage();
+            this.pnlMatriz = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnU2Calcular = new System.Windows.Forms.Button();
+            this.cmbU2Metodo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnU2Generar = new System.Windows.Forms.Button();
+            this.nudU2Dimension = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
             this.tbcUnidad3 = new System.Windows.Forms.TabPage();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nudU2Dimension = new System.Windows.Forms.NumericUpDown();
-            this.btnU2Generar = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cmbU2Metodo = new System.Windows.Forms.ComboBox();
-            this.btnU2Calcular = new System.Windows.Forms.Button();
-            this.pnlMatriz = new System.Windows.Forms.Panel();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -423,6 +423,98 @@
             this.tbcUnidad2.Text = "Unidad 2";
             this.tbcUnidad2.UseVisualStyleBackColor = true;
             // 
+            // pnlMatriz
+            // 
+            this.pnlMatriz.AutoScroll = true;
+            this.pnlMatriz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMatriz.Location = new System.Drawing.Point(8, 77);
+            this.pnlMatriz.Name = "pnlMatriz";
+            this.pnlMatriz.Size = new System.Drawing.Size(773, 484);
+            this.pnlMatriz.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnU2Calcular);
+            this.groupBox1.Controls.Add(this.cmbU2Metodo);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.btnU2Generar);
+            this.groupBox1.Controls.Add(this.nudU2Dimension);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(773, 65);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Especificaciones";
+            // 
+            // btnU2Calcular
+            // 
+            this.btnU2Calcular.Location = new System.Drawing.Point(678, 24);
+            this.btnU2Calcular.Name = "btnU2Calcular";
+            this.btnU2Calcular.Size = new System.Drawing.Size(75, 23);
+            this.btnU2Calcular.TabIndex = 5;
+            this.btnU2Calcular.Text = "Calcular";
+            this.btnU2Calcular.UseVisualStyleBackColor = true;
+            this.btnU2Calcular.Click += new System.EventHandler(this.btnU2Calcular_Click);
+            // 
+            // cmbU2Metodo
+            // 
+            this.cmbU2Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbU2Metodo.FormattingEnabled = true;
+            this.cmbU2Metodo.Items.AddRange(new object[] {
+            "Gauss-Jordan",
+            "Gauss-Seidel"});
+            this.cmbU2Metodo.Location = new System.Drawing.Point(462, 24);
+            this.cmbU2Metodo.MaxDropDownItems = 2;
+            this.cmbU2Metodo.Name = "cmbU2Metodo";
+            this.cmbU2Metodo.Size = new System.Drawing.Size(210, 24);
+            this.cmbU2Metodo.TabIndex = 4;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(400, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Método:";
+            // 
+            // btnU2Generar
+            // 
+            this.btnU2Generar.Location = new System.Drawing.Point(213, 26);
+            this.btnU2Generar.Name = "btnU2Generar";
+            this.btnU2Generar.Size = new System.Drawing.Size(75, 23);
+            this.btnU2Generar.TabIndex = 2;
+            this.btnU2Generar.Text = "Generar";
+            this.btnU2Generar.UseVisualStyleBackColor = true;
+            this.btnU2Generar.Click += new System.EventHandler(this.btnU2Generar_Click);
+            // 
+            // nudU2Dimension
+            // 
+            this.nudU2Dimension.Location = new System.Drawing.Point(87, 26);
+            this.nudU2Dimension.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudU2Dimension.Name = "nudU2Dimension";
+            this.nudU2Dimension.Size = new System.Drawing.Size(120, 22);
+            this.nudU2Dimension.TabIndex = 1;
+            this.nudU2Dimension.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Dimensión:";
+            // 
             // tbcUnidad3
             // 
             this.tbcUnidad3.Location = new System.Drawing.Point(4, 25);
@@ -443,97 +535,6 @@
             this.tbcUnidad4.Text = "Unidad 4";
             this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnU2Calcular);
-            this.groupBox1.Controls.Add(this.cmbU2Metodo);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.btnU2Generar);
-            this.groupBox1.Controls.Add(this.nudU2Dimension);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 65);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Especificaciones";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 28);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Dimensión:";
-            // 
-            // nudU2Dimension
-            // 
-            this.nudU2Dimension.Location = new System.Drawing.Point(87, 26);
-            this.nudU2Dimension.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudU2Dimension.Name = "nudU2Dimension";
-            this.nudU2Dimension.Size = new System.Drawing.Size(120, 22);
-            this.nudU2Dimension.TabIndex = 1;
-            this.nudU2Dimension.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // btnU2Generar
-            // 
-            this.btnU2Generar.Location = new System.Drawing.Point(213, 26);
-            this.btnU2Generar.Name = "btnU2Generar";
-            this.btnU2Generar.Size = new System.Drawing.Size(75, 23);
-            this.btnU2Generar.TabIndex = 2;
-            this.btnU2Generar.Text = "Generar";
-            this.btnU2Generar.UseVisualStyleBackColor = true;
-            this.btnU2Generar.Click += new System.EventHandler(this.btnU2Generar_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(400, 28);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 16);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Método:";
-            // 
-            // cmbU2Metodo
-            // 
-            this.cmbU2Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbU2Metodo.FormattingEnabled = true;
-            this.cmbU2Metodo.Items.AddRange(new object[] {
-            "Gauss-Jordan",
-            "Gauss-Seidel"});
-            this.cmbU2Metodo.Location = new System.Drawing.Point(462, 24);
-            this.cmbU2Metodo.MaxDropDownItems = 2;
-            this.cmbU2Metodo.Name = "cmbU2Metodo";
-            this.cmbU2Metodo.Size = new System.Drawing.Size(210, 24);
-            this.cmbU2Metodo.TabIndex = 4;
-            // 
-            // btnU2Calcular
-            // 
-            this.btnU2Calcular.Location = new System.Drawing.Point(678, 24);
-            this.btnU2Calcular.Name = "btnU2Calcular";
-            this.btnU2Calcular.Size = new System.Drawing.Size(75, 23);
-            this.btnU2Calcular.TabIndex = 5;
-            this.btnU2Calcular.Text = "Calcular";
-            this.btnU2Calcular.UseVisualStyleBackColor = true;
-            // 
-            // pnlMatriz
-            // 
-            this.pnlMatriz.AutoScroll = true;
-            this.pnlMatriz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMatriz.Location = new System.Drawing.Point(8, 77);
-            this.pnlMatriz.Name = "pnlMatriz";
-            this.pnlMatriz.Size = new System.Drawing.Size(773, 484);
-            this.pnlMatriz.TabIndex = 1;
-            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,7 +542,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(797, 598);
             this.Controls.Add(this.tbcUnidades);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Formulario";
             this.Text = "Análisis Numérico - Bonafede, Marengo";
