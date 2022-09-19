@@ -78,13 +78,16 @@ namespace Unidad_2
                     salida.Resultado.CopyTo(vectorAnterior, 0);
                 for (int row = 0; row < datos.Dimension; row++)
                 {
+                    resultado = datos.Matriz[row, datos.Dimension];
+                    double coefIncog = datos.Matriz[row, row];
                     for (int col = 0; col < datos.Dimension; col++)
                     {
                         if (row!=col)                        
-                            resultado = datos.Matriz[row, datos.Dimension] - (datos.Matriz[row,col]*salida.Resultado[col]);                        
+                            resultado = resultado - (datos.Matriz[row,col]*salida.Resultado[col]);                        
                     }
-                    //double coefIncognit = resultado / coefIncognit;
-                    salida.Resultado[row] = resultado / (salida.Resultado[row] * resultado);
+                    coefIncog = resultado / coefIncog; //Ver si en ese punto coefIncog puede llegar a ser 0
+                    salida.Resultado[row] = coefIncog;
+
                 }
                 int contarMismoResultado = 0;
                 for (int i = 0; i < datos.Dimension; i++)
