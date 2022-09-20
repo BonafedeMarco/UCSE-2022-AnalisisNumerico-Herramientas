@@ -10,6 +10,5 @@ namespace Entidades
     {
         public int Dimension { get; set; }
         public double[,] Matriz { get; set; }
-        public bool Metodo { get; set; }
     }
 }

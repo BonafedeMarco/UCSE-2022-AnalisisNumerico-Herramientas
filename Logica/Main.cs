@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Calculus;
-
+using Entidades;
 using Unidad_2;
 
 namespace Logica
@@ -26,7 +25,7 @@ namespace Logica
         {
             return Unidad_1.MetodoAbierto(datos, true);
         }
-        
+
         public static Salida Secante(Entrada datos)
         {
             return Unidad_1.MetodoAbierto(datos, false);
@@ -35,6 +34,16 @@ namespace Logica
         #endregion
 
         #region Unidad 2
+
+        public static U2Salida GaussJordan(U2Entrada entrada)
+        {
+            return Unidad_2.Procedimientos.MetodoGaussJordan(entrada);
+        }
+
+        public static U2Salida GaussSeidel(U2Entrada entrada)
+        {
+            return Unidad_2.Procedimientos.MetodoGaussSeidel(entrada);
+        }
 
         #endregion
 

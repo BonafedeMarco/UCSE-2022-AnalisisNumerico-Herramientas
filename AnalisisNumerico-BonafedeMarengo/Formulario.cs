@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Logica;
+using Entidades;
 
 namespace AnalisisNumerico_BonafedeMarengo
 {
@@ -119,14 +120,55 @@ namespace AnalisisNumerico_BonafedeMarengo
             }
         }
 
-        private void btnU2Calcular_Click(object sender, EventArgs e)
+        private double[,] GuardarMatriz()
         {
-
+            double[,] matriz = new double[Convert.ToInt32(nudU2Dimension.Value), Convert.ToInt32(nudU2Dimension.Value) + 1];
+            for (int i = 0; i < nudU2Dimension.Value; i++)
+            {
+                for (int j = 0; j < nudU2Dimension.Value + 1; j++)
+                {
+                    Control textBox = pnlMatriz.Controls.Find($"{i}r{j}c", true).First();
+                    matriz[i, j] = double.Parse((textBox as TextBox).Text);
+                }
+            }
+            return matriz;
         }
 
-        private void MostrarResultadosU2()
+        private void btnU2Calcular_Click(object sender, EventArgs e)
         {
+            U2Entrada entrada = new U2Entrada();
+            entrada.Matriz = GuardarMatriz();
+            entrada.Dimension = Convert.ToInt32(nudU2Dimension.Value);
 
+            switch (cmbU2Metodo.SelectedIndex)
+            {
+                case 0:
+                    MostrarResultadosU2(Main.GaussJordan(entrada));
+                    break;
+                case 1:
+                    MostrarResultadosU2(Main.GaussSeidel(entrada));
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void MostrarResultadosU2(U2Salida salida)
+        {
+            if (!salida._Error)
+            {
+                string resultado = "";
+                for (int i = 0; i < salida.Resultado.Length; i++)
+                {
+                    resultado += $"X{i+1} = {salida.Resultado[i]}\n";
+                }
+
+                MessageBox.Show(resultado, $"Resultados - {salida._Metodo} - Iteraciones: {salida.Iteraciones}", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(salida._MsjError, $"Error - {salida._Metodo} - Iteraciones: {salida.Iteraciones}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
