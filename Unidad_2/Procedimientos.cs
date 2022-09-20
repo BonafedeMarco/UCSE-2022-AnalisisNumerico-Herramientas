@@ -49,18 +49,20 @@ namespace Unidad_2
                             if (row != x)
                             {
                                 for (int col = 0; col < datos.Dimension + 1; col++)
-                                {
-                                    datos.Matriz[row, col] = datos.Matriz[row, col] - (datos.Matriz[row, col] * datos.Matriz[x, y]);
+                                {                                    
+                                    datos.Matriz[row, col] = datos.Matriz[row, col] - (datos.Matriz[row, col] * datos.Matriz[x, col]);
                                 }
                             }
                         }
                     }
                 }
             }
+            double[] vectorResultado = new double[datos.Dimension];
             for (int i = 0; i < datos.Dimension; i++) //En algunos pongo dimensión+1 y en otros no porque solamente hay una columna extra (los valores b resultados)
             {
-                salida.Resultado[i] = datos.Matriz[i, datos.Dimension + 1];
+                vectorResultado[i] = datos.Matriz[i, datos.Dimension];
             }
+            salida.Resultado=vectorResultado;
             return salida;
         }
         public static U2Salida MetodoGaussSeidel(U2Entrada datos)//Transcribo lo que mandó el profe (as good as I can)
@@ -68,15 +70,17 @@ namespace Unidad_2
             double tolerancia = 0.0001;
             bool menorTolerancia = false;
             int contador = 0;
+            double[] vectorResultado = new double[datos.Dimension];
+
             double[] vectorAnterior = new double[datos.Dimension];
             double resultado = 0;
             U2Salida salida = new U2Salida();
-            salida.Resultado.Initialize(); //Rellena el vector con 0s
-            while (contador<=100||!menorTolerancia)
+            vectorResultado.Initialize(); //Rellena el vector con 0s
+            while (contador<=100&&!menorTolerancia)
             {
                 contador++;
-                if (contador>1)                
-                    salida.Resultado.CopyTo(vectorAnterior, 0);
+                if (contador>1)
+                    vectorResultado.CopyTo(vectorAnterior, 0);
                 for (int row = 0; row < datos.Dimension; row++)
                 {
                     resultado = datos.Matriz[row, datos.Dimension];
@@ -84,16 +88,16 @@ namespace Unidad_2
                     for (int col = 0; col < datos.Dimension; col++)
                     {
                         if (row!=col)                        
-                            resultado = resultado - (datos.Matriz[row,col]*salida.Resultado[col]);                        
+                            resultado = resultado - (datos.Matriz[row,col]* vectorResultado[col]);                        
                     }
                     coefIncog = resultado / coefIncog; //Ver si en ese punto coefIncog puede llegar a ser 0
-                    salida.Resultado[row] = coefIncog;
+                    vectorResultado[row] = coefIncog;
 
                 }
                 int contarMismoResultado = 0;
                 for (int i = 0; i < datos.Dimension; i++)
                 {
-                    if (Math.Abs(salida.Resultado[i]-vectorAnterior[i])<tolerancia)
+                    if (Math.Abs(vectorResultado[i]-vectorAnterior[i])<tolerancia)
                     {
                         contarMismoResultado++;
                     }
@@ -102,7 +106,7 @@ namespace Unidad_2
             }
             if (contador > 100)
                 salida.AgregarMsjError("Se superó el número máximo de iteraciones antes de llegar a un resultado tolerable");
-            
+            salida.Resultado = vectorResultado;
             return salida;
             /*
              EJERCICIO 4: sistema de ecuaciones.
