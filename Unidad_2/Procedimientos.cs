@@ -104,6 +104,20 @@ namespace Unidad_2
                 salida.AgregarMsjError("Se superó el número máximo de iteraciones antes de llegar a un resultado tolerable");
             
             return salida;
+            /*
+             EJERCICIO 4: sistema de ecuaciones.
+
+            Varon -> x      Mujer -> y      Prof -> z       Cocin -> t   
+
+                x   +   y   +   z   +   t   =   96
+
+                1/4x + 1/3y + 1/2z + 1/2t   =   31
+
+                1/8x + 1/8y -   z   +   0   =   0
+
+                1/15x + 1/15y + 1/15z - t   =   0 
+                
+             */
         }
     }
 }
