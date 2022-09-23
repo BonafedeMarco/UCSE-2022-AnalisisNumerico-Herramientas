@@ -105,6 +105,21 @@ namespace AnalisisNumerico_BonafedeMarengo
 
             for (int col = 0; col < dimension+1; col++)
             {
+                if (col == dimension)
+                {
+                    for (int i = 0; i < dimension; i++)
+                    {
+                        Label lbl = new Label();
+                        lbl.Location = new Point(puntoX, puntoY);
+                        lbl.Size = new Size(espacioX, sizeY);
+                        lbl.Text = "=";
+                        pnlMatriz.Controls.Add(lbl);
+                        pnlMatriz.Show();
+                        puntoY += lbl.Size.Height + espacioY;
+                    }
+                    puntoY = 10;
+                    puntoX += espacioX*2;
+                }
                 for (int row = 0; row < dimension; row++)
                 {
                     TextBox txt = new TextBox();
