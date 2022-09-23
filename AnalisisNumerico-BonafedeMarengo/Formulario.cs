@@ -140,6 +140,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             entrada.Matriz = GuardarMatriz();
             entrada.Dimension = Convert.ToInt32(nudU2Dimension.Value);
             entrada.Tolerancia = Convert.ToDouble(txtU2Tolerancia.Text);
+            entrada.MaxIter = (int)nudU2MaxIter.Value;
 
             switch (cmbU2Metodo.SelectedIndex)
             {
@@ -185,10 +186,5 @@ namespace AnalisisNumerico_BonafedeMarengo
         #region Validaciones
 
         #endregion
-
-        private void txtU2Tolerancia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

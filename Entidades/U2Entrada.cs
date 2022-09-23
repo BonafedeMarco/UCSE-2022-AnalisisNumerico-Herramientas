@@ -11,5 +11,6 @@ namespace Entidades
         public int Dimension { get; set; }
         public double[,] Matriz { get; set; }
         public double Tolerancia { get; set; }
+        public int MaxIter { get; set; }
     }
 }

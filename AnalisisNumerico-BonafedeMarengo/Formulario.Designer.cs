@@ -72,6 +72,8 @@
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.txtU2Tolerancia = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.nudU2MaxIter = new System.Windows.Forms.NumericUpDown();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -80,6 +82,7 @@
             this.tbcUnidad2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -404,14 +407,16 @@
             // 
             this.pnlMatriz.AutoScroll = true;
             this.pnlMatriz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMatriz.Location = new System.Drawing.Point(6, 63);
+            this.pnlMatriz.Location = new System.Drawing.Point(6, 98);
             this.pnlMatriz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlMatriz.Name = "pnlMatriz";
-            this.pnlMatriz.Size = new System.Drawing.Size(580, 394);
+            this.pnlMatriz.Size = new System.Drawing.Size(580, 359);
             this.pnlMatriz.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudU2MaxIter);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.txtU2Tolerancia);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.btnU2Calcular);
@@ -424,14 +429,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(580, 53);
+            this.groupBox1.Size = new System.Drawing.Size(580, 89);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Especificaciones";
             // 
             // btnU2Calcular
             // 
-            this.btnU2Calcular.Location = new System.Drawing.Point(508, 20);
+            this.btnU2Calcular.Location = new System.Drawing.Point(508, 52);
             this.btnU2Calcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnU2Calcular.Name = "btnU2Calcular";
             this.btnU2Calcular.Size = new System.Drawing.Size(56, 19);
@@ -447,17 +452,17 @@
             this.cmbU2Metodo.Items.AddRange(new object[] {
             "Gauss-Jordan",
             "Gauss-Seidel"});
-            this.cmbU2Metodo.Location = new System.Drawing.Point(379, 20);
+            this.cmbU2Metodo.Location = new System.Drawing.Point(335, 52);
             this.cmbU2Metodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbU2Metodo.MaxDropDownItems = 2;
             this.cmbU2Metodo.Name = "cmbU2Metodo";
-            this.cmbU2Metodo.Size = new System.Drawing.Size(125, 21);
+            this.cmbU2Metodo.Size = new System.Drawing.Size(169, 21);
             this.cmbU2Metodo.TabIndex = 4;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(329, 24);
+            this.label14.Location = new System.Drawing.Point(285, 56);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(46, 13);
@@ -466,7 +471,7 @@
             // 
             // btnU2Generar
             // 
-            this.btnU2Generar.Location = new System.Drawing.Point(117, 21);
+            this.btnU2Generar.Location = new System.Drawing.Point(146, 53);
             this.btnU2Generar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnU2Generar.Name = "btnU2Generar";
             this.btnU2Generar.Size = new System.Drawing.Size(56, 19);
@@ -477,7 +482,7 @@
             // 
             // nudU2Dimension
             // 
-            this.nudU2Dimension.Location = new System.Drawing.Point(65, 21);
+            this.nudU2Dimension.Location = new System.Drawing.Point(65, 53);
             this.nudU2Dimension.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudU2Dimension.Minimum = new decimal(new int[] {
             2,
@@ -485,7 +490,7 @@
             0,
             0});
             this.nudU2Dimension.Name = "nudU2Dimension";
-            this.nudU2Dimension.Size = new System.Drawing.Size(48, 20);
+            this.nudU2Dimension.Size = new System.Drawing.Size(76, 20);
             this.nudU2Dimension.TabIndex = 1;
             this.nudU2Dimension.Value = new decimal(new int[] {
             2,
@@ -496,7 +501,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(5, 23);
+            this.label13.Location = new System.Drawing.Point(5, 55);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 13);
@@ -528,7 +533,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(183, 24);
+            this.label15.Location = new System.Drawing.Point(285, 23);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(60, 13);
@@ -537,12 +542,41 @@
             // 
             // txtU2Tolerancia
             // 
-            this.txtU2Tolerancia.Location = new System.Drawing.Point(244, 21);
+            this.txtU2Tolerancia.Enabled = false;
+            this.txtU2Tolerancia.Location = new System.Drawing.Point(345, 19);
             this.txtU2Tolerancia.Name = "txtU2Tolerancia";
-            this.txtU2Tolerancia.Size = new System.Drawing.Size(75, 20);
+            this.txtU2Tolerancia.Size = new System.Drawing.Size(49, 20);
             this.txtU2Tolerancia.TabIndex = 7;
             this.txtU2Tolerancia.Text = "0,0001";
-            this.txtU2Tolerancia.TextChanged += new System.EventHandler(this.txtU2Tolerancia_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(399, 23);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(105, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Iteraciones máximas:";
+            // 
+            // nudU2MaxIter
+            // 
+            this.nudU2MaxIter.Enabled = false;
+            this.nudU2MaxIter.Location = new System.Drawing.Point(508, 19);
+            this.nudU2MaxIter.Margin = new System.Windows.Forms.Padding(2);
+            this.nudU2MaxIter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudU2MaxIter.Name = "nudU2MaxIter";
+            this.nudU2MaxIter.Size = new System.Drawing.Size(56, 20);
+            this.nudU2MaxIter.TabIndex = 9;
+            this.nudU2MaxIter.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // Formulario
             // 
@@ -566,6 +600,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -616,6 +651,8 @@
         private System.Windows.Forms.Panel pnlMatriz;
         private System.Windows.Forms.TextBox txtU2Tolerancia;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown nudU2MaxIter;
+        private System.Windows.Forms.Label label16;
     }
 }
 

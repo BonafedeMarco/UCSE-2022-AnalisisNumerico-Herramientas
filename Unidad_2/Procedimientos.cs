@@ -73,6 +73,7 @@ namespace Unidad_2
             double tolerancia = datos.Tolerancia;
             bool menorTolerancia = false;
             int contador = 0;
+            int maxIteraciones = datos.MaxIter;
             double[] vectorResultado = new double[datos.Dimension];
 
             double[] vectorAnterior = new double[datos.Dimension];
@@ -81,7 +82,7 @@ namespace Unidad_2
             salida._Metodo = "Gauss-Seidel";
 
             vectorResultado.Initialize(); //Rellena el vector con 0s
-            while (contador<=100&&!menorTolerancia)
+            while (contador <= maxIteraciones && !menorTolerancia)
             {
                 contador++;
                 if (contador>1)
@@ -109,7 +110,7 @@ namespace Unidad_2
                 }
                 menorTolerancia = contarMismoResultado == datos.Dimension;
             }
-            if (contador > 100)
+            if (contador > maxIteraciones)
                 salida.AgregarMsjError("Se superó el número máximo de iteraciones antes de llegar a un resultado tolerable");
             salida.Resultado = vectorResultado;
             return salida;
