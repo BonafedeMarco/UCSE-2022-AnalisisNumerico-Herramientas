@@ -70,7 +70,7 @@ namespace Unidad_2
         }
         public static U2Salida MetodoGaussSeidel(U2Entrada datos)//Transcribo lo que mandó el profe (as good as I can)
         {
-            double tolerancia = 0.0001;
+            double tolerancia = datos.Tolerancia;
             bool menorTolerancia = false;
             int contador = 0;
             double[] vectorResultado = new double[datos.Dimension];
