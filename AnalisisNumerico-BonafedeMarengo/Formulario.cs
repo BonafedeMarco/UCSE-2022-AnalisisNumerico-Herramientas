@@ -163,7 +163,7 @@ namespace AnalisisNumerico_BonafedeMarengo
                     resultado += $"X{i+1} = {salida.Resultado[i]}\n";
                 }
 
-                MessageBox.Show(resultado, $"Resultados - {salida._Metodo} - Iteraciones: {salida.Iteraciones}", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(resultado, $"Resultados - {salida._Metodo}{(salida._Metodo == "Gauss-Seidel" ? $"-Iteraciones: {salida.Iteraciones}" : "")}", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

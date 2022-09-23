@@ -33,6 +33,7 @@ namespace Unidad_2
         public static U2Salida MetodoGaussJordan(U2Entrada datos)
         {
             U2Salida salida = new U2Salida();
+            salida._Metodo = "Gauss-Jordan";
 
             for (int x = 0; x < datos.Dimension; x++)
             {
@@ -40,17 +41,19 @@ namespace Unidad_2
                 {
                     if (x == y)
                     {
+                        double coeficienteDiagonal = datos.Matriz[x, y];
                         for (int col = 0; col < datos.Dimension + 1; col++) //Divido todos los coeficientes de la ecuación por el coeficiente de la DP
                         {
-                            datos.Matriz[x, col] = datos.Matriz[x, col] / datos.Matriz[x, y];
+                            datos.Matriz[x, col] = datos.Matriz[x, col] / coeficienteDiagonal;
                         }
                         for (int row = 0; row < datos.Dimension; row++)//Fuera de ese renglón tengo que hacer 0 todos los coeficientes de arriba y abajo
                         {                                                //Tmb modificando los demás coeficientes de renglones ajenos.
                             if (row != x)
                             {
+                                double coeficienteCero = datos.Matriz[row,y];
                                 for (int col = 0; col < datos.Dimension + 1; col++)
                                 {                                    
-                                    datos.Matriz[row, col] = datos.Matriz[row, col] - (datos.Matriz[row, col] * datos.Matriz[x, col]);
+                                    datos.Matriz[row, col] = datos.Matriz[row, col] - (coeficienteCero * datos.Matriz[x, col]);
                                 }
                             }
                         }
@@ -60,7 +63,7 @@ namespace Unidad_2
             double[] vectorResultado = new double[datos.Dimension];
             for (int i = 0; i < datos.Dimension; i++) //En algunos pongo dimensión+1 y en otros no porque solamente hay una columna extra (los valores b resultados)
             {
-                vectorResultado[i] = datos.Matriz[i, datos.Dimension];
+                vectorResultado[i] = Math.Round(datos.Matriz[i, datos.Dimension], 4);
             }
             salida.Resultado=vectorResultado;
             return salida;
@@ -75,6 +78,8 @@ namespace Unidad_2
             double[] vectorAnterior = new double[datos.Dimension];
             double resultado = 0;
             U2Salida salida = new U2Salida();
+            salida._Metodo = "Gauss-Seidel";
+
             vectorResultado.Initialize(); //Rellena el vector con 0s
             while (contador<=100&&!menorTolerancia)
             {
