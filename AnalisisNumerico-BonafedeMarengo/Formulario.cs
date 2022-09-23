@@ -141,6 +141,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             entrada.Dimension = Convert.ToInt32(nudU2Dimension.Value);
             entrada.Tolerancia = Convert.ToDouble(txtU2Tolerancia.Text);
             entrada.MaxIter = (int)nudU2MaxIter.Value;
+            entrada.Decimales = (int)nudU2Decimales.Value;
 
             switch (cmbU2Metodo.SelectedIndex)
             {
@@ -165,11 +166,26 @@ namespace AnalisisNumerico_BonafedeMarengo
                     resultado += $"X{i+1} = {salida.Resultado[i]}\n";
                 }
 
-                MessageBox.Show(resultado, $"Resultados - {salida._Metodo}{(salida._Metodo == "Gauss-Seidel" ? $"-Iteraciones: {salida.Iteraciones}" : "")}", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(resultado, $"Resultados - {salida._Metodo}{(salida._Metodo == "Gauss-Seidel" ? $" - Iteraciones: {salida.Iteraciones}" : "")}", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show(salida._MsjError, $"Error - {salida._Metodo} - Iteraciones: {salida.Iteraciones}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbU2Metodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbU2Metodo.SelectedIndex == 0)
+            {
+                txtU2Tolerancia.Enabled = false;
+                nudU2MaxIter.Enabled = false;
+            }
+
+            if (cmbU2Metodo.SelectedIndex == 1)
+            {
+                txtU2Tolerancia.Enabled = true;
+                nudU2MaxIter.Enabled = true;
             }
         }
 

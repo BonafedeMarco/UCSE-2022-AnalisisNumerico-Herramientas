@@ -12,5 +12,6 @@ namespace Entidades
         public double[,] Matriz { get; set; }
         public double Tolerancia { get; set; }
         public int MaxIter { get; set; }
+        public int Decimales { get; set; }
     }
 }

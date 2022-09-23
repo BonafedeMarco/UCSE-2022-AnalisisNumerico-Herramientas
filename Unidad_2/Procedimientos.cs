@@ -63,7 +63,7 @@ namespace Unidad_2
             double[] vectorResultado = new double[datos.Dimension];
             for (int i = 0; i < datos.Dimension; i++) //En algunos pongo dimensión+1 y en otros no porque solamente hay una columna extra (los valores b resultados)
             {
-                vectorResultado[i] = Math.Round(datos.Matriz[i, datos.Dimension], 4);
+                vectorResultado[i] = Math.Round(datos.Matriz[i, datos.Dimension], datos.Decimales);
             }
             salida.Resultado=vectorResultado;
             return salida;
@@ -97,7 +97,7 @@ namespace Unidad_2
                             resultado = resultado - (datos.Matriz[row,col]* vectorResultado[col]);                        
                     }
                     coefIncog = resultado / coefIncog; //Ver si en ese punto coefIncog puede llegar a ser 0
-                    vectorResultado[row] = coefIncog;
+                    vectorResultado[row] = Math.Round(coefIncog, datos.Decimales);
 
                 }
                 int contarMismoResultado = 0;
@@ -113,6 +113,7 @@ namespace Unidad_2
             if (contador > maxIteraciones)
                 salida.AgregarMsjError("Se superó el número máximo de iteraciones antes de llegar a un resultado tolerable");
             salida.Resultado = vectorResultado;
+            salida.Iteraciones = contador;
             return salida;
             /*
              EJERCICIO 4: sistema de ecuaciones.
