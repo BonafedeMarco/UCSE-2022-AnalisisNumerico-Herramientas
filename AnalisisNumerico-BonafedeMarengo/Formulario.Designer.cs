@@ -541,6 +541,7 @@
             this.txtU2Tolerancia.Name = "txtU2Tolerancia";
             this.txtU2Tolerancia.Size = new System.Drawing.Size(75, 20);
             this.txtU2Tolerancia.TabIndex = 7;
+            this.txtU2Tolerancia.Text = "0,0001";
             this.txtU2Tolerancia.TextChanged += new System.EventHandler(this.txtU2Tolerancia_TextChanged);
             // 
             // Formulario
