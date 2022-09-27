@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Logica;
 using Entidades;
+using Analisis_Numerico;
 
 namespace AnalisisNumerico_BonafedeMarengo
 {
@@ -19,11 +20,22 @@ namespace AnalisisNumerico_BonafedeMarengo
         {
             InitializeComponent();
             cmbU2Metodo.SelectedIndex = 0;
+            cmbU3Metodo.SelectedIndex = 0;
         }
 
         #region Tabcontrol
-        
 
+        private void tbcUnidades_TabIndexChanged(object sender, EventArgs e)
+        {
+            if (tbcUnidades.SelectedTab == tbcUnidad3)
+            {
+                this.Size = new Size(815, 645); // Editar en base a lo que ocupe el graficador
+            }
+            else
+            {
+                this.Size = new Size(815, 645);
+            }
+        }
 
         #endregion
 
