@@ -61,7 +61,9 @@
             this.tbcUnidad1 = new System.Windows.Forms.TabPage();
             this.tbcUnidad2 = new System.Windows.Forms.TabPage();
             this.pnlMatriz = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxU2Specs = new System.Windows.Forms.GroupBox();
+            this.nudU2Decimales = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.nudU2MaxIter = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.txtU2Tolerancia = new System.Windows.Forms.TextBox();
@@ -74,18 +76,37 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tbcUnidad3 = new System.Windows.Forms.TabPage();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.nudU2Decimales = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtU3X = new System.Windows.Forms.TextBox();
+            this.gbxU3Inputs = new System.Windows.Forms.GroupBox();
+            this.txtU3Y = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnU3AgregarPunto = new System.Windows.Forms.Button();
+            this.txtU3Tolerancia = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cmbU3Metodo = new System.Windows.Forms.ComboBox();
+            this.btnU3Calcular = new System.Windows.Forms.Button();
+            this.gbxU3Outputs = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtU3Funcion = new System.Windows.Forms.TextBox();
+            this.txtU3EfectividadPorcentaje = new System.Windows.Forms.TextBox();
+            this.txtU3EfectividadAjuste = new System.Windows.Forms.TextBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
             this.tbcUnidades.SuspendLayout();
             this.tbcUnidad1.SuspendLayout();
             this.tbcUnidad2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxU2Specs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2Decimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudU2Decimales)).BeginInit();
+            this.tbcUnidad3.SuspendLayout();
+            this.gbxU3Inputs.SuspendLayout();
+            this.gbxU3Outputs.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -101,9 +122,9 @@
             this.gbxU1Entradas.Controls.Add(this.label2);
             this.gbxU1Entradas.Controls.Add(this.label1);
             this.gbxU1Entradas.Location = new System.Drawing.Point(7, 7);
-            this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Name = "gbxU1Entradas";
-            this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Size = new System.Drawing.Size(567, 271);
             this.gbxU1Entradas.TabIndex = 0;
             this.gbxU1Entradas.TabStop = false;
@@ -112,7 +133,7 @@
             // txtU1MaxIteraciones
             // 
             this.txtU1MaxIteraciones.Location = new System.Drawing.Point(411, 210);
-            this.txtU1MaxIteraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1MaxIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1MaxIteraciones.Name = "txtU1MaxIteraciones";
             this.txtU1MaxIteraciones.Size = new System.Drawing.Size(132, 22);
             this.txtU1MaxIteraciones.TabIndex = 9;
@@ -120,7 +141,7 @@
             // txtU1Tolerancia
             // 
             this.txtU1Tolerancia.Location = new System.Drawing.Point(411, 132);
-            this.txtU1Tolerancia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Tolerancia.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Tolerancia.Name = "txtU1Tolerancia";
             this.txtU1Tolerancia.Size = new System.Drawing.Size(132, 22);
             this.txtU1Tolerancia.TabIndex = 8;
@@ -128,7 +149,7 @@
             // txtU1XDerecha
             // 
             this.txtU1XDerecha.Location = new System.Drawing.Point(64, 210);
-            this.txtU1XDerecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1XDerecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XDerecha.Name = "txtU1XDerecha";
             this.txtU1XDerecha.Size = new System.Drawing.Size(172, 22);
             this.txtU1XDerecha.TabIndex = 7;
@@ -136,7 +157,7 @@
             // txtU1XIzquierda
             // 
             this.txtU1XIzquierda.Location = new System.Drawing.Point(64, 132);
-            this.txtU1XIzquierda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1XIzquierda.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XIzquierda.Name = "txtU1XIzquierda";
             this.txtU1XIzquierda.Size = new System.Drawing.Size(172, 22);
             this.txtU1XIzquierda.TabIndex = 6;
@@ -144,7 +165,7 @@
             // txtU1Funcion
             // 
             this.txtU1Funcion.Location = new System.Drawing.Point(64, 53);
-            this.txtU1Funcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Funcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Funcion.Name = "txtU1Funcion";
             this.txtU1Funcion.Size = new System.Drawing.Size(479, 22);
             this.txtU1Funcion.TabIndex = 5;
@@ -212,9 +233,9 @@
             this.gbxU1Salidas.Controls.Add(this.label7);
             this.gbxU1Salidas.Controls.Add(this.label6);
             this.gbxU1Salidas.Location = new System.Drawing.Point(7, 286);
-            this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Name = "gbxU1Salidas";
-            this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Size = new System.Drawing.Size(567, 277);
             this.gbxU1Salidas.TabIndex = 1;
             this.gbxU1Salidas.TabStop = false;
@@ -224,7 +245,7 @@
             // 
             this.txtU1Metodo.Enabled = false;
             this.txtU1Metodo.Location = new System.Drawing.Point(104, 71);
-            this.txtU1Metodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Metodo.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Metodo.Name = "txtU1Metodo";
             this.txtU1Metodo.Size = new System.Drawing.Size(132, 22);
             this.txtU1Metodo.TabIndex = 9;
@@ -243,7 +264,7 @@
             // 
             this.txtU1CantIteraciones.Enabled = false;
             this.txtU1CantIteraciones.Location = new System.Drawing.Point(104, 130);
-            this.txtU1CantIteraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1CantIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1CantIteraciones.Name = "txtU1CantIteraciones";
             this.txtU1CantIteraciones.Size = new System.Drawing.Size(132, 22);
             this.txtU1CantIteraciones.TabIndex = 7;
@@ -252,7 +273,7 @@
             // 
             this.txtU1Raiz.Enabled = false;
             this.txtU1Raiz.Location = new System.Drawing.Point(384, 130);
-            this.txtU1Raiz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Raiz.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Raiz.Name = "txtU1Raiz";
             this.txtU1Raiz.Size = new System.Drawing.Size(159, 22);
             this.txtU1Raiz.TabIndex = 6;
@@ -261,7 +282,7 @@
             // 
             this.txtU1ErrorRelativo.Enabled = false;
             this.txtU1ErrorRelativo.Location = new System.Drawing.Point(104, 190);
-            this.txtU1ErrorRelativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1ErrorRelativo.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1ErrorRelativo.Name = "txtU1ErrorRelativo";
             this.txtU1ErrorRelativo.Size = new System.Drawing.Size(439, 22);
             this.txtU1ErrorRelativo.TabIndex = 5;
@@ -270,7 +291,7 @@
             // 
             this.txtU1Converge.Enabled = false;
             this.txtU1Converge.Location = new System.Drawing.Point(384, 69);
-            this.txtU1Converge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Converge.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Converge.Name = "txtU1Converge";
             this.txtU1Converge.Size = new System.Drawing.Size(159, 22);
             this.txtU1Converge.TabIndex = 4;
@@ -324,9 +345,9 @@
             this.gbxU1Metodos.Controls.Add(this.btnU1ReglaFalsa);
             this.gbxU1Metodos.Controls.Add(this.btnU1Biseccion);
             this.gbxU1Metodos.Location = new System.Drawing.Point(581, 7);
-            this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Name = "gbxU1Metodos";
-            this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Size = new System.Drawing.Size(196, 555);
             this.gbxU1Metodos.TabIndex = 2;
             this.gbxU1Metodos.TabStop = false;
@@ -353,7 +374,7 @@
             // btnU1Secante
             // 
             this.btnU1Secante.Location = new System.Drawing.Point(51, 409);
-            this.btnU1Secante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Secante.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Secante.Name = "btnU1Secante";
             this.btnU1Secante.Size = new System.Drawing.Size(100, 94);
             this.btnU1Secante.TabIndex = 3;
@@ -364,7 +385,7 @@
             // btnU1Tangente
             // 
             this.btnU1Tangente.Location = new System.Drawing.Point(51, 315);
-            this.btnU1Tangente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Tangente.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Tangente.Name = "btnU1Tangente";
             this.btnU1Tangente.Size = new System.Drawing.Size(100, 94);
             this.btnU1Tangente.TabIndex = 2;
@@ -375,7 +396,7 @@
             // btnU1ReglaFalsa
             // 
             this.btnU1ReglaFalsa.Location = new System.Drawing.Point(51, 174);
-            this.btnU1ReglaFalsa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1ReglaFalsa.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1ReglaFalsa.Name = "btnU1ReglaFalsa";
             this.btnU1ReglaFalsa.Size = new System.Drawing.Size(100, 94);
             this.btnU1ReglaFalsa.TabIndex = 1;
@@ -386,7 +407,7 @@
             // btnU1Biseccion
             // 
             this.btnU1Biseccion.Location = new System.Drawing.Point(51, 80);
-            this.btnU1Biseccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Biseccion.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Biseccion.Name = "btnU1Biseccion";
             this.btnU1Biseccion.Size = new System.Drawing.Size(100, 94);
             this.btnU1Biseccion.TabIndex = 0;
@@ -406,6 +427,7 @@
             this.tbcUnidades.SelectedIndex = 0;
             this.tbcUnidades.Size = new System.Drawing.Size(800, 598);
             this.tbcUnidades.TabIndex = 4;
+            this.tbcUnidades.TabIndexChanged += new System.EventHandler(this.tbcUnidades_TabIndexChanged);
             // 
             // tbcUnidad1
             // 
@@ -424,7 +446,7 @@
             // tbcUnidad2
             // 
             this.tbcUnidad2.Controls.Add(this.pnlMatriz);
-            this.tbcUnidad2.Controls.Add(this.groupBox1);
+            this.tbcUnidad2.Controls.Add(this.gbxU2Specs);
             this.tbcUnidad2.Location = new System.Drawing.Point(4, 25);
             this.tbcUnidad2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbcUnidad2.Name = "tbcUnidad2";
@@ -444,28 +466,50 @@
             this.pnlMatriz.Size = new System.Drawing.Size(773, 441);
             this.pnlMatriz.TabIndex = 1;
             // 
-            // groupBox1
+            // gbxU2Specs
             // 
-            this.groupBox1.Controls.Add(this.nudU2Decimales);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.nudU2MaxIter);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.txtU2Tolerancia);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.btnU2Calcular);
-            this.groupBox1.Controls.Add(this.cmbU2Metodo);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.btnU2Generar);
-            this.groupBox1.Controls.Add(this.nudU2Dimension);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(773, 110);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Especificaciones";
+            this.gbxU2Specs.Controls.Add(this.nudU2Decimales);
+            this.gbxU2Specs.Controls.Add(this.label17);
+            this.gbxU2Specs.Controls.Add(this.nudU2MaxIter);
+            this.gbxU2Specs.Controls.Add(this.label16);
+            this.gbxU2Specs.Controls.Add(this.txtU2Tolerancia);
+            this.gbxU2Specs.Controls.Add(this.label15);
+            this.gbxU2Specs.Controls.Add(this.btnU2Calcular);
+            this.gbxU2Specs.Controls.Add(this.cmbU2Metodo);
+            this.gbxU2Specs.Controls.Add(this.label14);
+            this.gbxU2Specs.Controls.Add(this.btnU2Generar);
+            this.gbxU2Specs.Controls.Add(this.nudU2Dimension);
+            this.gbxU2Specs.Controls.Add(this.label13);
+            this.gbxU2Specs.Location = new System.Drawing.Point(8, 6);
+            this.gbxU2Specs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxU2Specs.Name = "gbxU2Specs";
+            this.gbxU2Specs.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxU2Specs.Size = new System.Drawing.Size(773, 110);
+            this.gbxU2Specs.TabIndex = 0;
+            this.gbxU2Specs.TabStop = false;
+            this.gbxU2Specs.Text = "Especificaciones";
+            // 
+            // nudU2Decimales
+            // 
+            this.nudU2Decimales.Location = new System.Drawing.Point(88, 24);
+            this.nudU2Decimales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudU2Decimales.Name = "nudU2Decimales";
+            this.nudU2Decimales.Size = new System.Drawing.Size(75, 22);
+            this.nudU2Decimales.TabIndex = 11;
+            this.nudU2Decimales.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 16);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Decimales:";
             // 
             // nudU2MaxIter
             // 
@@ -499,7 +543,7 @@
             // 
             this.txtU2Tolerancia.Enabled = false;
             this.txtU2Tolerancia.Location = new System.Drawing.Point(460, 23);
-            this.txtU2Tolerancia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU2Tolerancia.Margin = new System.Windows.Forms.Padding(4);
             this.txtU2Tolerancia.Name = "txtU2Tolerancia";
             this.txtU2Tolerancia.Size = new System.Drawing.Size(64, 22);
             this.txtU2Tolerancia.TabIndex = 7;
@@ -589,6 +633,8 @@
             // 
             // tbcUnidad3
             // 
+            this.tbcUnidad3.Controls.Add(this.gbxU3Outputs);
+            this.tbcUnidad3.Controls.Add(this.gbxU3Inputs);
             this.tbcUnidad3.Location = new System.Drawing.Point(4, 25);
             this.tbcUnidad3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbcUnidad3.Name = "tbcUnidad3";
@@ -609,27 +655,177 @@
             this.tbcUnidad4.Text = "Unidad 4";
             this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // label18
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 28);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 16);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Decimales:";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(18, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "X:";
             // 
-            // nudU2Decimales
+            // txtU3X
             // 
-            this.nudU2Decimales.Location = new System.Drawing.Point(88, 24);
-            this.nudU2Decimales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudU2Decimales.Name = "nudU2Decimales";
-            this.nudU2Decimales.Size = new System.Drawing.Size(75, 22);
-            this.nudU2Decimales.TabIndex = 11;
-            this.nudU2Decimales.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
+            this.txtU3X.Location = new System.Drawing.Point(30, 24);
+            this.txtU3X.Name = "txtU3X";
+            this.txtU3X.Size = new System.Drawing.Size(94, 22);
+            this.txtU3X.TabIndex = 1;
+            // 
+            // gbxU3Inputs
+            // 
+            this.gbxU3Inputs.Controls.Add(this.btnU3Calcular);
+            this.gbxU3Inputs.Controls.Add(this.cmbU3Metodo);
+            this.gbxU3Inputs.Controls.Add(this.label21);
+            this.gbxU3Inputs.Controls.Add(this.txtU3Tolerancia);
+            this.gbxU3Inputs.Controls.Add(this.label20);
+            this.gbxU3Inputs.Controls.Add(this.btnU3AgregarPunto);
+            this.gbxU3Inputs.Controls.Add(this.txtU3Y);
+            this.gbxU3Inputs.Controls.Add(this.label19);
+            this.gbxU3Inputs.Controls.Add(this.txtU3X);
+            this.gbxU3Inputs.Controls.Add(this.label18);
+            this.gbxU3Inputs.Location = new System.Drawing.Point(8, 5);
+            this.gbxU3Inputs.Name = "gbxU3Inputs";
+            this.gbxU3Inputs.Size = new System.Drawing.Size(603, 162);
+            this.gbxU3Inputs.TabIndex = 2;
+            this.gbxU3Inputs.TabStop = false;
+            this.gbxU3Inputs.Text = "Entradas";
+            // 
+            // txtU3Y
+            // 
+            this.txtU3Y.Location = new System.Drawing.Point(166, 24);
+            this.txtU3Y.Name = "txtU3Y";
+            this.txtU3Y.Size = new System.Drawing.Size(94, 22);
+            this.txtU3Y.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(142, 27);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(19, 16);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Y:";
+            // 
+            // btnU3AgregarPunto
+            // 
+            this.btnU3AgregarPunto.Location = new System.Drawing.Point(277, 19);
+            this.btnU3AgregarPunto.Name = "btnU3AgregarPunto";
+            this.btnU3AgregarPunto.Size = new System.Drawing.Size(75, 33);
+            this.btnU3AgregarPunto.TabIndex = 4;
+            this.btnU3AgregarPunto.Text = "Agregar";
+            this.btnU3AgregarPunto.UseVisualStyleBackColor = true;
+            // 
+            // txtU3Tolerancia
+            // 
+            this.txtU3Tolerancia.Location = new System.Drawing.Point(87, 66);
+            this.txtU3Tolerancia.Name = "txtU3Tolerancia";
+            this.txtU3Tolerancia.Size = new System.Drawing.Size(173, 22);
+            this.txtU3Tolerancia.TabIndex = 6;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 69);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(75, 16);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Tolerancia:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 117);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 16);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Método:";
+            // 
+            // cmbU3Metodo
+            // 
+            this.cmbU3Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbU3Metodo.FormattingEnabled = true;
+            this.cmbU3Metodo.Items.AddRange(new object[] {
+            "Regresión Lineal"});
+            this.cmbU3Metodo.Location = new System.Drawing.Point(68, 114);
+            this.cmbU3Metodo.MaxDropDownItems = 3;
+            this.cmbU3Metodo.Name = "cmbU3Metodo";
+            this.cmbU3Metodo.Size = new System.Drawing.Size(192, 24);
+            this.cmbU3Metodo.TabIndex = 8;
+            // 
+            // btnU3Calcular
+            // 
+            this.btnU3Calcular.Location = new System.Drawing.Point(277, 109);
+            this.btnU3Calcular.Name = "btnU3Calcular";
+            this.btnU3Calcular.Size = new System.Drawing.Size(75, 33);
+            this.btnU3Calcular.TabIndex = 9;
+            this.btnU3Calcular.Text = "Calcular";
+            this.btnU3Calcular.UseVisualStyleBackColor = true;
+            // 
+            // gbxU3Outputs
+            // 
+            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadAjuste);
+            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadPorcentaje);
+            this.gbxU3Outputs.Controls.Add(this.txtU3Funcion);
+            this.gbxU3Outputs.Controls.Add(this.label24);
+            this.gbxU3Outputs.Controls.Add(this.label23);
+            this.gbxU3Outputs.Controls.Add(this.label22);
+            this.gbxU3Outputs.Location = new System.Drawing.Point(8, 173);
+            this.gbxU3Outputs.Name = "gbxU3Outputs";
+            this.gbxU3Outputs.Size = new System.Drawing.Size(603, 120);
+            this.gbxU3Outputs.TabIndex = 3;
+            this.gbxU3Outputs.TabStop = false;
+            this.gbxU3Outputs.Text = "Salidas";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 28);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(57, 16);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Función:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 57);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(100, 16);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Efectividad (%):";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 87);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(135, 16);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "Efectividad de ajuste:";
+            // 
+            // txtU3Funcion
+            // 
+            this.txtU3Funcion.Enabled = false;
+            this.txtU3Funcion.Location = new System.Drawing.Point(67, 25);
+            this.txtU3Funcion.Name = "txtU3Funcion";
+            this.txtU3Funcion.Size = new System.Drawing.Size(193, 22);
+            this.txtU3Funcion.TabIndex = 10;
+            // 
+            // txtU3EfectividadPorcentaje
+            // 
+            this.txtU3EfectividadPorcentaje.Enabled = false;
+            this.txtU3EfectividadPorcentaje.Location = new System.Drawing.Point(112, 54);
+            this.txtU3EfectividadPorcentaje.Name = "txtU3EfectividadPorcentaje";
+            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(148, 22);
+            this.txtU3EfectividadPorcentaje.TabIndex = 13;
+            // 
+            // txtU3EfectividadAjuste
+            // 
+            this.txtU3EfectividadAjuste.Enabled = false;
+            this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(145, 84);
+            this.txtU3EfectividadAjuste.Name = "txtU3EfectividadAjuste";
+            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(115, 22);
+            this.txtU3EfectividadAjuste.TabIndex = 14;
             // 
             // Formulario
             // 
@@ -639,7 +835,7 @@
             this.ClientSize = new System.Drawing.Size(797, 598);
             this.Controls.Add(this.tbcUnidades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Formulario";
             this.Text = "Análisis Numérico - Bonafede, Marengo";
             this.gbxU1Entradas.ResumeLayout(false);
@@ -651,11 +847,16 @@
             this.tbcUnidades.ResumeLayout(false);
             this.tbcUnidad1.ResumeLayout(false);
             this.tbcUnidad2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxU2Specs.ResumeLayout(false);
+            this.gbxU2Specs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudU2Decimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudU2Decimales)).EndInit();
+            this.tbcUnidad3.ResumeLayout(false);
+            this.gbxU3Inputs.ResumeLayout(false);
+            this.gbxU3Inputs.PerformLayout();
+            this.gbxU3Outputs.ResumeLayout(false);
+            this.gbxU3Outputs.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -696,7 +897,7 @@
         private System.Windows.Forms.TabPage tbcUnidad2;
         private System.Windows.Forms.TabPage tbcUnidad3;
         private System.Windows.Forms.TabPage tbcUnidad4;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxU2Specs;
         private System.Windows.Forms.NumericUpDown nudU2Dimension;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbU2Metodo;
@@ -710,6 +911,24 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown nudU2Decimales;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox gbxU3Inputs;
+        private System.Windows.Forms.TextBox txtU3X;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnU3AgregarPunto;
+        private System.Windows.Forms.TextBox txtU3Y;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cmbU3Metodo;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtU3Tolerancia;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnU3Calcular;
+        private System.Windows.Forms.GroupBox gbxU3Outputs;
+        private System.Windows.Forms.TextBox txtU3EfectividadAjuste;
+        private System.Windows.Forms.TextBox txtU3EfectividadPorcentaje;
+        private System.Windows.Forms.TextBox txtU3Funcion;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
     }
 }
 

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1591AD35-2905-4C0B-88C9-6250F99FAE75}</ProjectGuid>
+    <ProjectGuid>{CF8975BB-9E88-45D8-88C0-65CA7C83D631}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logica</RootNamespace>
-    <AssemblyName>Logica</AssemblyName>
+    <RootNamespace>Unidad_3</RootNamespace>
+    <AssemblyName>Unidad_3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Calculus">
-      <HintPath>..\Calculus.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,25 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entrada.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="Procedimientos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Salida.cs" />
-    <Compile Include="Unidad_1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{59ab19e3-d830-46f8-bc6a-75ad8a7bbbb6}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Unidad_2\Unidad_2.csproj">
-      <Project>{8fc0815a-341a-4cb2-aadd-7d9f3eaada8a}</Project>
-      <Name>Unidad_2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Unidad_3\Unidad_3.csproj">
-      <Project>{cf8975bb-9e88-45d8-88c0-65ca7c83d631}</Project>
-      <Name>Unidad_3</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
