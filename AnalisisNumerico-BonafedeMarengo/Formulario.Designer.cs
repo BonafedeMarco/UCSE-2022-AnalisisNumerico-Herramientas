@@ -75,25 +75,32 @@
             this.nudU2Dimension = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.tbcUnidad3 = new System.Windows.Forms.TabPage();
-            this.tbcUnidad4 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtU3X = new System.Windows.Forms.TextBox();
+            this.gbxU3Outputs = new System.Windows.Forms.GroupBox();
+            this.txtU3EfectividadAjuste = new System.Windows.Forms.TextBox();
+            this.txtU3EfectividadPorcentaje = new System.Windows.Forms.TextBox();
+            this.txtU3Funcion = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.gbxU3Inputs = new System.Windows.Forms.GroupBox();
-            this.txtU3Y = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.btnU3AgregarPunto = new System.Windows.Forms.Button();
+            this.btnU3Calcular = new System.Windows.Forms.Button();
+            this.cmbU3Metodo = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.txtU3Tolerancia = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cmbU3Metodo = new System.Windows.Forms.ComboBox();
-            this.btnU3Calcular = new System.Windows.Forms.Button();
-            this.gbxU3Outputs = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtU3Funcion = new System.Windows.Forms.TextBox();
-            this.txtU3EfectividadPorcentaje = new System.Windows.Forms.TextBox();
-            this.txtU3EfectividadAjuste = new System.Windows.Forms.TextBox();
+            this.btnU3AgregarPunto = new System.Windows.Forms.Button();
+            this.txtU3Y = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtU3X = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbcUnidad4 = new System.Windows.Forms.TabPage();
+            this.gbxU3Puntos = new System.Windows.Forms.GroupBox();
+            this.lbxU3Puntos = new System.Windows.Forms.ListBox();
+            this.btnU3Ultimo = new System.Windows.Forms.Button();
+            this.btnU3Seleccionado = new System.Windows.Forms.Button();
+            this.btnU3Todos = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pnlGraficador = new System.Windows.Forms.Panel();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -105,8 +112,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).BeginInit();
             this.tbcUnidad3.SuspendLayout();
-            this.gbxU3Inputs.SuspendLayout();
             this.gbxU3Outputs.SuspendLayout();
+            this.gbxU3Inputs.SuspendLayout();
+            this.gbxU3Puntos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -633,6 +641,8 @@
             // 
             // tbcUnidad3
             // 
+            this.tbcUnidad3.Controls.Add(this.pnlGraficador);
+            this.tbcUnidad3.Controls.Add(this.gbxU3Puntos);
             this.tbcUnidad3.Controls.Add(this.gbxU3Outputs);
             this.tbcUnidad3.Controls.Add(this.gbxU3Inputs);
             this.tbcUnidad3.Location = new System.Drawing.Point(4, 25);
@@ -644,32 +654,71 @@
             this.tbcUnidad3.Text = "Unidad 3";
             this.tbcUnidad3.UseVisualStyleBackColor = true;
             // 
-            // tbcUnidad4
+            // gbxU3Outputs
             // 
-            this.tbcUnidad4.Location = new System.Drawing.Point(4, 25);
-            this.tbcUnidad4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbcUnidad4.Name = "tbcUnidad4";
-            this.tbcUnidad4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbcUnidad4.Size = new System.Drawing.Size(792, 569);
-            this.tbcUnidad4.TabIndex = 3;
-            this.tbcUnidad4.Text = "Unidad 4";
-            this.tbcUnidad4.UseVisualStyleBackColor = true;
+            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadAjuste);
+            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadPorcentaje);
+            this.gbxU3Outputs.Controls.Add(this.txtU3Funcion);
+            this.gbxU3Outputs.Controls.Add(this.label24);
+            this.gbxU3Outputs.Controls.Add(this.label23);
+            this.gbxU3Outputs.Controls.Add(this.label22);
+            this.gbxU3Outputs.Location = new System.Drawing.Point(8, 173);
+            this.gbxU3Outputs.Name = "gbxU3Outputs";
+            this.gbxU3Outputs.Size = new System.Drawing.Size(477, 120);
+            this.gbxU3Outputs.TabIndex = 3;
+            this.gbxU3Outputs.TabStop = false;
+            this.gbxU3Outputs.Text = "Salidas";
             // 
-            // label18
+            // txtU3EfectividadAjuste
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(18, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "X:";
+            this.txtU3EfectividadAjuste.Enabled = false;
+            this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(145, 84);
+            this.txtU3EfectividadAjuste.Name = "txtU3EfectividadAjuste";
+            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(115, 22);
+            this.txtU3EfectividadAjuste.TabIndex = 14;
             // 
-            // txtU3X
+            // txtU3EfectividadPorcentaje
             // 
-            this.txtU3X.Location = new System.Drawing.Point(30, 24);
-            this.txtU3X.Name = "txtU3X";
-            this.txtU3X.Size = new System.Drawing.Size(94, 22);
-            this.txtU3X.TabIndex = 1;
+            this.txtU3EfectividadPorcentaje.Enabled = false;
+            this.txtU3EfectividadPorcentaje.Location = new System.Drawing.Point(112, 54);
+            this.txtU3EfectividadPorcentaje.Name = "txtU3EfectividadPorcentaje";
+            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(148, 22);
+            this.txtU3EfectividadPorcentaje.TabIndex = 13;
+            // 
+            // txtU3Funcion
+            // 
+            this.txtU3Funcion.Enabled = false;
+            this.txtU3Funcion.Location = new System.Drawing.Point(67, 25);
+            this.txtU3Funcion.Name = "txtU3Funcion";
+            this.txtU3Funcion.Size = new System.Drawing.Size(193, 22);
+            this.txtU3Funcion.TabIndex = 10;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 87);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(135, 16);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "Efectividad de ajuste:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 57);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(100, 16);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Efectividad (%):";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 28);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(57, 16);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Función:";
             // 
             // gbxU3Inputs
             // 
@@ -685,10 +734,67 @@
             this.gbxU3Inputs.Controls.Add(this.label18);
             this.gbxU3Inputs.Location = new System.Drawing.Point(8, 5);
             this.gbxU3Inputs.Name = "gbxU3Inputs";
-            this.gbxU3Inputs.Size = new System.Drawing.Size(603, 162);
+            this.gbxU3Inputs.Size = new System.Drawing.Size(477, 162);
             this.gbxU3Inputs.TabIndex = 2;
             this.gbxU3Inputs.TabStop = false;
             this.gbxU3Inputs.Text = "Entradas";
+            // 
+            // btnU3Calcular
+            // 
+            this.btnU3Calcular.Location = new System.Drawing.Point(277, 109);
+            this.btnU3Calcular.Name = "btnU3Calcular";
+            this.btnU3Calcular.Size = new System.Drawing.Size(75, 33);
+            this.btnU3Calcular.TabIndex = 9;
+            this.btnU3Calcular.Text = "Calcular";
+            this.btnU3Calcular.UseVisualStyleBackColor = true;
+            // 
+            // cmbU3Metodo
+            // 
+            this.cmbU3Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbU3Metodo.FormattingEnabled = true;
+            this.cmbU3Metodo.Items.AddRange(new object[] {
+            "Regresión Lineal"});
+            this.cmbU3Metodo.Location = new System.Drawing.Point(68, 114);
+            this.cmbU3Metodo.MaxDropDownItems = 3;
+            this.cmbU3Metodo.Name = "cmbU3Metodo";
+            this.cmbU3Metodo.Size = new System.Drawing.Size(192, 24);
+            this.cmbU3Metodo.TabIndex = 8;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 117);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 16);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Método:";
+            // 
+            // txtU3Tolerancia
+            // 
+            this.txtU3Tolerancia.Location = new System.Drawing.Point(87, 66);
+            this.txtU3Tolerancia.Name = "txtU3Tolerancia";
+            this.txtU3Tolerancia.Size = new System.Drawing.Size(173, 22);
+            this.txtU3Tolerancia.TabIndex = 6;
+            this.txtU3Tolerancia.Text = "0,0001";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 69);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(75, 16);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Tolerancia:";
+            // 
+            // btnU3AgregarPunto
+            // 
+            this.btnU3AgregarPunto.Location = new System.Drawing.Point(277, 19);
+            this.btnU3AgregarPunto.Name = "btnU3AgregarPunto";
+            this.btnU3AgregarPunto.Size = new System.Drawing.Size(75, 33);
+            this.btnU3AgregarPunto.TabIndex = 4;
+            this.btnU3AgregarPunto.Text = "Agregar";
+            this.btnU3AgregarPunto.UseVisualStyleBackColor = true;
+            this.btnU3AgregarPunto.Click += new System.EventHandler(this.btnU3AgregarPunto_Click);
             // 
             // txtU3Y
             // 
@@ -706,126 +812,101 @@
             this.label19.TabIndex = 2;
             this.label19.Text = "Y:";
             // 
-            // btnU3AgregarPunto
+            // txtU3X
             // 
-            this.btnU3AgregarPunto.Location = new System.Drawing.Point(277, 19);
-            this.btnU3AgregarPunto.Name = "btnU3AgregarPunto";
-            this.btnU3AgregarPunto.Size = new System.Drawing.Size(75, 33);
-            this.btnU3AgregarPunto.TabIndex = 4;
-            this.btnU3AgregarPunto.Text = "Agregar";
-            this.btnU3AgregarPunto.UseVisualStyleBackColor = true;
+            this.txtU3X.Location = new System.Drawing.Point(30, 24);
+            this.txtU3X.Name = "txtU3X";
+            this.txtU3X.Size = new System.Drawing.Size(94, 22);
+            this.txtU3X.TabIndex = 1;
             // 
-            // txtU3Tolerancia
+            // label18
             // 
-            this.txtU3Tolerancia.Location = new System.Drawing.Point(87, 66);
-            this.txtU3Tolerancia.Name = "txtU3Tolerancia";
-            this.txtU3Tolerancia.Size = new System.Drawing.Size(173, 22);
-            this.txtU3Tolerancia.TabIndex = 6;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(18, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "X:";
             // 
-            // label20
+            // tbcUnidad4
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 69);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(75, 16);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Tolerancia:";
+            this.tbcUnidad4.Location = new System.Drawing.Point(4, 25);
+            this.tbcUnidad4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbcUnidad4.Name = "tbcUnidad4";
+            this.tbcUnidad4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbcUnidad4.Size = new System.Drawing.Size(792, 569);
+            this.tbcUnidad4.TabIndex = 3;
+            this.tbcUnidad4.Text = "Unidad 4";
+            this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // gbxU3Puntos
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 117);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 16);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Método:";
+            this.gbxU3Puntos.Controls.Add(this.label25);
+            this.gbxU3Puntos.Controls.Add(this.btnU3Todos);
+            this.gbxU3Puntos.Controls.Add(this.btnU3Seleccionado);
+            this.gbxU3Puntos.Controls.Add(this.btnU3Ultimo);
+            this.gbxU3Puntos.Controls.Add(this.lbxU3Puntos);
+            this.gbxU3Puntos.Location = new System.Drawing.Point(491, 5);
+            this.gbxU3Puntos.Name = "gbxU3Puntos";
+            this.gbxU3Puntos.Size = new System.Drawing.Size(295, 288);
+            this.gbxU3Puntos.TabIndex = 4;
+            this.gbxU3Puntos.TabStop = false;
+            this.gbxU3Puntos.Text = "Puntos";
             // 
-            // cmbU3Metodo
+            // lbxU3Puntos
             // 
-            this.cmbU3Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbU3Metodo.FormattingEnabled = true;
-            this.cmbU3Metodo.Items.AddRange(new object[] {
-            "Regresión Lineal"});
-            this.cmbU3Metodo.Location = new System.Drawing.Point(68, 114);
-            this.cmbU3Metodo.MaxDropDownItems = 3;
-            this.cmbU3Metodo.Name = "cmbU3Metodo";
-            this.cmbU3Metodo.Size = new System.Drawing.Size(192, 24);
-            this.cmbU3Metodo.TabIndex = 8;
+            this.lbxU3Puntos.FormattingEnabled = true;
+            this.lbxU3Puntos.ItemHeight = 16;
+            this.lbxU3Puntos.Location = new System.Drawing.Point(6, 19);
+            this.lbxU3Puntos.Name = "lbxU3Puntos";
+            this.lbxU3Puntos.Size = new System.Drawing.Size(170, 260);
+            this.lbxU3Puntos.TabIndex = 0;
             // 
-            // btnU3Calcular
+            // btnU3Ultimo
             // 
-            this.btnU3Calcular.Location = new System.Drawing.Point(277, 109);
-            this.btnU3Calcular.Name = "btnU3Calcular";
-            this.btnU3Calcular.Size = new System.Drawing.Size(75, 33);
-            this.btnU3Calcular.TabIndex = 9;
-            this.btnU3Calcular.Text = "Calcular";
-            this.btnU3Calcular.UseVisualStyleBackColor = true;
+            this.btnU3Ultimo.Location = new System.Drawing.Point(182, 48);
+            this.btnU3Ultimo.Name = "btnU3Ultimo";
+            this.btnU3Ultimo.Size = new System.Drawing.Size(107, 69);
+            this.btnU3Ultimo.TabIndex = 10;
+            this.btnU3Ultimo.Text = "Ultimo";
+            this.btnU3Ultimo.UseVisualStyleBackColor = true;
+            this.btnU3Ultimo.Click += new System.EventHandler(this.btnU3Ultimo_Click);
             // 
-            // gbxU3Outputs
+            // btnU3Seleccionado
             // 
-            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadAjuste);
-            this.gbxU3Outputs.Controls.Add(this.txtU3EfectividadPorcentaje);
-            this.gbxU3Outputs.Controls.Add(this.txtU3Funcion);
-            this.gbxU3Outputs.Controls.Add(this.label24);
-            this.gbxU3Outputs.Controls.Add(this.label23);
-            this.gbxU3Outputs.Controls.Add(this.label22);
-            this.gbxU3Outputs.Location = new System.Drawing.Point(8, 173);
-            this.gbxU3Outputs.Name = "gbxU3Outputs";
-            this.gbxU3Outputs.Size = new System.Drawing.Size(603, 120);
-            this.gbxU3Outputs.TabIndex = 3;
-            this.gbxU3Outputs.TabStop = false;
-            this.gbxU3Outputs.Text = "Salidas";
+            this.btnU3Seleccionado.Location = new System.Drawing.Point(182, 122);
+            this.btnU3Seleccionado.Name = "btnU3Seleccionado";
+            this.btnU3Seleccionado.Size = new System.Drawing.Size(107, 69);
+            this.btnU3Seleccionado.TabIndex = 11;
+            this.btnU3Seleccionado.Text = "Seleccionado";
+            this.btnU3Seleccionado.UseVisualStyleBackColor = true;
+            this.btnU3Seleccionado.Click += new System.EventHandler(this.btnU3Seleccionado_Click);
             // 
-            // label22
+            // btnU3Todos
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 28);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(57, 16);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "Función:";
+            this.btnU3Todos.Location = new System.Drawing.Point(182, 196);
+            this.btnU3Todos.Name = "btnU3Todos";
+            this.btnU3Todos.Size = new System.Drawing.Size(107, 69);
+            this.btnU3Todos.TabIndex = 12;
+            this.btnU3Todos.Text = "Todos";
+            this.btnU3Todos.UseVisualStyleBackColor = true;
+            this.btnU3Todos.Click += new System.EventHandler(this.btnU3Todos_Click);
             // 
-            // label23
+            // label25
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 57);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(100, 16);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "Efectividad (%):";
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(206, 27);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 16);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Eliminar:";
             // 
-            // label24
+            // pnlGraficador
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 87);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(135, 16);
-            this.label24.TabIndex = 12;
-            this.label24.Text = "Efectividad de ajuste:";
-            // 
-            // txtU3Funcion
-            // 
-            this.txtU3Funcion.Enabled = false;
-            this.txtU3Funcion.Location = new System.Drawing.Point(67, 25);
-            this.txtU3Funcion.Name = "txtU3Funcion";
-            this.txtU3Funcion.Size = new System.Drawing.Size(193, 22);
-            this.txtU3Funcion.TabIndex = 10;
-            // 
-            // txtU3EfectividadPorcentaje
-            // 
-            this.txtU3EfectividadPorcentaje.Enabled = false;
-            this.txtU3EfectividadPorcentaje.Location = new System.Drawing.Point(112, 54);
-            this.txtU3EfectividadPorcentaje.Name = "txtU3EfectividadPorcentaje";
-            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(148, 22);
-            this.txtU3EfectividadPorcentaje.TabIndex = 13;
-            // 
-            // txtU3EfectividadAjuste
-            // 
-            this.txtU3EfectividadAjuste.Enabled = false;
-            this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(145, 84);
-            this.txtU3EfectividadAjuste.Name = "txtU3EfectividadAjuste";
-            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(115, 22);
-            this.txtU3EfectividadAjuste.TabIndex = 14;
+            this.pnlGraficador.Location = new System.Drawing.Point(8, 299);
+            this.pnlGraficador.Name = "pnlGraficador";
+            this.pnlGraficador.Size = new System.Drawing.Size(778, 262);
+            this.pnlGraficador.TabIndex = 5;
             // 
             // Formulario
             // 
@@ -853,10 +934,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudU2MaxIter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudU2Dimension)).EndInit();
             this.tbcUnidad3.ResumeLayout(false);
-            this.gbxU3Inputs.ResumeLayout(false);
-            this.gbxU3Inputs.PerformLayout();
             this.gbxU3Outputs.ResumeLayout(false);
             this.gbxU3Outputs.PerformLayout();
+            this.gbxU3Inputs.ResumeLayout(false);
+            this.gbxU3Inputs.PerformLayout();
+            this.gbxU3Puntos.ResumeLayout(false);
+            this.gbxU3Puntos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -929,6 +1012,13 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.GroupBox gbxU3Puntos;
+        private System.Windows.Forms.Button btnU3Todos;
+        private System.Windows.Forms.Button btnU3Seleccionado;
+        private System.Windows.Forms.Button btnU3Ultimo;
+        private System.Windows.Forms.ListBox lbxU3Puntos;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel pnlGraficador;
     }
 }
 

@@ -16,11 +16,17 @@ namespace AnalisisNumerico_BonafedeMarengo
 {
     public partial class Formulario : Form
     {
+        Graficador graficador = new Graficador();
         public Formulario()
         {
             InitializeComponent();
+            
             cmbU2Metodo.SelectedIndex = 0;
+
             cmbU3Metodo.SelectedIndex = 0;
+
+            pnlGraficador.Controls.Add(graficador);
+            graficador.Dock = DockStyle.Fill;
         }
 
         #region Tabcontrol
@@ -219,6 +225,53 @@ namespace AnalisisNumerico_BonafedeMarengo
         #endregion
 
         #region Unidad 3
+
+        public List<double[]> PuntosCargados { get; set; }
+
+        private void btnU3AgregarPunto_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtU3X.Text) && !string.IsNullOrEmpty(txtU3Y.Text))
+            {
+                double[] punto = new double[2] { double.Parse(txtU3X.Text), double.Parse(txtU3Y.Text) };
+                if (PuntosCargados == null)
+                {
+                    PuntosCargados = new List<double[]>();
+                }
+                PuntosCargados.Add(punto);
+            }
+            RefreshListBox();
+        }
+
+        private void btnU3Ultimo_Click(object sender, EventArgs e)
+        {
+            PuntosCargados.RemoveAt(PuntosCargados.Count-1);
+            RefreshListBox();
+        }
+
+        private void btnU3Seleccionado_Click(object sender, EventArgs e)
+        {
+            PuntosCargados.RemoveAt(lbxU3Puntos.SelectedIndex);
+            RefreshListBox();
+        }
+
+        private void btnU3Todos_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Está seguro?", "Confirmar eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.OK)
+                PuntosCargados.Clear();
+            RefreshListBox();
+        }
+
+
+
+        private void RefreshListBox()
+        {
+            lbxU3Puntos.Items.Clear();
+            foreach (double[] punto in PuntosCargados)
+            {
+                lbxU3Puntos.Items.Add($"({punto[0]}, {punto[1]})");
+            }
+        }
 
         #endregion
 
