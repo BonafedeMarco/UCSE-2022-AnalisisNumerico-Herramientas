@@ -44,6 +44,8 @@
     <Compile Include="U2Entrada.cs" />
     <Compile Include="U2Salida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="U3Entrada.cs" />
+    <Compile Include="U3Salida.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
