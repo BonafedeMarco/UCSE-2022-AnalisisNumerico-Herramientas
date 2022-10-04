@@ -10,6 +10,5 @@ namespace Entidades
     {
         public List<double[]> PuntosCargados { get; set; }
         public double Tolerancia { get; set; }
-        public int MetodoUtilizado { get; set; } //0: Regresión Lineal
     }
 }

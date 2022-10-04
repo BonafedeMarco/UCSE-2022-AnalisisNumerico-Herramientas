@@ -262,7 +262,15 @@ namespace AnalisisNumerico_BonafedeMarengo
             RefreshListBox();
         }
 
+        private void btnU3Calcular_Click(object sender, EventArgs e)
+        {
+            U3Entrada entrada = new U3Entrada();
+            entrada.Tolerancia = double.Parse(txtU3Tolerancia.Text);
+            entrada.PuntosCargados = PuntosCargados;
+            Main.RegresionLineal(entrada);
 
+            // Falta mostrar los resultados
+        }
 
         private void RefreshListBox()
         {

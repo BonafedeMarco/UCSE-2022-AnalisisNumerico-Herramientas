@@ -49,6 +49,11 @@ namespace Logica
 
         #region Unidad 3
 
+        public static U3Salida RegresionLineal(U3Entrada entrada)
+        {
+            return Unidad_3.Procedimientos.Resolucion(entrada, 0);
+        }
+
         #endregion
 
         #region Unidad 4

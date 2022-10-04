@@ -17,7 +17,7 @@ namespace Unidad_3
             public double SumXY { get; set; }
             public double SumX2 { get; set; }
         }
-        public static U3Salida Resolucion(U3Entrada entrada)
+        public static U3Salida Resolucion(U3Entrada entrada, int metodo)
         {
             Datos datos = new Datos()
             {
@@ -28,7 +28,7 @@ namespace Unidad_3
                 SumX2= entrada.PuntosCargados[0].Sum() * entrada.PuntosCargados[0].Sum()
             };
 
-            if (entrada.MetodoUtilizado==0)       
+            if (metodo == 0)       
                 return RegresionLineal(datos, entrada);            
 
             return new U3Salida();
