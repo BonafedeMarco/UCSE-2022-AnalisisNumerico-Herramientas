@@ -25,8 +25,7 @@ namespace AnalisisNumerico_BonafedeMarengo
 
             cmbU3Metodo.SelectedIndex = 0;
 
-            pnlGraficador.Controls.Add(graficador);
-            graficador.Dock = DockStyle.Fill;
+            SetPanelGrafica();
         }
 
         #region Tabcontrol
@@ -228,6 +227,14 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         public List<double[]> PuntosCargados { get; set; }
 
+        private void SetPanelGrafica()
+        {
+            pnlGraficador.Controls.Clear();
+            this.graficador = new Graficador();
+            pnlGraficador.Controls.Add(this.graficador);
+            pnlGraficador.Dock = DockStyle.Fill;
+        }
+
         private void btnU3AgregarPunto_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtU3X.Text) && !string.IsNullOrEmpty(txtU3Y.Text))
@@ -267,9 +274,13 @@ namespace AnalisisNumerico_BonafedeMarengo
             U3Entrada entrada = new U3Entrada();
             entrada.Tolerancia = double.Parse(txtU3Tolerancia.Text);
             entrada.PuntosCargados = PuntosCargados;
-            Main.RegresionLineal(entrada);
+            U3Salida salida = Main.RegresionLineal(entrada);
 
-            // Falta mostrar los resultados
+            txtU3Funcion.Text = salida.Funcion;
+            txtU3EfectividadPorcentaje.Text = salida.PorcentajeEfectividad.ToString();
+            txtU3EfectividadAjuste.Text = salida.EfectividadAjuste.ToString();
+
+            // Pasar muestra de resultados a funcion con mensaje de error como unidades anteriores
         }
 
         private void RefreshListBox()
