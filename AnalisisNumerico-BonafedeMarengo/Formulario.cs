@@ -274,13 +274,24 @@ namespace AnalisisNumerico_BonafedeMarengo
             U3Entrada entrada = new U3Entrada();
             entrada.Tolerancia = double.Parse(txtU3Tolerancia.Text);
             entrada.PuntosCargados = PuntosCargados;
-            U3Salida salida = Main.RegresionLineal(entrada);
 
-            txtU3Funcion.Text = salida.Funcion;
-            txtU3EfectividadPorcentaje.Text = salida.PorcentajeEfectividad.ToString();
-            txtU3EfectividadAjuste.Text = salida.EfectividadAjuste.ToString();
+            MostrarResultadosU3(Main.RegresionLineal(entrada));
+        }
 
-            // Pasar muestra de resultados a funcion con mensaje de error como unidades anteriores
+        private void MostrarResultadosU3(U3Salida salida)
+        {
+            if (!salida._Error)
+            {
+                txtU3Funcion.Text = salida.Funcion;
+                txtU3EfectividadPorcentaje.Text = salida.PorcentajeEfectividad.ToString();
+                txtU3EfectividadAjuste.Text = salida.EfectividadAjuste.ToString();
+
+                graficador.Graficar(PuntosCargados, salida.FuncionGraficador);
+            }
+            else
+            {
+                MessageBox.Show(salida._MsjError, $"Error - {salida._Metodo}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void RefreshListBox()
