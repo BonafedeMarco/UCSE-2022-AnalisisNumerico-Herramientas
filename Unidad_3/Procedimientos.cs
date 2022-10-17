@@ -26,10 +26,6 @@ namespace Unidad_3
             foreach (double[] item in entrada.PuntosCargados)
             {
                 sumXY += item[0] * item[1];
-            }
-
-            foreach (double[] item in entrada.PuntosCargados)
-            {
                 sumX2 += item[0] * item[0];
             }
 
@@ -64,7 +60,7 @@ namespace Unidad_3
 
             return new U3Salida
             {
-                Funcion = $"y = {a1}x{(a0 > 0 ? "+" : "")}{a0}",
+                Funcion = $"y = {Math.Round(a1,3)}.x {(a0 > 0 ? "+" : "")}{Math.Round(a0,3)}",
                 FuncionGraficador = $"{a1}*x{(a0 > 0 ? "+" : "")}{a0}",
                 PorcentajeEfectividad = coefCorrelacion,
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
@@ -75,7 +71,7 @@ namespace Unidad_3
             U3Salida u3Salida = new U3Salida();
 
             double[,] MatrizPolinomial = GenerarMatrizPolinomial(entrada);
-            U2Entrada methodData = new U2Entrada { Matriz = MatrizPolinomial };
+            U2Entrada methodData = new U2Entrada { Matriz = MatrizPolinomial, Dimension=entrada.Grado+1, MaxIter=100, Tolerancia=0.0001, Decimales=10 };
 
             U2Salida data = Unidad_2.Procedimientos.MetodoGaussJordan(methodData);
             if (data._Error)
