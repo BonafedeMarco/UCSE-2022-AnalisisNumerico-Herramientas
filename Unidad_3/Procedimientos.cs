@@ -20,13 +20,26 @@ namespace Unidad_3
         }
         public static U3Salida Resolucion(U3Entrada entrada, int metodo)
         {
+            double sumXY = 0;
+            double sumX2 = 0;
+
+            foreach (double[] item in entrada.PuntosCargados)
+            {
+                sumXY += item[0] * item[1];
+            }
+
+            foreach (double[] item in entrada.PuntosCargados)
+            {
+                sumX2 += item[0] * item[0];
+            }
+
             Datos datos = new Datos()
             {
                 CantPuntos = entrada.PuntosCargados.Count,
                 SumX = entrada.PuntosCargados[0].Sum(),
                 SumY = entrada.PuntosCargados[1].Sum(),
-                SumXY = entrada.PuntosCargados[0].Sum() * entrada.PuntosCargados[1].Sum(),
-                SumX2 = entrada.PuntosCargados[0].Sum() * entrada.PuntosCargados[0].Sum()
+                SumXY = sumXY,
+                SumX2 = sumX2
             };
 
             if (metodo == 0)
