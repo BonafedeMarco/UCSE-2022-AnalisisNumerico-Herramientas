@@ -90,6 +90,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.gbxU3Inputs = new System.Windows.Forms.GroupBox();
+            this.nudU3Grado = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
             this.btnU3Calcular = new System.Windows.Forms.Button();
             this.cmbU3Metodo = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -101,8 +103,6 @@
             this.txtU3X = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
-            this.label26 = new System.Windows.Forms.Label();
-            this.nudU3Grado = new System.Windows.Forms.NumericUpDown();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -813,6 +813,33 @@
             this.gbxU3Inputs.TabStop = false;
             this.gbxU3Inputs.Text = "Entradas";
             // 
+            // nudU3Grado
+            // 
+            this.nudU3Grado.Enabled = false;
+            this.nudU3Grado.Location = new System.Drawing.Point(202, 66);
+            this.nudU3Grado.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudU3Grado.Name = "nudU3Grado";
+            this.nudU3Grado.Size = new System.Drawing.Size(58, 22);
+            this.nudU3Grado.TabIndex = 11;
+            this.nudU3Grado.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(147, 69);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(48, 16);
+            this.label26.TabIndex = 10;
+            this.label26.Text = "Grado:";
+            // 
             // btnU3Calcular
             // 
             this.btnU3Calcular.Location = new System.Drawing.Point(277, 109);
@@ -821,6 +848,7 @@
             this.btnU3Calcular.TabIndex = 9;
             this.btnU3Calcular.Text = "Calcular";
             this.btnU3Calcular.UseVisualStyleBackColor = true;
+            this.btnU3Calcular.Click += new System.EventHandler(this.btnU3Calcular_Click);
             // 
             // cmbU3Metodo
             // 
@@ -914,33 +942,6 @@
             this.tbcUnidad4.TabIndex = 3;
             this.tbcUnidad4.Text = "Unidad 4";
             this.tbcUnidad4.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(147, 69);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(48, 16);
-            this.label26.TabIndex = 10;
-            this.label26.Text = "Grado:";
-            // 
-            // nudU3Grado
-            // 
-            this.nudU3Grado.Enabled = false;
-            this.nudU3Grado.Location = new System.Drawing.Point(202, 66);
-            this.nudU3Grado.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudU3Grado.Name = "nudU3Grado";
-            this.nudU3Grado.Size = new System.Drawing.Size(58, 22);
-            this.nudU3Grado.TabIndex = 11;
-            this.nudU3Grado.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
             // 
             // Formulario
             // 

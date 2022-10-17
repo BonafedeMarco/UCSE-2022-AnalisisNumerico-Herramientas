@@ -25,7 +25,7 @@ namespace AnalisisNumerico_BonafedeMarengo
 
             cmbU3Metodo.SelectedIndex = 0;
 
-            SetPanelGrafica();
+            //SetPanelGrafica();
         }
 
         #region Tabcontrol
