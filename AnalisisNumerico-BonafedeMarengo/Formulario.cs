@@ -247,6 +247,10 @@ namespace AnalisisNumerico_BonafedeMarengo
                 PuntosCargados.Add(punto);
             }
             RefreshListBox();
+
+            txtU3X.Text = "";
+            txtU3Y.Text = "";
+            txtU3X.Select();
         }
 
         private void btnU3Ultimo_Click(object sender, EventArgs e)
