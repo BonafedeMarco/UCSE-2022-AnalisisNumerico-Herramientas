@@ -10,5 +10,6 @@ namespace Entidades
     {
         public List<double[]> PuntosCargados { get; set; }
         public double Tolerancia { get; set; }
+        public int Grado { get; set; } //Siempre es 2 o más para la regresion polinomial
     }
 }
