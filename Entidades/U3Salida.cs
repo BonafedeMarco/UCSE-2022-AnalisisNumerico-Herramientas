@@ -15,6 +15,7 @@ namespace Entidades
         public double PorcentajeEfectividad { get; set; }
         public bool EfectividadAjuste { get; set; }
         public string FuncionGraficador { get; set; }
+        public int Grado { get; set; } // Grado con el que fue resuelto el polinomio
 
         // Métodos
         public void AgregarMsjError(string msj)

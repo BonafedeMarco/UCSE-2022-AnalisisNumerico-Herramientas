@@ -32,8 +32,6 @@ namespace Unidad_3
             if (metodo == 0)
                 return RegresionLineal(datos, entrada);
             return RegresionPolinomial(datos, entrada);
-
-            //return new U3Salida();
         }
         public static U3Salida RegresionLineal(Datos datos, U3Entrada entrada)
         {

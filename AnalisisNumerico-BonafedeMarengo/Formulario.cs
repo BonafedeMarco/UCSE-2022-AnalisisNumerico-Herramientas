@@ -275,7 +275,17 @@ namespace AnalisisNumerico_BonafedeMarengo
             entrada.Tolerancia = double.Parse(txtU3Tolerancia.Text);
             entrada.PuntosCargados = PuntosCargados;
 
-            MostrarResultadosU3(Main.RegresionLineal(entrada));
+            switch (cmbU3Metodo.SelectedIndex)
+            {
+                case 0:
+                    MostrarResultadosU3(Main.RegresionLineal(entrada));
+                    break;
+                case 1:
+                    // reg polinomial
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void MostrarResultadosU3(U3Salida salida)
@@ -300,6 +310,19 @@ namespace AnalisisNumerico_BonafedeMarengo
             foreach (double[] punto in PuntosCargados)
             {
                 lbxU3Puntos.Items.Add($"({punto[0]}, {punto[1]})");
+            }
+        }
+
+        private void cmbU3Metodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbU3Metodo.SelectedIndex == 0)
+            {
+                nudU3Grado.Enabled = false;
+            }
+
+            if (cmbU3Metodo.SelectedIndex == 1)
+            {
+                nudU3Grado.Enabled = true;
             }
         }
 
