@@ -25,7 +25,7 @@ namespace AnalisisNumerico_BonafedeMarengo
 
             cmbU3Metodo.SelectedIndex = 0;
 
-            //SetPanelGrafica();
+            SetPanelGrafica();
         }
 
         #region Tabcontrol
@@ -232,7 +232,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             pnlGraficador.Controls.Clear();
             this.graficador = new Graficador();
             pnlGraficador.Controls.Add(this.graficador);
-            pnlGraficador.Dock = DockStyle.Fill;
+            graficador.Dock = DockStyle.Fill;
         }
 
         private void btnU3AgregarPunto_Click(object sender, EventArgs e)
