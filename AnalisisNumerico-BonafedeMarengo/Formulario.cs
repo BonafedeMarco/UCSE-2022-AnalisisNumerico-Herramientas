@@ -278,6 +278,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             U3Entrada entrada = new U3Entrada();
             entrada.Tolerancia = double.Parse(txtU3Tolerancia.Text);
             entrada.PuntosCargados = PuntosCargados;
+            entrada.Grado = cmbU3Metodo.SelectedIndex == 1 ? Convert.ToInt32(nudU3Grado.Value) : 0;
 
             switch (cmbU3Metodo.SelectedIndex)
             {
@@ -285,7 +286,7 @@ namespace AnalisisNumerico_BonafedeMarengo
                     MostrarResultadosU3(Main.RegresionLineal(entrada));
                     break;
                 case 1:
-                    // reg polinomial
+                    MostrarResultadosU3(Main.RegresionPolinomial(entrada));
                     break;
                 default:
                     break;

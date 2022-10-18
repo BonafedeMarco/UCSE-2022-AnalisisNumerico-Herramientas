@@ -60,13 +60,13 @@ namespace Unidad_3
                 Sr += Math.Pow(a1 * item[0] + a0 - item[1], 2);
             }
 
-            double coefCorrelacion = Math.Sqrt((St - Sr) / St) * 100;
+            double coefCorrelacion = Math.Sqrt((St - Sr) / St);
 
             return new U3Salida
             {
                 Funcion = $"y = {Math.Round(a1,3)}.x {(a0 > 0 ? "+" : "")}{Math.Round(a0,3)}",
                 FuncionGraficador = $"{a1}*x{(a0 > 0 ? "+" : "")}{a0}",
-                PorcentajeEfectividad = coefCorrelacion,
+                PorcentajeEfectividad = coefCorrelacion * 100,
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
             };
         }
@@ -100,13 +100,13 @@ namespace Unidad_3
                 St += Math.Pow(datos.SumY / datos.CantPuntos - y, 2);
             }
 
-            double coefCorrelacion = Math.Sqrt((St - Sr) / St) * 100;
+            double coefCorrelacion = Math.Sqrt((St - Sr) / St);
 
             return new U3Salida
             {
                 Funcion = funciones[0],
                 FuncionGraficador = funciones[1],
-                PorcentajeEfectividad = coefCorrelacion,
+                PorcentajeEfectividad = coefCorrelacion * 100,
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
             };
         }
