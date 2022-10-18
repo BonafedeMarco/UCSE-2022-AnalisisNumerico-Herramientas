@@ -20,11 +20,15 @@ namespace Unidad_3
         }
         public static U3Salida Resolucion(U3Entrada entrada, int metodo)
         {
+            double sumX = 0;
+            double sumY = 0;
             double sumXY = 0;
             double sumX2 = 0;
 
             foreach (double[] item in entrada.PuntosCargados)
             {
+                sumX += item[0];
+                sumY += item[1];
                 sumXY += item[0] * item[1];
                 sumX2 += item[0] * item[0];
             }
@@ -32,8 +36,8 @@ namespace Unidad_3
             Datos datos = new Datos()
             {
                 CantPuntos = entrada.PuntosCargados.Count,
-                SumX = entrada.PuntosCargados[0].Sum(),
-                SumY = entrada.PuntosCargados[1].Sum(),
+                SumX = sumX,
+                SumY = sumY,
                 SumXY = sumXY,
                 SumX2 = sumX2
             };
@@ -53,7 +57,7 @@ namespace Unidad_3
             foreach (double[] item in entrada.PuntosCargados)
             {
                 St += Math.Pow(datos.SumY / datos.CantPuntos - item[1], 2);
-                Sr += Math.Pow(a1 * item[0] + a0 - item[0], 2);
+                Sr += Math.Pow(a1 * item[0] + a0 - item[1], 2);
             }
 
             double coefCorrelacion = Math.Sqrt((St - Sr) / St) * 100;
@@ -79,7 +83,7 @@ namespace Unidad_3
                 u3Salida.AgregarMsjError(data._MsjError);
             }
 
-            string[] funciones = EscribirFuncionesPolinom(data);
+            string[] funciones = EscribirFuncionPolinomial(data);
 
             double Sr = 0;
             double St = 0;
@@ -125,7 +129,7 @@ namespace Unidad_3
             }
             return matriz;
         }
-        public static string[] EscribirFuncionesPolinom(U2Salida data)
+        public static string[] EscribirFuncionPolinomial(U2Salida data)
         {
             string funcion = string.Empty;
             string funcionGraf = string.Empty;

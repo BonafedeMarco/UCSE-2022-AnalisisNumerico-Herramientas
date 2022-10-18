@@ -54,6 +54,11 @@ namespace Logica
             return Unidad_3.Procedimientos.Resolucion(entrada, 0);
         }
 
+        public static U3Salida RegresionPolinomial(U3Entrada entrada)
+        {
+            return Unidad_3.Procedimientos.Resolucion(entrada, 1);
+        }
+
         #endregion
 
         #region Unidad 4
