@@ -106,7 +106,7 @@ namespace Unidad_3
             {
                 Funcion = funciones[0],
                 FuncionGraficador = funciones[1],
-                PorcentajeEfectividad = coefCorrelacion * 100,
+                PorcentajeEfectividad = Math.Round(coefCorrelacion * 100,4),
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
             };
         }
@@ -131,25 +131,28 @@ namespace Unidad_3
         }
         public static string[] EscribirFuncionPolinomial(U2Salida data)
         {
-            string funcion = string.Empty;
+            string funcion = "y =";
             string funcionGraf = string.Empty;
             string signo = string.Empty;
-            for (int i = data.Resultado.Count(); i > 0; i--)
+            for (int i = data.Resultado.Count()-1; i >= 0; i--)
             {
-                double ai = Math.Pow(data.Resultado[i], 4);
+                double ai = Math.Round(data.Resultado[i], 4);
                 if (i == 0 && ai != 0)
-                    funcion += $"{ai}";
+                {
+                    funcion += $" {ai}";
+                    funcionGraf += $"{ai}";
+                }
                 else if (i == 1 && ai != 0)
                 {
-                    funcion += $"{ai}x {signo}";
-                    funcionGraf += $"{ai}*x {signo}";
+                    funcion += $" {ai}x {signo}";
+                    funcionGraf += $"{ai}*x{signo}";
                 }
                 else
                 {
                     if (ai != 0)
                     {
-                        funcion += $"{ai}x^{i} {signo}";
-                        funcionGraf += $"{ai}*x^{i} {signo}";
+                        funcion += $" {ai}x^{i} {signo}";
+                        funcionGraf += $"{ai}*x^{i}{signo}";
                     }
                 }
                 signo = ai > 0 ? "+" : string.Empty;

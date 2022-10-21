@@ -405,7 +405,7 @@
             this.tbcUnidades.Controls.Add(this.tbcUnidad3);
             this.tbcUnidades.Controls.Add(this.tbcUnidad4);
             this.tbcUnidades.Location = new System.Drawing.Point(0, 0);
-            this.tbcUnidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidades.Margin = new System.Windows.Forms.Padding(2);
             this.tbcUnidades.Name = "tbcUnidades";
             this.tbcUnidades.SelectedIndex = 0;
             this.tbcUnidades.Size = new System.Drawing.Size(600, 486);
@@ -418,9 +418,9 @@
             this.tbcUnidad1.Controls.Add(this.gbxU1Metodos);
             this.tbcUnidad1.Controls.Add(this.gbxU1Salidas);
             this.tbcUnidad1.Location = new System.Drawing.Point(4, 22);
-            this.tbcUnidad1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad1.Margin = new System.Windows.Forms.Padding(2);
             this.tbcUnidad1.Name = "tbcUnidad1";
-            this.tbcUnidad1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad1.Padding = new System.Windows.Forms.Padding(2);
             this.tbcUnidad1.Size = new System.Drawing.Size(592, 460);
             this.tbcUnidad1.TabIndex = 0;
             this.tbcUnidad1.Text = "Unidad 1";
@@ -431,9 +431,9 @@
             this.tbcUnidad2.Controls.Add(this.pnlMatriz);
             this.tbcUnidad2.Controls.Add(this.gbxU2Specs);
             this.tbcUnidad2.Location = new System.Drawing.Point(4, 22);
-            this.tbcUnidad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad2.Margin = new System.Windows.Forms.Padding(2);
             this.tbcUnidad2.Name = "tbcUnidad2";
-            this.tbcUnidad2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad2.Padding = new System.Windows.Forms.Padding(2);
             this.tbcUnidad2.Size = new System.Drawing.Size(592, 460);
             this.tbcUnidad2.TabIndex = 1;
             this.tbcUnidad2.Text = "Unidad 2";
@@ -444,7 +444,7 @@
             this.pnlMatriz.AutoScroll = true;
             this.pnlMatriz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMatriz.Location = new System.Drawing.Point(6, 98);
-            this.pnlMatriz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMatriz.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMatriz.Name = "pnlMatriz";
             this.pnlMatriz.Size = new System.Drawing.Size(580, 359);
             this.pnlMatriz.TabIndex = 1;
@@ -464,9 +464,9 @@
             this.gbxU2Specs.Controls.Add(this.nudU2Dimension);
             this.gbxU2Specs.Controls.Add(this.label13);
             this.gbxU2Specs.Location = new System.Drawing.Point(6, 5);
-            this.gbxU2Specs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU2Specs.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU2Specs.Name = "gbxU2Specs";
-            this.gbxU2Specs.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU2Specs.Padding = new System.Windows.Forms.Padding(2);
             this.gbxU2Specs.Size = new System.Drawing.Size(580, 89);
             this.gbxU2Specs.TabIndex = 0;
             this.gbxU2Specs.TabStop = false;
@@ -475,7 +475,7 @@
             // nudU2Decimales
             // 
             this.nudU2Decimales.Location = new System.Drawing.Point(66, 20);
-            this.nudU2Decimales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudU2Decimales.Margin = new System.Windows.Forms.Padding(2);
             this.nudU2Decimales.Name = "nudU2Decimales";
             this.nudU2Decimales.Size = new System.Drawing.Size(56, 20);
             this.nudU2Decimales.TabIndex = 11;
@@ -499,7 +499,7 @@
             // 
             this.nudU2MaxIter.Enabled = false;
             this.nudU2MaxIter.Location = new System.Drawing.Point(508, 19);
-            this.nudU2MaxIter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudU2MaxIter.Margin = new System.Windows.Forms.Padding(2);
             this.nudU2MaxIter.Minimum = new decimal(new int[] {
             1,
             0,
@@ -546,7 +546,7 @@
             // btnU2Calcular
             // 
             this.btnU2Calcular.Location = new System.Drawing.Point(508, 52);
-            this.btnU2Calcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU2Calcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnU2Calcular.Name = "btnU2Calcular";
             this.btnU2Calcular.Size = new System.Drawing.Size(56, 19);
             this.btnU2Calcular.TabIndex = 5;
@@ -562,7 +562,7 @@
             "Gauss-Jordan",
             "Gauss-Seidel"});
             this.cmbU2Metodo.Location = new System.Drawing.Point(335, 52);
-            this.cmbU2Metodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbU2Metodo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbU2Metodo.MaxDropDownItems = 2;
             this.cmbU2Metodo.Name = "cmbU2Metodo";
             this.cmbU2Metodo.Size = new System.Drawing.Size(169, 21);
@@ -582,7 +582,7 @@
             // btnU2Generar
             // 
             this.btnU2Generar.Location = new System.Drawing.Point(146, 53);
-            this.btnU2Generar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU2Generar.Margin = new System.Windows.Forms.Padding(2);
             this.btnU2Generar.Name = "btnU2Generar";
             this.btnU2Generar.Size = new System.Drawing.Size(56, 19);
             this.btnU2Generar.TabIndex = 2;
@@ -593,7 +593,7 @@
             // nudU2Dimension
             // 
             this.nudU2Dimension.Location = new System.Drawing.Point(65, 53);
-            this.nudU2Dimension.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudU2Dimension.Margin = new System.Windows.Forms.Padding(2);
             this.nudU2Dimension.Minimum = new decimal(new int[] {
             2,
             0,
@@ -625,9 +625,9 @@
             this.tbcUnidad3.Controls.Add(this.gbxU3Outputs);
             this.tbcUnidad3.Controls.Add(this.gbxU3Inputs);
             this.tbcUnidad3.Location = new System.Drawing.Point(4, 22);
-            this.tbcUnidad3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad3.Margin = new System.Windows.Forms.Padding(2);
             this.tbcUnidad3.Name = "tbcUnidad3";
-            this.tbcUnidad3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad3.Padding = new System.Windows.Forms.Padding(2);
             this.tbcUnidad3.Size = new System.Drawing.Size(592, 460);
             this.tbcUnidad3.TabIndex = 2;
             this.tbcUnidad3.Text = "Unidad 3";
@@ -636,7 +636,7 @@
             // pnlGraficador
             // 
             this.pnlGraficador.Location = new System.Drawing.Point(6, 243);
-            this.pnlGraficador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGraficador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGraficador.Name = "pnlGraficador";
             this.pnlGraficador.Size = new System.Drawing.Size(584, 213);
             this.pnlGraficador.TabIndex = 5;
@@ -649,9 +649,9 @@
             this.gbxU3Puntos.Controls.Add(this.btnU3Ultimo);
             this.gbxU3Puntos.Controls.Add(this.lbxU3Puntos);
             this.gbxU3Puntos.Location = new System.Drawing.Point(368, 4);
-            this.gbxU3Puntos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Puntos.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Puntos.Name = "gbxU3Puntos";
-            this.gbxU3Puntos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Puntos.Padding = new System.Windows.Forms.Padding(2);
             this.gbxU3Puntos.Size = new System.Drawing.Size(221, 234);
             this.gbxU3Puntos.TabIndex = 4;
             this.gbxU3Puntos.TabStop = false;
@@ -670,7 +670,7 @@
             // btnU3Todos
             // 
             this.btnU3Todos.Location = new System.Drawing.Point(136, 159);
-            this.btnU3Todos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU3Todos.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Todos.Name = "btnU3Todos";
             this.btnU3Todos.Size = new System.Drawing.Size(80, 56);
             this.btnU3Todos.TabIndex = 12;
@@ -681,7 +681,7 @@
             // btnU3Seleccionado
             // 
             this.btnU3Seleccionado.Location = new System.Drawing.Point(136, 99);
-            this.btnU3Seleccionado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU3Seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Seleccionado.Name = "btnU3Seleccionado";
             this.btnU3Seleccionado.Size = new System.Drawing.Size(80, 56);
             this.btnU3Seleccionado.TabIndex = 11;
@@ -692,7 +692,7 @@
             // btnU3Ultimo
             // 
             this.btnU3Ultimo.Location = new System.Drawing.Point(136, 39);
-            this.btnU3Ultimo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU3Ultimo.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Ultimo.Name = "btnU3Ultimo";
             this.btnU3Ultimo.Size = new System.Drawing.Size(80, 56);
             this.btnU3Ultimo.TabIndex = 10;
@@ -704,7 +704,7 @@
             // 
             this.lbxU3Puntos.FormattingEnabled = true;
             this.lbxU3Puntos.Location = new System.Drawing.Point(4, 15);
-            this.lbxU3Puntos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxU3Puntos.Margin = new System.Windows.Forms.Padding(2);
             this.lbxU3Puntos.Name = "lbxU3Puntos";
             this.lbxU3Puntos.Size = new System.Drawing.Size(128, 212);
             this.lbxU3Puntos.TabIndex = 0;
@@ -718,9 +718,9 @@
             this.gbxU3Outputs.Controls.Add(this.label23);
             this.gbxU3Outputs.Controls.Add(this.label22);
             this.gbxU3Outputs.Location = new System.Drawing.Point(6, 141);
-            this.gbxU3Outputs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Outputs.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Outputs.Name = "gbxU3Outputs";
-            this.gbxU3Outputs.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Outputs.Padding = new System.Windows.Forms.Padding(2);
             this.gbxU3Outputs.Size = new System.Drawing.Size(358, 98);
             this.gbxU3Outputs.TabIndex = 3;
             this.gbxU3Outputs.TabStop = false;
@@ -730,27 +730,27 @@
             // 
             this.txtU3EfectividadAjuste.Enabled = false;
             this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(109, 68);
-            this.txtU3EfectividadAjuste.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3EfectividadAjuste.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3EfectividadAjuste.Name = "txtU3EfectividadAjuste";
-            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(87, 20);
+            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(155, 20);
             this.txtU3EfectividadAjuste.TabIndex = 14;
             // 
             // txtU3EfectividadPorcentaje
             // 
             this.txtU3EfectividadPorcentaje.Enabled = false;
             this.txtU3EfectividadPorcentaje.Location = new System.Drawing.Point(84, 44);
-            this.txtU3EfectividadPorcentaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3EfectividadPorcentaje.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3EfectividadPorcentaje.Name = "txtU3EfectividadPorcentaje";
-            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(112, 20);
+            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(180, 20);
             this.txtU3EfectividadPorcentaje.TabIndex = 13;
             // 
             // txtU3Funcion
             // 
             this.txtU3Funcion.Enabled = false;
             this.txtU3Funcion.Location = new System.Drawing.Point(50, 20);
-            this.txtU3Funcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3Funcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3Funcion.Name = "txtU3Funcion";
-            this.txtU3Funcion.Size = new System.Drawing.Size(146, 20);
+            this.txtU3Funcion.Size = new System.Drawing.Size(214, 20);
             this.txtU3Funcion.TabIndex = 10;
             // 
             // label24
@@ -798,9 +798,9 @@
             this.gbxU3Inputs.Controls.Add(this.txtU3X);
             this.gbxU3Inputs.Controls.Add(this.label18);
             this.gbxU3Inputs.Location = new System.Drawing.Point(6, 4);
-            this.gbxU3Inputs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Inputs.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Inputs.Name = "gbxU3Inputs";
-            this.gbxU3Inputs.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxU3Inputs.Padding = new System.Windows.Forms.Padding(2);
             this.gbxU3Inputs.Size = new System.Drawing.Size(358, 132);
             this.gbxU3Inputs.TabIndex = 2;
             this.gbxU3Inputs.TabStop = false;
@@ -810,7 +810,7 @@
             // 
             this.nudU3Grado.Enabled = false;
             this.nudU3Grado.Location = new System.Drawing.Point(152, 54);
-            this.nudU3Grado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudU3Grado.Margin = new System.Windows.Forms.Padding(2);
             this.nudU3Grado.Minimum = new decimal(new int[] {
             1,
             0,
@@ -838,7 +838,7 @@
             // btnU3Calcular
             // 
             this.btnU3Calcular.Location = new System.Drawing.Point(208, 89);
-            this.btnU3Calcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU3Calcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Calcular.Name = "btnU3Calcular";
             this.btnU3Calcular.Size = new System.Drawing.Size(56, 27);
             this.btnU3Calcular.TabIndex = 9;
@@ -854,7 +854,7 @@
             "Regresión Lineal",
             "Regresión Polinomial"});
             this.cmbU3Metodo.Location = new System.Drawing.Point(51, 93);
-            this.cmbU3Metodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbU3Metodo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbU3Metodo.MaxDropDownItems = 2;
             this.cmbU3Metodo.Name = "cmbU3Metodo";
             this.cmbU3Metodo.Size = new System.Drawing.Size(145, 21);
@@ -874,7 +874,7 @@
             // txtU3Tolerancia
             // 
             this.txtU3Tolerancia.Location = new System.Drawing.Point(65, 54);
-            this.txtU3Tolerancia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3Tolerancia.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3Tolerancia.Name = "txtU3Tolerancia";
             this.txtU3Tolerancia.Size = new System.Drawing.Size(42, 20);
             this.txtU3Tolerancia.TabIndex = 6;
@@ -893,7 +893,7 @@
             // btnU3AgregarPunto
             // 
             this.btnU3AgregarPunto.Location = new System.Drawing.Point(208, 15);
-            this.btnU3AgregarPunto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU3AgregarPunto.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3AgregarPunto.Name = "btnU3AgregarPunto";
             this.btnU3AgregarPunto.Size = new System.Drawing.Size(56, 27);
             this.btnU3AgregarPunto.TabIndex = 4;
@@ -904,7 +904,7 @@
             // txtU3Y
             // 
             this.txtU3Y.Location = new System.Drawing.Point(124, 20);
-            this.txtU3Y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3Y.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3Y.Name = "txtU3Y";
             this.txtU3Y.Size = new System.Drawing.Size(72, 20);
             this.txtU3Y.TabIndex = 3;
@@ -922,7 +922,7 @@
             // txtU3X
             // 
             this.txtU3X.Location = new System.Drawing.Point(22, 20);
-            this.txtU3X.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtU3X.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3X.Name = "txtU3X";
             this.txtU3X.Size = new System.Drawing.Size(72, 20);
             this.txtU3X.TabIndex = 1;
@@ -940,9 +940,9 @@
             // tbcUnidad4
             // 
             this.tbcUnidad4.Location = new System.Drawing.Point(4, 22);
-            this.tbcUnidad4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad4.Margin = new System.Windows.Forms.Padding(2);
             this.tbcUnidad4.Name = "tbcUnidad4";
-            this.tbcUnidad4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcUnidad4.Padding = new System.Windows.Forms.Padding(2);
             this.tbcUnidad4.Size = new System.Drawing.Size(592, 460);
             this.tbcUnidad4.TabIndex = 3;
             this.tbcUnidad4.Text = "Unidad 4";
