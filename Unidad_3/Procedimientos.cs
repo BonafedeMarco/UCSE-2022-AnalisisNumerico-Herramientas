@@ -64,7 +64,7 @@ namespace Unidad_3
 
             return new U3Salida
             {
-                Funcion = $"y = {Math.Round(a1,3)}.x {(a0 > 0 ? "+" : "")}{Math.Round(a0,3)}",
+                Funcion = $"y = {Math.Round(a1, 3)}.x {(a0 > 0 ? "+" : "")}{Math.Round(a0, 3)}",
                 FuncionGraficador = $"{a1}*x{(a0 > 0 ? "+" : "")}{a0}",
                 PorcentajeEfectividad = coefCorrelacion * 100,
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
@@ -75,7 +75,7 @@ namespace Unidad_3
             U3Salida u3Salida = new U3Salida();
 
             double[,] MatrizPolinomial = GenerarMatrizPolinomial(entrada);
-            U2Entrada methodData = new U2Entrada { Matriz = MatrizPolinomial, Dimension=entrada.Grado+1, MaxIter=100, Tolerancia=0.0001, Decimales=10 };
+            U2Entrada methodData = new U2Entrada { Matriz = MatrizPolinomial, Dimension = entrada.Grado + 1, MaxIter = 100, Tolerancia = 0.0001, Decimales = 10 };
 
             U2Salida data = Unidad_2.Procedimientos.MetodoGaussJordan(methodData);
             if (data._Error)
@@ -106,7 +106,7 @@ namespace Unidad_3
             {
                 Funcion = funciones[0],
                 FuncionGraficador = funciones[1],
-                PorcentajeEfectividad = Math.Round(coefCorrelacion * 100,4),
+                PorcentajeEfectividad = Math.Round(coefCorrelacion * 100, 4),
                 EfectividadAjuste = coefCorrelacion > entrada.Tolerancia
             };
         }
@@ -134,28 +134,33 @@ namespace Unidad_3
             string funcion = "y =";
             string funcionGraf = string.Empty;
             string signo = string.Empty;
-            for (int i = data.Resultado.Count()-1; i >= 0; i--)
+            for (int i = data.Resultado.Count() - 1; i >= 0; i--)
             {
                 double ai = Math.Round(data.Resultado[i], 4);
+
+                if (i == data.Resultado.Count() - 1)
+                    signo = ai > 0 ? "" : "-";
+                else
+                    signo = ai > 0 ? "+" : "-";
+
                 if (i == 0 && ai != 0)
                 {
-                    funcion += $" {ai}";
-                    funcionGraf += $"{ai}";
+                    funcion += $" {signo}{Math.Abs(ai)}";
+                    funcionGraf += $"{signo}{Math.Abs(ai)}";
                 }
                 else if (i == 1 && ai != 0)
                 {
-                    funcion += $" {ai}x {signo}";
-                    funcionGraf += $"{ai}*x{signo}";
+                    funcion += $"{signo} {Math.Abs(ai)}x ";
+                    funcionGraf += $"{signo}{Math.Abs(ai)}*x";
                 }
                 else
                 {
                     if (ai != 0)
                     {
-                        funcion += $" {ai}x^{i} {signo}";
-                        funcionGraf += $"{ai}*x^{i}{signo}";
+                        funcion += $"{signo} {Math.Abs(ai)}x^{i} ";
+                        funcionGraf += $"{signo}{Math.Abs(ai)}*x^{i}";
                     }
-                }
-                signo = ai > 0 ? "+" : string.Empty;
+                }                
             }
             return new string[] { funcion, funcionGraf };
         }
