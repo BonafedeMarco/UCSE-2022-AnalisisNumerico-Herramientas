@@ -648,11 +648,11 @@
             this.gbxU3Puntos.Controls.Add(this.btnU3Seleccionado);
             this.gbxU3Puntos.Controls.Add(this.btnU3Ultimo);
             this.gbxU3Puntos.Controls.Add(this.lbxU3Puntos);
-            this.gbxU3Puntos.Location = new System.Drawing.Point(368, 4);
+            this.gbxU3Puntos.Location = new System.Drawing.Point(394, 4);
             this.gbxU3Puntos.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Puntos.Name = "gbxU3Puntos";
             this.gbxU3Puntos.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxU3Puntos.Size = new System.Drawing.Size(221, 234);
+            this.gbxU3Puntos.Size = new System.Drawing.Size(195, 234);
             this.gbxU3Puntos.TabIndex = 4;
             this.gbxU3Puntos.TabStop = false;
             this.gbxU3Puntos.Text = "Puntos";
@@ -660,7 +660,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 22);
+            this.label25.Location = new System.Drawing.Point(129, 22);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(46, 13);
@@ -669,7 +669,7 @@
             // 
             // btnU3Todos
             // 
-            this.btnU3Todos.Location = new System.Drawing.Point(136, 159);
+            this.btnU3Todos.Location = new System.Drawing.Point(111, 159);
             this.btnU3Todos.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Todos.Name = "btnU3Todos";
             this.btnU3Todos.Size = new System.Drawing.Size(80, 56);
@@ -680,7 +680,7 @@
             // 
             // btnU3Seleccionado
             // 
-            this.btnU3Seleccionado.Location = new System.Drawing.Point(136, 99);
+            this.btnU3Seleccionado.Location = new System.Drawing.Point(111, 99);
             this.btnU3Seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Seleccionado.Name = "btnU3Seleccionado";
             this.btnU3Seleccionado.Size = new System.Drawing.Size(80, 56);
@@ -691,7 +691,7 @@
             // 
             // btnU3Ultimo
             // 
-            this.btnU3Ultimo.Location = new System.Drawing.Point(136, 39);
+            this.btnU3Ultimo.Location = new System.Drawing.Point(111, 39);
             this.btnU3Ultimo.Margin = new System.Windows.Forms.Padding(2);
             this.btnU3Ultimo.Name = "btnU3Ultimo";
             this.btnU3Ultimo.Size = new System.Drawing.Size(80, 56);
@@ -706,7 +706,7 @@
             this.lbxU3Puntos.Location = new System.Drawing.Point(4, 15);
             this.lbxU3Puntos.Margin = new System.Windows.Forms.Padding(2);
             this.lbxU3Puntos.Name = "lbxU3Puntos";
-            this.lbxU3Puntos.Size = new System.Drawing.Size(128, 212);
+            this.lbxU3Puntos.Size = new System.Drawing.Size(100, 212);
             this.lbxU3Puntos.TabIndex = 0;
             // 
             // gbxU3Outputs
@@ -721,7 +721,7 @@
             this.gbxU3Outputs.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Outputs.Name = "gbxU3Outputs";
             this.gbxU3Outputs.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxU3Outputs.Size = new System.Drawing.Size(358, 98);
+            this.gbxU3Outputs.Size = new System.Drawing.Size(384, 98);
             this.gbxU3Outputs.TabIndex = 3;
             this.gbxU3Outputs.TabStop = false;
             this.gbxU3Outputs.Text = "Salidas";
@@ -729,11 +729,12 @@
             // txtU3EfectividadAjuste
             // 
             this.txtU3EfectividadAjuste.Enabled = false;
-            this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(109, 68);
+            this.txtU3EfectividadAjuste.Location = new System.Drawing.Point(113, 68);
             this.txtU3EfectividadAjuste.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3EfectividadAjuste.Name = "txtU3EfectividadAjuste";
-            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(155, 20);
+            this.txtU3EfectividadAjuste.Size = new System.Drawing.Size(267, 20);
             this.txtU3EfectividadAjuste.TabIndex = 14;
+            this.txtU3EfectividadAjuste.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtU3EfectividadPorcentaje
             // 
@@ -741,8 +742,9 @@
             this.txtU3EfectividadPorcentaje.Location = new System.Drawing.Point(84, 44);
             this.txtU3EfectividadPorcentaje.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3EfectividadPorcentaje.Name = "txtU3EfectividadPorcentaje";
-            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(180, 20);
+            this.txtU3EfectividadPorcentaje.Size = new System.Drawing.Size(296, 20);
             this.txtU3EfectividadPorcentaje.TabIndex = 13;
+            this.txtU3EfectividadPorcentaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtU3Funcion
             // 
@@ -750,8 +752,9 @@
             this.txtU3Funcion.Location = new System.Drawing.Point(50, 20);
             this.txtU3Funcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtU3Funcion.Name = "txtU3Funcion";
-            this.txtU3Funcion.Size = new System.Drawing.Size(214, 20);
+            this.txtU3Funcion.Size = new System.Drawing.Size(330, 20);
             this.txtU3Funcion.TabIndex = 10;
+            this.txtU3Funcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label24
             // 
@@ -801,7 +804,7 @@
             this.gbxU3Inputs.Margin = new System.Windows.Forms.Padding(2);
             this.gbxU3Inputs.Name = "gbxU3Inputs";
             this.gbxU3Inputs.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxU3Inputs.Size = new System.Drawing.Size(358, 132);
+            this.gbxU3Inputs.Size = new System.Drawing.Size(384, 132);
             this.gbxU3Inputs.TabIndex = 2;
             this.gbxU3Inputs.TabStop = false;
             this.gbxU3Inputs.Text = "Entradas";
@@ -908,6 +911,7 @@
             this.txtU3Y.Name = "txtU3Y";
             this.txtU3Y.Size = new System.Drawing.Size(72, 20);
             this.txtU3Y.TabIndex = 3;
+            this.txtU3Y.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtU3Y_KeyPress);
             // 
             // label19
             // 

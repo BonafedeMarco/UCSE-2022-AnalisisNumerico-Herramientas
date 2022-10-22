@@ -299,7 +299,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             {
                 txtU3Funcion.Text = salida.Funcion;
                 txtU3EfectividadPorcentaje.Text = salida.PorcentajeEfectividad.ToString();
-                txtU3EfectividadAjuste.Text = salida.EfectividadAjuste.ToString();
+                txtU3EfectividadAjuste.Text = salida.EfectividadAjuste ? "Efectivo" : "No efectivo";
 
                 graficador.Graficar(PuntosCargados, salida.FuncionGraficador);
             }
@@ -328,6 +328,14 @@ namespace AnalisisNumerico_BonafedeMarengo
             if (cmbU3Metodo.SelectedIndex == 1)
             {
                 nudU3Grado.Enabled = true;
+            }
+        }
+
+        private void txtU3Y_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnU3AgregarPunto.PerformClick();
             }
         }
 

@@ -145,7 +145,7 @@ namespace Unidad_3
 
                 if (i == 0 && ai != 0)
                 {
-                    funcion += $" {signo}{Math.Abs(ai)}";
+                    funcion += $" {signo} {Math.Abs(ai)}";
                     funcionGraf += $"{signo}{Math.Abs(ai)}";
                 }
                 else if (i == 1 && ai != 0)
