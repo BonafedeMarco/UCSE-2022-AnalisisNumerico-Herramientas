@@ -145,6 +145,7 @@
             this.txtU1MaxIteraciones.Name = "txtU1MaxIteraciones";
             this.txtU1MaxIteraciones.Size = new System.Drawing.Size(100, 20);
             this.txtU1MaxIteraciones.TabIndex = 9;
+            this.txtU1MaxIteraciones.Text = "100";
             // 
             // txtU1Tolerancia
             // 
@@ -152,6 +153,7 @@
             this.txtU1Tolerancia.Name = "txtU1Tolerancia";
             this.txtU1Tolerancia.Size = new System.Drawing.Size(100, 20);
             this.txtU1Tolerancia.TabIndex = 8;
+            this.txtU1Tolerancia.Text = "0,0001";
             // 
             // txtU1XDerecha
             // 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica
+namespace Entidades
 {
-    public class Salida
+    public class U1Salida
     {
         // Propiedades de debug
 

@@ -66,7 +66,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             MostrarResultadosU1(Main.Secante(ParseInputs()));
         }
 
-        private void MostrarResultadosU1(Salida salida)
+        private void MostrarResultadosU1(U1Salida salida)
         {
             if (!salida._Error)
             {
@@ -82,10 +82,10 @@ namespace AnalisisNumerico_BonafedeMarengo
             }
         }
 
-        public Entrada ParseInputs()
+        public U1Entrada ParseInputs()
         {
             CheckDefaults();
-            Entrada entrada = new Entrada()
+            U1Entrada entrada = new U1Entrada()
             {
                 Funcion = txtU1Funcion.Text,
                 Xi = Convert.ToDouble(txtU1XIzquierda.Text),

@@ -4,31 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
-using Unidad_2;
 
 namespace Logica
 {
     public static class Main
     {
         #region Unidad 1
-        public static Salida Bisección(Entrada datos)
+        public static U1Salida Bisección(U1Entrada datos)
         {
-            return Unidad_1.MetodoCerrado(datos, true);
+            return Unidad_1.Procedimientos.MetodoCerrado(datos, true);
         }
 
-        public static Salida ReglaFalsa(Entrada datos)
+        public static U1Salida ReglaFalsa(U1Entrada datos)
         {
-            return Unidad_1.MetodoCerrado(datos, false);
+            return Unidad_1.Procedimientos.MetodoCerrado(datos, false);
         }
 
-        public static Salida Tangente(Entrada datos)
+        public static U1Salida Tangente(U1Entrada datos)
         {
-            return Unidad_1.MetodoAbierto(datos, true);
+            return Unidad_1.Procedimientos.MetodoAbierto(datos, true);
         }
 
-        public static Salida Secante(Entrada datos)
+        public static U1Salida Secante(U1Entrada datos)
         {
-            return Unidad_1.MetodoAbierto(datos, false);
+            return Unidad_1.Procedimientos.MetodoAbierto(datos, false);
         }
 
         #endregion

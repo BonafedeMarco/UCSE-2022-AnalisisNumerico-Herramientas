@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculus;
+using Entidades;
 
 
-namespace Logica
+namespace Unidad_1
 {
-    public static class Unidad_1
+    public static class Procedimientos
     {
         //4 metodos (Biseccion - Regla Falsa - Tangente - Secante)
         //Una region para cada metodo (o dos para abiertos y cerrados), una seccion para calculos globale
         //con generincs se puede pasar el metodo de la (para pasar el same (privado)dfd y qué metodo usar () para que llame a la funcion y utilizar el calculo que corresponda)
-        public static Salida MetodoCerrado(Entrada datos, bool bit) //true = Biseccion
+        public static U1Salida MetodoCerrado(U1Entrada datos, bool bit) //true = Biseccion
         {
-            Salida Resultado = new Salida();
+            U1Salida Resultado = new U1Salida();
             Calculo Analizador = new Calculo();
             Resultado._Metodo = bit ? "Bisección" : "Regla Falsa";
 
@@ -83,10 +84,10 @@ namespace Logica
             Resultado.AgregarMsjError("Funcion no válida");
             return Resultado;
         }
-        public static Salida MetodoAbierto(Entrada datos, bool bit) //true = Tangente
+        public static U1Salida MetodoAbierto(U1Entrada datos, bool bit) //true = Tangente
         {
             Calculo Analizador = new Calculo();
-            Salida Resultado = new Salida();
+            U1Salida Resultado = new U1Salida();
             Resultado._Metodo = bit ? "Tangente" : "Secante";
 
             if (Analizador.Sintaxis(datos.Funcion, 'x'))
@@ -160,25 +161,25 @@ namespace Logica
             Resultado.AgregarMsjError("Funcion no válida");
             return Resultado;
         }
-        public static double FormulaBiseccion(Entrada datos)
+        public static double FormulaBiseccion(U1Entrada datos)
         {
             return (datos.Xi + datos.Xd) / 2;
         }
-        public static double FormulaReglaFalsa(Entrada datos, Calculo Analizador)
+        public static double FormulaReglaFalsa(U1Entrada datos, Calculo Analizador)
         {
             double fxi = Analizador.EvaluaFx(datos.Xi);
             double fxd = Analizador.EvaluaFx(datos.Xd);
             return ((fxi * datos.Xd) - (fxd * datos.Xi)) / (fxi - fxd);
         }
-        public static double FormulaTangente(Entrada datos, Calculo Analizador)
+        public static double FormulaTangente(U1Entrada datos, Calculo Analizador)
         {
             return datos.Xi - (Analizador.EvaluaFx(datos.Xi) / Analizador.Dx(datos.Xi));
         }
-        public static double FormulaSecante(Entrada datos, Calculo Analizador)
+        public static double FormulaSecante(U1Entrada datos, Calculo Analizador)
         {
             return ((Analizador.EvaluaFx(datos.Xd) * datos.Xi) - (Analizador.EvaluaFx(datos.Xi) * datos.Xd)) / (Analizador.EvaluaFx(datos.Xd) - Analizador.EvaluaFx(datos.Xi));
         }
-        public static bool DenominadorCero(Entrada datos, Calculo Analizador, bool bit) //return true = Error
+        public static bool DenominadorCero(U1Entrada datos, Calculo Analizador, bool bit) //return true = Error
         {
             if (bit)
             {

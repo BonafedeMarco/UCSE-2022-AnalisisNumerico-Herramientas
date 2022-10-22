@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica
+namespace Entidades
 {
-    public class Entrada
+    public class U1Entrada
     {
         public string Funcion { get; set; }
         public double Xi { get; set; } // En caso de ser un método abierto, se usa como "XIni"
