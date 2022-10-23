@@ -316,6 +316,7 @@ namespace AnalisisNumerico_BonafedeMarengo
             {
                 lbxU3Puntos.Items.Add($"({punto[0]}, {punto[1]})");
             }
+            gbxU3Puntos.Text = $"Puntos: {PuntosCargados.Count}";
         }
 
         private void cmbU3Metodo_SelectedIndexChanged(object sender, EventArgs e)

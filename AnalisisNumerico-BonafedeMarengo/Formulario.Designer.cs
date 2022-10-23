@@ -657,7 +657,7 @@
             this.gbxU3Puntos.Size = new System.Drawing.Size(195, 234);
             this.gbxU3Puntos.TabIndex = 4;
             this.gbxU3Puntos.TabStop = false;
-            this.gbxU3Puntos.Text = "Puntos";
+            this.gbxU3Puntos.Text = "Puntos: 0";
             // 
             // label25
             // 
