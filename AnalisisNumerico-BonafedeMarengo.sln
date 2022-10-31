@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1972
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "AnalisisNumerico-BonafedeMarengo\GUI.csproj", "{C24D03DB-FD28-4581-91EF-397CFA8E4F0A}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unidad_3", "Unidad_3\Unidad_3.csproj", "{CF8975BB-9E88-45D8-88C0-65CA7C83D631}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unidad_1", "Unidad_1\Unidad_1.csproj", "{A7214507-3E05-4C70-88FB-18A84F394B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unidad_4", "Unidad_4\Unidad_4.csproj", "{30C852CF-CB82-4663-8BF5-3CC5C05E58BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A7214507-3E05-4C70-88FB-18A84F394B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7214507-3E05-4C70-88FB-18A84F394B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7214507-3E05-4C70-88FB-18A84F394B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C852CF-CB82-4663-8BF5-3CC5C05E58BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C852CF-CB82-4663-8BF5-3CC5C05E58BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C852CF-CB82-4663-8BF5-3CC5C05E58BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C852CF-CB82-4663-8BF5-3CC5C05E58BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
