@@ -8,5 +8,6 @@ namespace Entidades
 {
     public sealed class U4Salida
     {
+        public double Resultado { get; set; }
     }
 }
