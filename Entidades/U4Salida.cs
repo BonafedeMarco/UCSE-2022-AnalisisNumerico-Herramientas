@@ -12,6 +12,7 @@ namespace Entidades
         public string _MsjError { get; set; } // Detalle de dicho error
         public string _Metodo { get; set; } // Método utilizado para la resolución
         public double Resultado { get; set; }
+        public double ResultadoImpar { get; set; } //Para Simpson 3/8
         public void AgregarMsjError(string msj)
         {
             _Error = true;

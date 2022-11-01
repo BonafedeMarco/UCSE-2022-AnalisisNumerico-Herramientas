@@ -34,7 +34,10 @@ namespace Unidad_4
                         Rta.Resultado = SimpsonMultiple(entrada, Analizador);
                         break;
                     case 4:
-                        Rta.Resultado = SimpsonOculto(entrada, Analizador);
+                        U4Salida resultados = SimpsonOculto(entrada, Analizador);
+                        Rta.Resultado = resultados.Resultado;
+                        Rta.ResultadoImpar = resultados.ResultadoImpar;
+                        
                         break;
                     default:
                         Rta.AgregarMsjError("El int del metodo ingresado no corresponde con ninguno codificado");
@@ -99,8 +102,9 @@ namespace Unidad_4
 
             return (h / 3) * (funcionA + 4 * ImparesFxi + 2 * ParesFxi + funcionB);
         }
-        public static double SimpsonOculto(U4Entrada datos, Calculo analizador)
+        public static U4Salida SimpsonOculto(U4Entrada datos, Calculo analizador)
         {
+            
             double funcionA = analizador.EvaluaFx(datos.PuntoA);
             double funcionB = analizador.EvaluaFx(datos.PuntoB);
 
@@ -112,7 +116,7 @@ namespace Unidad_4
             double SimpsonOculto = (3 * h / 8) * (funcionA + 3 * funcionAH + 3 * funcionA2H + funcionB);
             datos.CantidadSubintervalos -= 3; //-------------------------------------------------------------VER
 
-            return SimpsonMultiple(datos, analizador) + SimpsonOculto;
+            return new U4Salida { Resultado = SimpsonMultiple(datos, analizador) + SimpsonOculto, ResultadoImpar = SimpsonOculto };
         }
         public static double CalcularH(U4Entrada datos, int metodo)
         {
