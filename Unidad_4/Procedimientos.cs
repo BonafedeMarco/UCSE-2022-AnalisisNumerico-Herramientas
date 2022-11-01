@@ -14,6 +14,8 @@ namespace Unidad_4
         {
             Calculo Analizador = new Calculo();
             U4Salida Rta = new U4Salida();
+            Rta._Metodo = entrada.Metodo.ToString();
+
             if (entrada.Metodo == 3 && entrada.CantidadSubintervalos % 2 != 0) //ver si hay que hacerlo dentro del 1/3 multiple
                 entrada.Metodo = 4;
 
