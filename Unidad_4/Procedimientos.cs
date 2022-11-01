@@ -14,25 +14,27 @@ namespace Unidad_4
         {
             Calculo Analizador = new Calculo();
             U4Salida Rta = new U4Salida();
+            if (entrada.Metodo == 3 && entrada.CantidadSubintervalos % 2 != 0) //ver si hay que hacerlo dentro del 1/3 multiple
+                entrada.Metodo = 4;
 
             if (Analizador.Sintaxis(entrada.Funcion, 'x'))
             {
                 switch (entrada.Metodo)
                 {
                     case 0:
-                        //TrapecioSimple
+                        Rta.Resultado = TrapecioSimple(entrada, Analizador);
                         break;
                     case 1:
-                        //TrapecioMultiple
+                        Rta.Resultado = TrapecioMultiple(entrada, Analizador);
                         break;
                     case 2:
-                        //Simpson(1/3)Simple
+                        Rta.Resultado = SimpsonSimple(entrada, Analizador);
                         break;
                     case 3:
-                        //Simpson(1/3)Multiple
+                        Rta.Resultado = SimpsonMultiple(entrada, Analizador);
                         break;
                     case 4:
-                        //Simpson(3/8)Oculto
+                        Rta.Resultado = SimpsonOculto(entrada, Analizador);
                         break;
                     default:
                         Rta.AgregarMsjError("El int del metodo ingresado no corresponde con ninguno codificado");
@@ -49,7 +51,7 @@ namespace Unidad_4
             double funcionA = analizador.EvaluaFx(datos.PuntoA);
             double funcionB = analizador.EvaluaFx(datos.PuntoB);
 
-            return (funcionA + funcionB * (datos.PuntoB - datos.PuntoA)) / 2;
+            return ((funcionA + funcionB) * (datos.PuntoB - datos.PuntoA)) / 2;
         }
         public static double TrapecioMultiple(U4Entrada datos, Calculo analizador)
         {
@@ -57,26 +59,71 @@ namespace Unidad_4
             double funcionB = analizador.EvaluaFx(datos.PuntoB);
 
             double h = CalcularH(datos, 0);
-            
+
             double Fxi = 0;
-            
-            for (int i = 1; i < datos.CantidadSubintervalos; i++) //VER SI HAY QUE PONER CANTSUBINTERVALOS-1
+
+            for (int i = 1; i < datos.CantidadSubintervalos; i++)
             {
-                Fxi += analizador.EvaluaFx(datos.PuntoA + i * h);
+                Fxi += analizador.EvaluaFx(datos.PuntoA + i * h); //VER!
             }
 
-            return (funcionA + funcionB * (datos.PuntoA - datos.PuntoB)) / 2;
+            return (h / 2) * (funcionA + 2 * Fxi + funcionB);
+        }
+        public static double SimpsonSimple(U4Entrada datos, Calculo analizador)
+        {
+            double funcionA = analizador.EvaluaFx(datos.PuntoA);
+            double funcionB = analizador.EvaluaFx(datos.PuntoB);
+
+            double h = CalcularH(datos, 1);
+
+            double funcionAH = analizador.EvaluaFx(datos.PuntoA + h);
+
+            return (h / 3) * (funcionA + 4 * funcionAH + funcionB);
+        }
+        public static double SimpsonMultiple(U4Entrada datos, Calculo analizador)
+        {
+            double funcionA = analizador.EvaluaFx(datos.PuntoA);
+            double funcionB = analizador.EvaluaFx(datos.PuntoB);
+
+            double h = CalcularH(datos, 0);
+
+            double ParesFxi = 0;
+            double ImparesFxi = 0;
+            for (int i = 1; i < datos.CantidadSubintervalos; i++)
+            {
+                if (i % 2 == 0)
+                    ParesFxi += analizador.EvaluaFx(datos.PuntoA + i * h); //VER!
+                else
+                    ImparesFxi += analizador.EvaluaFx(datos.PuntoA + i * h); //VER TMB
+            }
+
+            return (h / 3) * (funcionA + 4 * ImparesFxi + 2 * ParesFxi + funcionB);
+        }
+        public static double SimpsonOculto(U4Entrada datos, Calculo analizador)
+        {
+            double funcionA = analizador.EvaluaFx(datos.PuntoA);
+            double funcionB = analizador.EvaluaFx(datos.PuntoB);
+
+            double h = CalcularH(datos, 2);
+
+            double funcionAH = analizador.EvaluaFx(datos.PuntoA + h);
+            double funcionA2H = analizador.EvaluaFx(datos.PuntoA + 2 * h);
+
+            double SimpsonOculto = (3 * h / 8) * (funcionA + 3 * funcionAH + 3 * funcionA2H + funcionB);
+            datos.CantidadSubintervalos -= 3; //-------------------------------------------------------------VER
+
+            return SimpsonMultiple(datos, analizador) + SimpsonOculto;
         }
         public static double CalcularH(U4Entrada datos, int metodo)
         {
             switch (metodo)
             {
                 case 0: //Metodos Multiples
-                        return (datos.PuntoB - datos.PuntoA) / datos.CantidadSubintervalos;
+                    return (datos.PuntoB - datos.PuntoA) / datos.CantidadSubintervalos;
                 case 1: //Simpson 1/3 Simple
                     return (datos.PuntoB - datos.PuntoA) / 2;
                 case 2: // Simpson 3/8
-                    return (datos.PuntoB - datos.PuntoA) / 3;                    
+                    return (datos.PuntoB - datos.PuntoA) / 3;
             }
             return 0;
         }
