@@ -104,6 +104,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
             this.gbxU4Salidas = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtU4S38 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtU4S13 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtU4Resultado = new System.Windows.Forms.TextBox();
             this.gbxU4Entradas = new System.Windows.Forms.GroupBox();
@@ -118,10 +122,6 @@
             this.txtU4Funcion = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtU4PuntoB = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.txtU4S13 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtU4S38 = new System.Windows.Forms.TextBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -1010,6 +1010,40 @@
             this.gbxU4Salidas.TabStop = false;
             this.gbxU4Salidas.Text = "Salidas";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 77);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(84, 16);
+            this.label34.TabIndex = 10;
+            this.label34.Text = "Simpson 3/8:";
+            // 
+            // txtU4S38
+            // 
+            this.txtU4S38.Enabled = false;
+            this.txtU4S38.Location = new System.Drawing.Point(96, 74);
+            this.txtU4S38.Name = "txtU4S38";
+            this.txtU4S38.Size = new System.Drawing.Size(266, 22);
+            this.txtU4S38.TabIndex = 9;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 51);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(101, 16);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Simpson 1/3 M.:";
+            // 
+            // txtU4S13
+            // 
+            this.txtU4S13.Enabled = false;
+            this.txtU4S13.Location = new System.Drawing.Point(113, 48);
+            this.txtU4S13.Name = "txtU4S13";
+            this.txtU4S13.Size = new System.Drawing.Size(249, 22);
+            this.txtU4S13.TabIndex = 7;
+            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -1159,40 +1193,6 @@
             this.txtU4PuntoB.Name = "txtU4PuntoB";
             this.txtU4PuntoB.Size = new System.Drawing.Size(106, 22);
             this.txtU4PuntoB.TabIndex = 3;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 51);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(101, 16);
-            this.label33.TabIndex = 8;
-            this.label33.Text = "Simpson 1/3 M.:";
-            // 
-            // txtU4S13
-            // 
-            this.txtU4S13.Enabled = false;
-            this.txtU4S13.Location = new System.Drawing.Point(113, 48);
-            this.txtU4S13.Name = "txtU4S13";
-            this.txtU4S13.Size = new System.Drawing.Size(249, 22);
-            this.txtU4S13.TabIndex = 7;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 77);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(84, 16);
-            this.label34.TabIndex = 10;
-            this.label34.Text = "Simpson 3/8:";
-            // 
-            // txtU4S38
-            // 
-            this.txtU4S38.Enabled = false;
-            this.txtU4S38.Location = new System.Drawing.Point(96, 74);
-            this.txtU4S38.Name = "txtU4S38";
-            this.txtU4S38.Size = new System.Drawing.Size(266, 22);
-            this.txtU4S38.TabIndex = 9;
             // 
             // Formulario
             // 
