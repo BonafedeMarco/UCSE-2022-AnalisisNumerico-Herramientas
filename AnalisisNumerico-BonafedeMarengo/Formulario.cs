@@ -25,6 +25,8 @@ namespace AnalisisNumerico_BonafedeMarengo
 
             cmbU3Metodo.SelectedIndex = 0;
 
+            cmbU4Metodo.SelectedIndex = 0;
+
             SetPanelGrafica();
         }
 
@@ -344,9 +346,43 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         #region Unidad 4
 
-        #endregion
+        private void cmbU4Metodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbU4Metodo.SelectedIndex == 3)
+            {
+                nudU4Subintervalos.Increment = 1;
+            }
+            else
+            {
+                nudU4Subintervalos.Increment = 2;
+            }
+        }
 
-        #region Validaciones
+        private void btnU4Calcular_Click(object sender, EventArgs e)
+        {
+            U4Entrada entrada = new U4Entrada()
+            {
+                Funcion = txtU4Funcion.Text,
+                PuntoA = Convert.ToInt32(txtU4PuntoA.Text),
+                PuntoB = Convert.ToInt32(txtU4PuntoB.Text),
+                CantidadSubintervalos = Convert.ToInt32(nudU4Subintervalos.Value),
+                Metodo = cmbU4Metodo.SelectedIndex
+            };
+
+            MostrarResultadosU4(Main.Calcular(entrada));
+        }
+
+        private void MostrarResultadosU4(U4Salida salida)
+        {
+            if (!salida._Error)
+            {
+                txtU3Funcion.Text = salida.Resultado.ToString();
+            }
+            else
+            {
+                MessageBox.Show(salida._MsjError, $"Error - {salida._Metodo}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         #endregion
     }

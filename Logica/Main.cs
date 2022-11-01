@@ -62,6 +62,11 @@ namespace Logica
 
         #region Unidad 4
 
+        public static U4Salida Calcular(U4Entrada entrada)
+        {
+            return Unidad_4.Procedimientos.Resolucion(entrada);
+        }
+
         #endregion
     }
 }
