@@ -363,8 +363,8 @@ namespace AnalisisNumerico_BonafedeMarengo
             U4Entrada entrada = new U4Entrada()
             {
                 Funcion = txtU4Funcion.Text,
-                PuntoA = Convert.ToInt32(txtU4PuntoA.Text),
-                PuntoB = Convert.ToInt32(txtU4PuntoB.Text),
+                PuntoA = Convert.ToDouble(txtU4PuntoA.Text),
+                PuntoB = Convert.ToDouble(txtU4PuntoB.Text),
                 CantidadSubintervalos = Convert.ToInt32(nudU4Subintervalos.Value),
                 Metodo = cmbU4Metodo.SelectedIndex
             };
@@ -376,7 +376,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         {
             if (!salida._Error)
             {
-                txtU3Funcion.Text = salida.Resultado.ToString();
+                txtU4Funcion.Text = salida.Resultado.ToString();
             }
             else
             {
