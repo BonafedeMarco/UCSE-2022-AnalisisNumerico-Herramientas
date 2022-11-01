@@ -376,7 +376,7 @@ namespace AnalisisNumerico_BonafedeMarengo
         {
             if (!salida._Error)
             {
-                txtU4Funcion.Text = salida.Resultado.ToString();
+                txtU4Resultado.Text = salida.Resultado.ToString();
             }
             else
             {

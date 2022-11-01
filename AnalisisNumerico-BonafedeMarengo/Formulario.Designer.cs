@@ -103,21 +103,21 @@
             this.txtU3X = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tbcUnidad4 = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtU4PuntoA = new System.Windows.Forms.TextBox();
-            this.txtU4PuntoB = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtU4Funcion = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.cmbU4Metodo = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.gbxU4Entradas = new System.Windows.Forms.GroupBox();
-            this.btnU4Calcular = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.nudU4Subintervalos = new System.Windows.Forms.NumericUpDown();
             this.gbxU4Salidas = new System.Windows.Forms.GroupBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtU4Resultado = new System.Windows.Forms.TextBox();
+            this.gbxU4Entradas = new System.Windows.Forms.GroupBox();
+            this.nudU4Subintervalos = new System.Windows.Forms.NumericUpDown();
+            this.label31 = new System.Windows.Forms.Label();
+            this.btnU4Calcular = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cmbU4Metodo = new System.Windows.Forms.ComboBox();
+            this.txtU4PuntoA = new System.Windows.Forms.TextBox();
+            this.txtU4Funcion = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtU4PuntoB = new System.Windows.Forms.TextBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -134,9 +134,9 @@
             this.gbxU3Inputs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU3Grado)).BeginInit();
             this.tbcUnidad4.SuspendLayout();
+            this.gbxU4Salidas.SuspendLayout();
             this.gbxU4Entradas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU4Subintervalos)).BeginInit();
-            this.gbxU4Salidas.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxU1Entradas
@@ -152,9 +152,9 @@
             this.gbxU1Entradas.Controls.Add(this.label2);
             this.gbxU1Entradas.Controls.Add(this.label1);
             this.gbxU1Entradas.Location = new System.Drawing.Point(7, 7);
-            this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Entradas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Name = "gbxU1Entradas";
-            this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Entradas.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Entradas.Size = new System.Drawing.Size(567, 271);
             this.gbxU1Entradas.TabIndex = 0;
             this.gbxU1Entradas.TabStop = false;
@@ -163,7 +163,7 @@
             // txtU1MaxIteraciones
             // 
             this.txtU1MaxIteraciones.Location = new System.Drawing.Point(411, 210);
-            this.txtU1MaxIteraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1MaxIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1MaxIteraciones.Name = "txtU1MaxIteraciones";
             this.txtU1MaxIteraciones.Size = new System.Drawing.Size(132, 22);
             this.txtU1MaxIteraciones.TabIndex = 9;
@@ -172,7 +172,7 @@
             // txtU1Tolerancia
             // 
             this.txtU1Tolerancia.Location = new System.Drawing.Point(411, 132);
-            this.txtU1Tolerancia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Tolerancia.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Tolerancia.Name = "txtU1Tolerancia";
             this.txtU1Tolerancia.Size = new System.Drawing.Size(132, 22);
             this.txtU1Tolerancia.TabIndex = 8;
@@ -181,7 +181,7 @@
             // txtU1XDerecha
             // 
             this.txtU1XDerecha.Location = new System.Drawing.Point(64, 210);
-            this.txtU1XDerecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1XDerecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XDerecha.Name = "txtU1XDerecha";
             this.txtU1XDerecha.Size = new System.Drawing.Size(172, 22);
             this.txtU1XDerecha.TabIndex = 7;
@@ -189,7 +189,7 @@
             // txtU1XIzquierda
             // 
             this.txtU1XIzquierda.Location = new System.Drawing.Point(64, 132);
-            this.txtU1XIzquierda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1XIzquierda.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1XIzquierda.Name = "txtU1XIzquierda";
             this.txtU1XIzquierda.Size = new System.Drawing.Size(172, 22);
             this.txtU1XIzquierda.TabIndex = 6;
@@ -197,7 +197,7 @@
             // txtU1Funcion
             // 
             this.txtU1Funcion.Location = new System.Drawing.Point(64, 53);
-            this.txtU1Funcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Funcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Funcion.Name = "txtU1Funcion";
             this.txtU1Funcion.Size = new System.Drawing.Size(479, 22);
             this.txtU1Funcion.TabIndex = 5;
@@ -265,9 +265,9 @@
             this.gbxU1Salidas.Controls.Add(this.label7);
             this.gbxU1Salidas.Controls.Add(this.label6);
             this.gbxU1Salidas.Location = new System.Drawing.Point(7, 286);
-            this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Salidas.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Name = "gbxU1Salidas";
-            this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Salidas.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Salidas.Size = new System.Drawing.Size(567, 277);
             this.gbxU1Salidas.TabIndex = 1;
             this.gbxU1Salidas.TabStop = false;
@@ -277,7 +277,7 @@
             // 
             this.txtU1Metodo.Enabled = false;
             this.txtU1Metodo.Location = new System.Drawing.Point(104, 71);
-            this.txtU1Metodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Metodo.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Metodo.Name = "txtU1Metodo";
             this.txtU1Metodo.Size = new System.Drawing.Size(132, 22);
             this.txtU1Metodo.TabIndex = 9;
@@ -296,7 +296,7 @@
             // 
             this.txtU1CantIteraciones.Enabled = false;
             this.txtU1CantIteraciones.Location = new System.Drawing.Point(104, 130);
-            this.txtU1CantIteraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1CantIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1CantIteraciones.Name = "txtU1CantIteraciones";
             this.txtU1CantIteraciones.Size = new System.Drawing.Size(132, 22);
             this.txtU1CantIteraciones.TabIndex = 7;
@@ -305,7 +305,7 @@
             // 
             this.txtU1Raiz.Enabled = false;
             this.txtU1Raiz.Location = new System.Drawing.Point(384, 130);
-            this.txtU1Raiz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Raiz.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Raiz.Name = "txtU1Raiz";
             this.txtU1Raiz.Size = new System.Drawing.Size(159, 22);
             this.txtU1Raiz.TabIndex = 6;
@@ -314,7 +314,7 @@
             // 
             this.txtU1ErrorRelativo.Enabled = false;
             this.txtU1ErrorRelativo.Location = new System.Drawing.Point(104, 190);
-            this.txtU1ErrorRelativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1ErrorRelativo.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1ErrorRelativo.Name = "txtU1ErrorRelativo";
             this.txtU1ErrorRelativo.Size = new System.Drawing.Size(439, 22);
             this.txtU1ErrorRelativo.TabIndex = 5;
@@ -323,7 +323,7 @@
             // 
             this.txtU1Converge.Enabled = false;
             this.txtU1Converge.Location = new System.Drawing.Point(384, 69);
-            this.txtU1Converge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU1Converge.Margin = new System.Windows.Forms.Padding(4);
             this.txtU1Converge.Name = "txtU1Converge";
             this.txtU1Converge.Size = new System.Drawing.Size(159, 22);
             this.txtU1Converge.TabIndex = 4;
@@ -377,9 +377,9 @@
             this.gbxU1Metodos.Controls.Add(this.btnU1ReglaFalsa);
             this.gbxU1Metodos.Controls.Add(this.btnU1Biseccion);
             this.gbxU1Metodos.Location = new System.Drawing.Point(581, 7);
-            this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Metodos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Name = "gbxU1Metodos";
-            this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxU1Metodos.Padding = new System.Windows.Forms.Padding(4);
             this.gbxU1Metodos.Size = new System.Drawing.Size(196, 555);
             this.gbxU1Metodos.TabIndex = 2;
             this.gbxU1Metodos.TabStop = false;
@@ -406,7 +406,7 @@
             // btnU1Secante
             // 
             this.btnU1Secante.Location = new System.Drawing.Point(51, 409);
-            this.btnU1Secante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Secante.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Secante.Name = "btnU1Secante";
             this.btnU1Secante.Size = new System.Drawing.Size(100, 94);
             this.btnU1Secante.TabIndex = 3;
@@ -417,7 +417,7 @@
             // btnU1Tangente
             // 
             this.btnU1Tangente.Location = new System.Drawing.Point(51, 315);
-            this.btnU1Tangente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Tangente.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Tangente.Name = "btnU1Tangente";
             this.btnU1Tangente.Size = new System.Drawing.Size(100, 94);
             this.btnU1Tangente.TabIndex = 2;
@@ -428,7 +428,7 @@
             // btnU1ReglaFalsa
             // 
             this.btnU1ReglaFalsa.Location = new System.Drawing.Point(51, 174);
-            this.btnU1ReglaFalsa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1ReglaFalsa.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1ReglaFalsa.Name = "btnU1ReglaFalsa";
             this.btnU1ReglaFalsa.Size = new System.Drawing.Size(100, 94);
             this.btnU1ReglaFalsa.TabIndex = 1;
@@ -439,7 +439,7 @@
             // btnU1Biseccion
             // 
             this.btnU1Biseccion.Location = new System.Drawing.Point(51, 80);
-            this.btnU1Biseccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnU1Biseccion.Margin = new System.Windows.Forms.Padding(4);
             this.btnU1Biseccion.Name = "btnU1Biseccion";
             this.btnU1Biseccion.Size = new System.Drawing.Size(100, 94);
             this.btnU1Biseccion.TabIndex = 0;
@@ -575,7 +575,7 @@
             // 
             this.txtU2Tolerancia.Enabled = false;
             this.txtU2Tolerancia.Location = new System.Drawing.Point(460, 23);
-            this.txtU2Tolerancia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtU2Tolerancia.Margin = new System.Windows.Forms.Padding(4);
             this.txtU2Tolerancia.Name = "txtU2Tolerancia";
             this.txtU2Tolerancia.Size = new System.Drawing.Size(64, 22);
             this.txtU2Tolerancia.TabIndex = 7;
@@ -991,77 +991,33 @@
             this.tbcUnidad4.Text = "Unidad 4";
             this.tbcUnidad4.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // gbxU4Salidas
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 63);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(56, 16);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Punto A:";
+            this.gbxU4Salidas.Controls.Add(this.label32);
+            this.gbxU4Salidas.Controls.Add(this.txtU4Resultado);
+            this.gbxU4Salidas.Location = new System.Drawing.Point(6, 234);
+            this.gbxU4Salidas.Name = "gbxU4Salidas";
+            this.gbxU4Salidas.Size = new System.Drawing.Size(773, 327);
+            this.gbxU4Salidas.TabIndex = 8;
+            this.gbxU4Salidas.TabStop = false;
+            this.gbxU4Salidas.Text = "Salidas";
             // 
-            // txtU4PuntoA
+            // label32
             // 
-            this.txtU4PuntoA.Location = new System.Drawing.Point(68, 60);
-            this.txtU4PuntoA.Name = "txtU4PuntoA";
-            this.txtU4PuntoA.Size = new System.Drawing.Size(106, 22);
-            this.txtU4PuntoA.TabIndex = 2;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 24);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 16);
+            this.label32.TabIndex = 6;
+            this.label32.Text = "Resultado:";
             // 
-            // txtU4PuntoB
+            // txtU4Resultado
             // 
-            this.txtU4PuntoB.Location = new System.Drawing.Point(255, 60);
-            this.txtU4PuntoB.Name = "txtU4PuntoB";
-            this.txtU4PuntoB.Size = new System.Drawing.Size(106, 22);
-            this.txtU4PuntoB.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(193, 63);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 16);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Punto B:";
-            // 
-            // txtU4Funcion
-            // 
-            this.txtU4Funcion.Location = new System.Drawing.Point(68, 24);
-            this.txtU4Funcion.Name = "txtU4Funcion";
-            this.txtU4Funcion.Size = new System.Drawing.Size(293, 22);
-            this.txtU4Funcion.TabIndex = 1;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 27);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 16);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "Función:";
-            // 
-            // cmbU4Metodo
-            // 
-            this.cmbU4Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbU4Metodo.FormattingEnabled = true;
-            this.cmbU4Metodo.Items.AddRange(new object[] {
-            "Trapecio Simple",
-            "Trapecio Múltiple",
-            "Simpson 1/3 Simple",
-            "Simpson 1/3 Multiple"});
-            this.cmbU4Metodo.Location = new System.Drawing.Point(68, 98);
-            this.cmbU4Metodo.Name = "cmbU4Metodo";
-            this.cmbU4Metodo.Size = new System.Drawing.Size(293, 24);
-            this.cmbU4Metodo.TabIndex = 4;
-            this.cmbU4Metodo.SelectedIndexChanged += new System.EventHandler(this.cmbU4Metodo_SelectedIndexChanged);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 101);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(56, 16);
-            this.label30.TabIndex = 6;
-            this.label30.Text = "Método:";
+            this.txtU4Resultado.Enabled = false;
+            this.txtU4Resultado.Location = new System.Drawing.Point(84, 21);
+            this.txtU4Resultado.Name = "txtU4Resultado";
+            this.txtU4Resultado.Size = new System.Drawing.Size(277, 22);
+            this.txtU4Resultado.TabIndex = 5;
             // 
             // gbxU4Entradas
             // 
@@ -1082,25 +1038,6 @@
             this.gbxU4Entradas.TabIndex = 7;
             this.gbxU4Entradas.TabStop = false;
             this.gbxU4Entradas.Text = "Entradas";
-            // 
-            // btnU4Calcular
-            // 
-            this.btnU4Calcular.Location = new System.Drawing.Point(9, 175);
-            this.btnU4Calcular.Name = "btnU4Calcular";
-            this.btnU4Calcular.Size = new System.Drawing.Size(352, 34);
-            this.btnU4Calcular.TabIndex = 6;
-            this.btnU4Calcular.Text = "Calcular";
-            this.btnU4Calcular.UseVisualStyleBackColor = true;
-            this.btnU4Calcular.Click += new System.EventHandler(this.btnU4Calcular_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 138);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(166, 16);
-            this.label31.TabIndex = 8;
-            this.label31.Text = "Cantidad de subintervalos:";
             // 
             // nudU4Subintervalos
             // 
@@ -1124,33 +1061,96 @@
             0,
             0});
             // 
-            // gbxU4Salidas
+            // label31
             // 
-            this.gbxU4Salidas.Controls.Add(this.label32);
-            this.gbxU4Salidas.Controls.Add(this.textBox1);
-            this.gbxU4Salidas.Location = new System.Drawing.Point(6, 234);
-            this.gbxU4Salidas.Name = "gbxU4Salidas";
-            this.gbxU4Salidas.Size = new System.Drawing.Size(773, 327);
-            this.gbxU4Salidas.TabIndex = 8;
-            this.gbxU4Salidas.TabStop = false;
-            this.gbxU4Salidas.Text = "Salidas";
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 138);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(166, 16);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "Cantidad de subintervalos:";
             // 
-            // label32
+            // btnU4Calcular
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 24);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(72, 16);
-            this.label32.TabIndex = 6;
-            this.label32.Text = "Resultado:";
+            this.btnU4Calcular.Location = new System.Drawing.Point(9, 175);
+            this.btnU4Calcular.Name = "btnU4Calcular";
+            this.btnU4Calcular.Size = new System.Drawing.Size(352, 34);
+            this.btnU4Calcular.TabIndex = 6;
+            this.btnU4Calcular.Text = "Calcular";
+            this.btnU4Calcular.UseVisualStyleBackColor = true;
+            this.btnU4Calcular.Click += new System.EventHandler(this.btnU4Calcular_Click);
             // 
-            // textBox1
+            // label29
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(84, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 22);
-            this.textBox1.TabIndex = 5;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 27);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(57, 16);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Función:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 101);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(56, 16);
+            this.label30.TabIndex = 6;
+            this.label30.Text = "Método:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 63);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(56, 16);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Punto A:";
+            // 
+            // cmbU4Metodo
+            // 
+            this.cmbU4Metodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbU4Metodo.FormattingEnabled = true;
+            this.cmbU4Metodo.Items.AddRange(new object[] {
+            "Trapecio Simple",
+            "Trapecio Múltiple",
+            "Simpson 1/3 Simple",
+            "Simpson 1/3 Multiple"});
+            this.cmbU4Metodo.Location = new System.Drawing.Point(68, 98);
+            this.cmbU4Metodo.Name = "cmbU4Metodo";
+            this.cmbU4Metodo.Size = new System.Drawing.Size(293, 24);
+            this.cmbU4Metodo.TabIndex = 4;
+            this.cmbU4Metodo.SelectedIndexChanged += new System.EventHandler(this.cmbU4Metodo_SelectedIndexChanged);
+            // 
+            // txtU4PuntoA
+            // 
+            this.txtU4PuntoA.Location = new System.Drawing.Point(68, 60);
+            this.txtU4PuntoA.Name = "txtU4PuntoA";
+            this.txtU4PuntoA.Size = new System.Drawing.Size(106, 22);
+            this.txtU4PuntoA.TabIndex = 2;
+            // 
+            // txtU4Funcion
+            // 
+            this.txtU4Funcion.Location = new System.Drawing.Point(68, 24);
+            this.txtU4Funcion.Name = "txtU4Funcion";
+            this.txtU4Funcion.Size = new System.Drawing.Size(293, 22);
+            this.txtU4Funcion.TabIndex = 1;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(193, 63);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(56, 16);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Punto B:";
+            // 
+            // txtU4PuntoB
+            // 
+            this.txtU4PuntoB.Location = new System.Drawing.Point(255, 60);
+            this.txtU4PuntoB.Name = "txtU4PuntoB";
+            this.txtU4PuntoB.Size = new System.Drawing.Size(106, 22);
+            this.txtU4PuntoB.TabIndex = 3;
             // 
             // Formulario
             // 
@@ -1160,7 +1160,7 @@
             this.ClientSize = new System.Drawing.Size(797, 598);
             this.Controls.Add(this.tbcUnidades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Formulario";
             this.Text = "Análisis Numérico - Bonafede, Marengo";
             this.gbxU1Entradas.ResumeLayout(false);
@@ -1186,11 +1186,11 @@
             this.gbxU3Inputs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU3Grado)).EndInit();
             this.tbcUnidad4.ResumeLayout(false);
+            this.gbxU4Salidas.ResumeLayout(false);
+            this.gbxU4Salidas.PerformLayout();
             this.gbxU4Entradas.ResumeLayout(false);
             this.gbxU4Entradas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudU4Subintervalos)).EndInit();
-            this.gbxU4Salidas.ResumeLayout(false);
-            this.gbxU4Salidas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1286,7 +1286,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button btnU4Calcular;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtU4Resultado;
     }
 }
 
