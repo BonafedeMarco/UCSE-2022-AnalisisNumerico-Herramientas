@@ -118,6 +118,10 @@
             this.txtU4Funcion = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtU4PuntoB = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtU4S13 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtU4S38 = new System.Windows.Forms.TextBox();
             this.gbxU1Entradas.SuspendLayout();
             this.gbxU1Salidas.SuspendLayout();
             this.gbxU1Metodos.SuspendLayout();
@@ -993,6 +997,10 @@
             // 
             // gbxU4Salidas
             // 
+            this.gbxU4Salidas.Controls.Add(this.label34);
+            this.gbxU4Salidas.Controls.Add(this.txtU4S38);
+            this.gbxU4Salidas.Controls.Add(this.label33);
+            this.gbxU4Salidas.Controls.Add(this.txtU4S13);
             this.gbxU4Salidas.Controls.Add(this.label32);
             this.gbxU4Salidas.Controls.Add(this.txtU4Resultado);
             this.gbxU4Salidas.Location = new System.Drawing.Point(6, 234);
@@ -1016,7 +1024,7 @@
             this.txtU4Resultado.Enabled = false;
             this.txtU4Resultado.Location = new System.Drawing.Point(84, 21);
             this.txtU4Resultado.Name = "txtU4Resultado";
-            this.txtU4Resultado.Size = new System.Drawing.Size(277, 22);
+            this.txtU4Resultado.Size = new System.Drawing.Size(278, 22);
             this.txtU4Resultado.TabIndex = 5;
             // 
             // gbxU4Entradas
@@ -1053,7 +1061,7 @@
             0,
             0});
             this.nudU4Subintervalos.Name = "nudU4Subintervalos";
-            this.nudU4Subintervalos.Size = new System.Drawing.Size(183, 22);
+            this.nudU4Subintervalos.Size = new System.Drawing.Size(184, 22);
             this.nudU4Subintervalos.TabIndex = 5;
             this.nudU4Subintervalos.Value = new decimal(new int[] {
             2,
@@ -1074,7 +1082,7 @@
             // 
             this.btnU4Calcular.Location = new System.Drawing.Point(9, 175);
             this.btnU4Calcular.Name = "btnU4Calcular";
-            this.btnU4Calcular.Size = new System.Drawing.Size(352, 34);
+            this.btnU4Calcular.Size = new System.Drawing.Size(353, 34);
             this.btnU4Calcular.TabIndex = 6;
             this.btnU4Calcular.Text = "Calcular";
             this.btnU4Calcular.UseVisualStyleBackColor = true;
@@ -1116,7 +1124,7 @@
             "Trapecio Múltiple",
             "Simpson 1/3 Simple",
             "Simpson 1/3 Multiple"});
-            this.cmbU4Metodo.Location = new System.Drawing.Point(68, 98);
+            this.cmbU4Metodo.Location = new System.Drawing.Point(69, 98);
             this.cmbU4Metodo.Name = "cmbU4Metodo";
             this.cmbU4Metodo.Size = new System.Drawing.Size(293, 24);
             this.cmbU4Metodo.TabIndex = 4;
@@ -1124,14 +1132,14 @@
             // 
             // txtU4PuntoA
             // 
-            this.txtU4PuntoA.Location = new System.Drawing.Point(68, 60);
+            this.txtU4PuntoA.Location = new System.Drawing.Point(69, 60);
             this.txtU4PuntoA.Name = "txtU4PuntoA";
             this.txtU4PuntoA.Size = new System.Drawing.Size(106, 22);
             this.txtU4PuntoA.TabIndex = 2;
             // 
             // txtU4Funcion
             // 
-            this.txtU4Funcion.Location = new System.Drawing.Point(68, 24);
+            this.txtU4Funcion.Location = new System.Drawing.Point(69, 24);
             this.txtU4Funcion.Name = "txtU4Funcion";
             this.txtU4Funcion.Size = new System.Drawing.Size(293, 22);
             this.txtU4Funcion.TabIndex = 1;
@@ -1147,10 +1155,44 @@
             // 
             // txtU4PuntoB
             // 
-            this.txtU4PuntoB.Location = new System.Drawing.Point(255, 60);
+            this.txtU4PuntoB.Location = new System.Drawing.Point(256, 60);
             this.txtU4PuntoB.Name = "txtU4PuntoB";
             this.txtU4PuntoB.Size = new System.Drawing.Size(106, 22);
             this.txtU4PuntoB.TabIndex = 3;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 51);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(101, 16);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Simpson 1/3 M.:";
+            // 
+            // txtU4S13
+            // 
+            this.txtU4S13.Enabled = false;
+            this.txtU4S13.Location = new System.Drawing.Point(113, 48);
+            this.txtU4S13.Name = "txtU4S13";
+            this.txtU4S13.Size = new System.Drawing.Size(249, 22);
+            this.txtU4S13.TabIndex = 7;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 77);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(84, 16);
+            this.label34.TabIndex = 10;
+            this.label34.Text = "Simpson 3/8:";
+            // 
+            // txtU4S38
+            // 
+            this.txtU4S38.Enabled = false;
+            this.txtU4S38.Location = new System.Drawing.Point(96, 74);
+            this.txtU4S38.Name = "txtU4S38";
+            this.txtU4S38.Size = new System.Drawing.Size(266, 22);
+            this.txtU4S38.TabIndex = 9;
             // 
             // Formulario
             // 
@@ -1287,6 +1329,10 @@
         private System.Windows.Forms.Button btnU4Calcular;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtU4Resultado;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtU4S38;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtU4S13;
     }
 }
 

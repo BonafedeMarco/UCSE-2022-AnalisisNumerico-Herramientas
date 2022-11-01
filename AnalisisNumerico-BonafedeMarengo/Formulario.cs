@@ -348,14 +348,16 @@ namespace AnalisisNumerico_BonafedeMarengo
 
         private void cmbU4Metodo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            nudU4Subintervalos.Value = 2;
+
+            nudU4Subintervalos.Increment = 2;
+            nudU4Subintervalos.Enabled = true;
+            
             if (cmbU4Metodo.SelectedIndex == 3)
-            {
                 nudU4Subintervalos.Increment = 1;
-            }
-            else
-            {
-                nudU4Subintervalos.Increment = 2;
-            }
+            
+            if (cmbU4Metodo.SelectedIndex == 0 || cmbU4Metodo.SelectedIndex == 2)
+                nudU4Subintervalos.Enabled = false;
         }
 
         private void btnU4Calcular_Click(object sender, EventArgs e)
@@ -377,6 +379,11 @@ namespace AnalisisNumerico_BonafedeMarengo
             if (!salida._Error)
             {
                 txtU4Resultado.Text = salida.Resultado.ToString();
+                if (salida._Metodo == "3")
+                {
+                    txtU4S13.Text = (salida.Resultado-salida.ResultadoImpar).ToString();
+                    txtU4S38.Text = salida.ResultadoImpar.ToString();
+                }
             }
             else
             {
