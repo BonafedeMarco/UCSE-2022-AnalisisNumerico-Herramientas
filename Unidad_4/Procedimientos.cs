@@ -39,7 +39,7 @@ namespace Unidad_4
                         U4Salida resultados = SimpsonOculto(entrada, Analizador);
                         Rta.Resultado = resultados.Resultado;
                         Rta.ResultadoImpar = resultados.ResultadoImpar;
-                        
+
                         break;
                     default:
                         Rta.AgregarMsjError("El int del metodo ingresado no corresponde con ninguno codificado");
@@ -106,17 +106,21 @@ namespace Unidad_4
         }
         public static U4Salida SimpsonOculto(U4Entrada datos, Calculo analizador)
         {
-            
-            double funcionA = analizador.EvaluaFx(datos.PuntoA);
+
+ 
             double funcionB = analizador.EvaluaFx(datos.PuntoB);
 
             double h = CalcularH(datos, 2);
 
-            double funcionAH = analizador.EvaluaFx(datos.PuntoA + h);
-            double funcionA2H = analizador.EvaluaFx(datos.PuntoA + 2 * h);
+            double puntoA = datos.PuntoB - 3 * h;
+            double funcionA = analizador.EvaluaFx(puntoA);
+
+            double funcionAH = analizador.EvaluaFx(puntoA + h);
+            double funcionA2H = analizador.EvaluaFx(puntoA + 2 * h);
 
             double SimpsonOculto = (3 * h / 8) * (funcionA + 3 * funcionAH + 3 * funcionA2H + funcionB);
             datos.CantidadSubintervalos -= 3; //-------------------------------------------------------------VER
+            datos.PuntoB = puntoA;
 
             return new U4Salida { Resultado = SimpsonMultiple(datos, analizador) + SimpsonOculto, ResultadoImpar = SimpsonOculto };
         }
@@ -129,7 +133,7 @@ namespace Unidad_4
                 case 1: //Simpson 1/3 Simple
                     return (datos.PuntoB - datos.PuntoA) / 2;
                 case 2: // Simpson 3/8
-                    return (datos.PuntoB - datos.PuntoA) / 3;
+                    return (datos.PuntoB - (datos.PuntoB - ((datos.PuntoB - datos.PuntoA) / datos.CantidadSubintervalos))*3) / 3;
             }
             return 0;
         }
