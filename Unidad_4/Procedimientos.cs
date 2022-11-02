@@ -110,7 +110,7 @@ namespace Unidad_4
  
             double funcionB = analizador.EvaluaFx(datos.PuntoB);
 
-            double h = CalcularH(datos, 2);
+            double h = CalcularH(datos, 0);
 
             double puntoA = datos.PuntoB - 3 * h;
             double funcionA = analizador.EvaluaFx(puntoA);
@@ -132,8 +132,6 @@ namespace Unidad_4
                     return (datos.PuntoB - datos.PuntoA) / datos.CantidadSubintervalos;
                 case 1: //Simpson 1/3 Simple
                     return (datos.PuntoB - datos.PuntoA) / 2;
-                case 2: // Simpson 3/8
-                    return (datos.PuntoB - (datos.PuntoB - ((datos.PuntoB - datos.PuntoA) / datos.CantidadSubintervalos))*3) / 3;
             }
             return 0;
         }
